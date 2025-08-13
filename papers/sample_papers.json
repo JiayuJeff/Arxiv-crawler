@@ -1,0 +1,24 @@
+[
+  {
+    "arxiv_id": "2507.21836v1",
+    "title": "AutoTIR: Autonomous Tools Integrated Reasoning via Reinforcement Learning",
+    "abstract": "Large Language Models (LLMs), when enhanced through reasoning-oriented post-training, evolve into powerful Large Reasoning Models (LRMs). Tool-Integrated Reasoning (TIR) further extends their capabilities by enabling seamless integration and utilization of external tools during reasoning processes.",
+    "abstract_cn": "大型语言模型(LLMs)通过面向推理的后训练增强后，演变为强大的大型推理模型(LRMs)。工具集成推理(TIR)通过在推理过程中实现外部工具的无缝集成和利用，进一步扩展了它们的能力。",
+    "authors": ["Yifan Wei", "Xiaoyan Yu", "Yixuan Weng"],
+    "published": "2025-07-29T14:12:28Z",
+    "categories": ["cs.CL"],
+    "pdf_url": "http://arxiv.org/pdf/2507.21836v1",
+    "page_url": "http://arxiv.org/abs/2507.21836v1"
+  },
+  {
+    "arxiv_id": "2507.17275v2",
+    "title": "Prolonging Tool Life: Learning Skillful Use of General-purpose Tools through Lifespan-guided Reinforcement Learning",
+    "abstract": "In inaccessible environments with uncertain task demands, robots often rely on general-purpose tools that lack predefined usage strategies. These tools are not tailored for particular operations, making it challenging to use them efficiently.",
+    "abstract_cn": "在任务需求不确定的不可达环境中，机器人通常依赖缺乏预定义使用策略的通用工具。这些工具不是为特定操作量身定制的，这使得有效使用它们变得具有挑战性。",
+    "authors": ["Po-Yen Wu", "Cheng-Yu Kuo", "Yuki Kadokawa"],
+    "published": "2025-07-23T07:25:04Z",
+    "categories": ["cs.RO", "cs.LG"],
+    "pdf_url": "http://arxiv.org/pdf/2507.17275v2",
+    "page_url": "http://arxiv.org/abs/2507.17275v2"
+  }
+]

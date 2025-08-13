@@ -1,0 +1,914 @@
+[
+  {
+    "arxiv_id": "2507.22245v1",
+    "title": "Minimizing CGYRO HPC Communication Costs in Ensembles with XGYRO by\n  Sharing the Collisional Constant Tensor Structure",
+    "abstract": "First-principles fusion plasma simulations are both compute and memory\nintensive, and CGYRO is no exception. The use of many HPC nodes to fit the\nproblem in the available memory thus results in significant communication\noverhead, which is hard to avoid for any single simulation. That said, most\nfusion studies are composed of ensembles of simulations, so we developed a new\ntool, named XGYRO, that executes a whole ensemble of CGYRO simulations as a\nsingle HPC job. By treating the ensemble as a unit, XGYRO can alter the global\nbuffer distribution logic and apply optimizations that are not feasible on any\nsingle simulation, but only on the ensemble as a whole. The main saving comes\nfrom the sharing of the collisional constant tensor structure, since its values\nare typically identical between parameter-sweep simulations. This data\nstructure dominates the memory consumption of CGYRO simulations, so\ndistributing it among the whole ensemble results in drastic memory savings for\neach simulation, which in turn results in overall lower communication overhead.",
+    "authors": [
+      "Igor Sfiligoi",
+      "Emily A. Belli",
+      "Jeff Candy"
+    ],
+    "published": "2025-07-29T21:42:44Z",
+    "updated": "2025-07-29T21:42:44Z",
+    "categories": [
+      "cs.DC"
+    ],
+    "page_url": "http://arxiv.org/abs/2507.22245v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.22245v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于CGYRO和XGYRO的英文摘要。首先，我需要仔细阅读原文，确保理解每个技术术语和逻辑结构。比如，“first-principles fusion plasma simulations”应该翻译成“基于第一性原理的聚变等离子体模拟”，这里要保持学术术语的准确性。\n\n接下来，注意原文提到CGYRO计算和内存消耗大，使用多个HPC节点导致通信开销大。这部分需要准确传达“compute and memory intensive”以及“communication overhead”的概念。然后，用户提到XGYRO作为新工具，将多个模拟作为单一任务执行，这里要处理“ensemble of simulations”和“single HPC job”的对应关系。\n\n还要注意技术细节，比如“collisional constant tensor structure”翻译为“碰撞常数张量结构”，确保术语正确。同时，原文提到内存节省和通信开销降低，这部分逻辑关系要保持清晰，可能需要调整句子结构使中文更流畅。\n\n另外，用户要求只输出翻译结果，不加解释，所以要避免添加任何额外内容。检查是否有遗漏或误译的地方，比如“parameter-sweep simulations”翻译成“参数扫描模拟”是否合适。最后，通读译文，确保语言自然，符合中文表达习惯，同时保持原文的学术严谨性。\n</think>\n\n基于第一性原理的聚变等离子体模拟具有极高的计算和内存需求，CGYRO模拟也不例外。由于需要使用大量HPC节点以满足可用内存需求，这种模拟会产生显著的通信开销，这是任何单次模拟都难以避免的。然而，大多数聚变研究通常由多个模拟组成的集合（ensemble）构成，因此我们开发了名为XGYRO的新工具，该工具能够将整个CGYRO模拟集合作为单一HPC任务执行。通过将模拟集合视为整体单元，XGYRO可以调整全局缓冲区分布逻辑，并实施仅在集合层面可行的优化策略。主要的优化来自于碰撞常数张量结构的共享，因为在参数扫描模拟中该数据结构的值通常保持一致。由于该数据结构主导了CGYRO模拟的内存消耗，将其在模拟集合中共享可为每个模拟带来显著的内存节省，从而整体降低通信开销。"
+  },
+  {
+    "arxiv_id": "2507.15659v1",
+    "title": "SENSOR: A Cost-Efficient Open-Source Flow Monitoring Platform",
+    "abstract": "This paper presents a cost-effective and distributed flow monitoring platform\nfor collecting unsampled IPFIX data exclusively using open-source tools, which\nis implemented at the University of T\\\"ubingen. An overview of all tools is\ngiven and their use is explained.",
+    "authors": [
+      "Gabriel Paradzik",
+      "Benjamin Steinert",
+      "Heinrich Abele",
+      "Michael Menth"
+    ],
+    "published": "2025-07-21T14:21:47Z",
+    "updated": "2025-07-21T14:21:47Z",
+    "categories": [
+      "cs.NI"
+    ],
+    "page_url": "http://arxiv.org/abs/2507.15659v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.15659v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段英文摘要成中文，而且要求很详细。首先，我需要仔细阅读原文，确保理解每个术语和句子的意思。比如“cost-effective”应该翻译成“经济高效”还是“低成本高效”？这里可能“经济高效”更符合学术用语。然后“distributed flow monitoring platform”是“分布式流量监测平台”，这个术语要准确。\n\n接下来，用户提到使用开源工具，所以“open-source tools”要翻译成“开源工具”，保持术语一致性。注意“University of T\\\"ubingen”是德国的图宾根大学，正确翻译校名很重要。然后检查句子结构，比如“An overview of all tools is given and their use is explained.”需要调整语序，使中文更通顺，比如“本文对所有工具进行了概述，并解释了其使用方法。”\n\n还要确保逻辑结构不变，技术细节不丢失。用户可能希望翻译后的摘要能准确传达研究的创新点和实现方式，所以每个部分都要对应。最后，检查有没有多余的解释或格式错误，确保只输出翻译结果。确认没有遗漏任何信息后，再通读一遍，确保流畅自然，符合中文表达习惯。\n</think>\n\n本文提出了一种经济高效的分布式流量监测平台，该平台通过纯开源工具实现IPFIX数据的无采样采集，已在图宾根大学部署实施。本文对所采用的所有工具进行了系统概述，并详细阐述了其具体应用方式。"
+  },
+  {
+    "arxiv_id": "2508.00849v1",
+    "title": "A Modular, Low-Cost IoT System for Environmental and Behavioural\n  Monitoring in Cultural Heritage Sites",
+    "abstract": "The preservation of cultural heritage faces growing challenges from climate\nchange, tourism pressure, and limited conservation resources. Existing\nmonitoring solutions are often cost-prohibitive, proprietary, and inflexible,\nleaving many institutions, particularly in developing regions, without viable\ntools for proactive management. This study presents a modular, low-cost\nInternet of Things (IoT) system designed for real-time environmental and\nbehavioural monitoring in heritage sites. Built with off-the-shelf components\nsuch as ESP32 microcontrollers and Raspberry Pi, the system integrates a\nwireless sensor network, edge computing, and cloud services (Microsoft Azure)\nto measure variables including temperature, humidity, sound, and visitor\nproximity. It also incorporates computer vision models to classify visitor\nbehaviour, achieving up to 95% accuracy using fine-tuned Vision Transformers.\nThe system's modularity, enabled via JSON configurations, allows for rapid\nreconfiguration without firmware changes. A simulated deployment demonstrated\nrobust performance, low power consumption, and cost-efficiency (less than 200\nGBP per node), validating the system's potential for scalable, sustainable\nheritage monitoring. This open-source framework offers a practical path forward\nfor institutions seeking to balance accessibility with conservation needs.",
+    "authors": [
+      "Juan Palomeque-Gonzalez"
+    ],
+    "published": "2025-07-11T08:31:43Z",
+    "updated": "2025-07-11T08:31:43Z",
+    "categories": [
+      "cs.CY"
+    ],
+    "page_url": "http://arxiv.org/abs/2508.00849v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.00849v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段学术摘要，我需要仔细看看内容。首先，用户是学术论文翻译专家，所以要确保术语准确。比如“Internet of Things”应该翻译成“物联网”，而“ESP32 microcontrollers”是“ESP32微控制器”。然后要注意句子的流畅性，符合中文表达习惯，比如“cost-prohibitive”可能翻译成“成本高昂”更合适。\n\n接下来，检查逻辑结构是否保持一致。原文提到挑战、现有解决方案的不足、研究内容、系统组成、性能测试和结论。翻译时要确保这些部分清晰。技术细节如“Vision Transformers”需要准确，可能翻译为“视觉变换器”或“视觉Transformer模型”，这里用户用了“视觉Transformer模型”，所以保持一致。\n\n还要注意数字和单位的转换，比如“less than 200 GBP per node”要转换成“每个节点成本低于200英镑”。另外，专有名词如“Microsoft Azure”直接保留英文，但可能需要加注中文，不过用户可能希望保留原名，所以直接翻译成“微软Azure云服务”。\n\n用户要求只输出翻译结果，不要解释，所以必须严格避免添加任何额外内容。最后通读一遍，确保没有遗漏关键信息，比如“modularity”翻译成“模块化”，“JSON configurations”是“JSON配置文件”。确认所有技术术语准确，语句通顺，符合学术论文的正式语气。\n</think>\n\n文化遗产保护正面临气候变化、旅游压力和有限保护资源日益加剧的挑战。现有监测方案往往存在成本高昂、专有性和灵活性不足等问题，导致许多机构，特别是发展中国家地区，缺乏有效的主动管理工具。本研究提出了一种模块化、低成本的物联网（IoT）系统，专为文化遗产地的实时环境与行为监测设计。该系统采用现成组件（如ESP32微控制器和Raspberry Pi）构建，集成了无线传感器网络、边缘计算和云服务（微软Azure），可测量温度、湿度、声音和游客接近度等变量。系统还整合了计算机视觉模型对游客行为进行分类，通过微调的视觉Transformer模型实现了高达95%的准确率。通过JSON配置文件实现的模块化设计，使系统可在无需固件修改的情况下快速重构。模拟部署验证了系统的稳健性能、低功耗（每个节点成本低于200英镑）和成本效益，证实了其在可扩展、可持续文化遗产监测中的应用潜力。这一开源框架为寻求平衡可及性与保护需求的机构提供了切实可行的解决方案。"
+  },
+  {
+    "arxiv_id": "2506.22398v1",
+    "title": "Cost Effective Designs For Next-Generation Radio Telescopes",
+    "abstract": "Radio astronomy has entered its golden era, with many revolutionary\nfacilities such as SKA, ngVLA, and LOFAR2.0 coming online in the next decade.\nThese facilities are certain to redefine radio astronomy. However, on smaller\nscales-such as at institutional or amateur levels-radio astronomy is still\nmostly practiced for educational or personal interest. The primary reason\nsmall-scale radio astronomical experiments rarely produce cutting-edge\nscientific results is the limitation of funding available for procuring or\ndeveloping components similar to those used in professional-grade facilities. A\nsecond major reason is the lack of tools and skills required for simulating\ncomponents for a complete telescope. In this work, we address the first of\nthese challenges and suggest novel ideas and designs for cost-effective,\nnext-generation radio telescopes that can be built at small scales. We also\ndescribe the observational strategies required to produce cutting-edge\nscientific results with these telescopes-results comparable to those from\nprofessional facilities.",
+    "authors": [
+      "G B Raghavkrishna",
+      "Deeptangshu Banik",
+      "B Ravi Kumar",
+      "D Veeraswamy"
+    ],
+    "published": "2025-06-27T17:13:30Z",
+    "updated": "2025-06-27T17:13:30Z",
+    "categories": [
+      "astro-ph.IM",
+      "astro-ph.CO",
+      "hep-ex"
+    ],
+    "page_url": "http://arxiv.org/abs/2506.22398v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.22398v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于射电天文学的英文摘要，要求保持学术术语准确，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节。首先，我需要通读原文，理解每个部分的意思，特别是专业术语和关键概念。\n\n首先，原文提到射电天文学进入黄金时代，列举了SKA、ngVLA和LOFAR2.0等设施。这些缩写需要确认是否在中文中有通用的译名，比如SKA通常译为“平方公里阵列”，ngVLA可能需要保留英文缩写或翻译为“下一代甚长基线阵列”，LOFAR2.0则是“低频阵列2.0”。接下来，用户提到小规模的射电天文实验在教育和业余爱好者中进行，但缺乏资金和工具。这里要注意“small-scale”翻译为“小规模”是否合适，或者是否需要更贴切的表达，比如“小型”或“小范围”。\n\n然后，用户指出两个主要原因：资金限制和缺乏工具与技能。这里需要确保术语如“procuring or developing components”准确翻译，可能译为“采购或开发组件”。同时，“simulating components for a complete telescope”中的“simulating”可能需要译为“模拟”或“仿真”，但结合上下文，可能更合适的是“模拟”或“仿真设计”。\n\n接下来，用户的工作是解决第一个挑战，提出新的想法和设计，以及观测策略。这里要注意“cost-effective”翻译为“低成本高效”是否准确，或者是否有更合适的术语。此外，“next-generation radio telescopes”应译为“下一代射电望远镜”，保持专业性。\n\n在翻译过程中，要确保句子结构符合中文习惯，比如英文中的被动语态可能需要转换为主动语态。例如，“These facilities are certain to redefine radio astronomy.”可以译为“这些设施必将重新定义射电天文学。”保持简洁有力。\n\n还需要注意逻辑连接词的使用，如“However”译为“然而”，“In this work”译为“在本研究中”。同时，检查是否有重复或冗余的表达，确保译文流畅自然。\n\n最后，通读译文，确认所有专业术语准确，没有遗漏关键信息，并且符合学术论文的正式语气。例如，“observational strategies”译为“观测策略”是否合适，或者是否需要更专业的术语。同时，确保技术细节如设施名称和术语的正确性，避免误译导致信息错误。\n\n总结来说，翻译过程中需要兼顾准确性和流畅性，确保专业术语正确，逻辑清晰，同时符合中文表达习惯。检查每个部分是否准确传达了原文的意思，特别是技术细节和关键概念，确保最终译文既专业又易于理解。\n</think>\n\n射电天文学已进入黄金时代，SKA、ngVLA和LOFAR2.0等革命性设施将在未来十年陆续建成。这些设施必将重新定义射电天文学。然而在机构或业余爱好者等小规模层面，射电天文学仍主要作为教育或个人兴趣开展。小规模射电天文实验难以产出前沿科学成果的首要原因是缺乏资金用于采购或开发与专业设施相当的组件。第二大原因是缺乏用于模拟完整望远镜组件的工具和技能。在本研究中，我们针对上述首要挑战提出创新性构想和设计，开发适用于小规模建设的低成本高效下一代射电望远镜。同时阐述了利用这些望远镜产出可与专业设施媲美的前沿科学成果所需的观测策略。"
+  },
+  {
+    "arxiv_id": "2506.08131v1",
+    "title": "Balanced Area Deprivation Index (bADI): Enhancing social determinants of\n  health indices to strengthen their association with healthcare clinical\n  outcomes, utilization and costs",
+    "abstract": "Background: As value-based care expands across the U.S. healthcare system,\nreducing health disparities has become a priority. Social determinants of\nhealth (SDoH) indices, like the widely used Area Deprivation Index (ADI), guide\nefforts to manage patient health and costs. However, the ADI's reliance on\nhousing-related variables (e.g., median home value) may reduce its\neffectiveness, especially in high-cost regions, by masking inequalities and\npoor health outcomes.\n  Methods: To overcome these limitations, we developed the balanced ADI (bADI),\na new SDoH index that reduces dependence on housing metrics through\nstandardized construction. We evaluated the bADI using data from millions of\nMedicare Fee-for-Service and Medicare Advantage beneficiaries. Correlation\nanalyses measured its association with clinical outcomes, life expectancy,\nhealthcare use, and cost, and compared results to the ADI.\n  Results: The bADI showed stronger correlations with clinical outcomes and\nlife expectancy than the ADI. It was less influenced by housing costs in\nexpensive regions and more accurately predicted healthcare use and costs. While\nADI-based research suggested both the most and least disadvantaged groups had\nhigher healthcare costs, the bADI revealed a more nuanced pattern, showing more\naccurate cost differences across groups.\n  Conclusions: The bADI offers stronger predictive power for healthcare\noutcomes and spending, making it a valuable tool for accountable care\norganizations. By reallocating resources from less to more disadvantaged areas,\nACOs could use the bADI to promote equity and cost-effective care within\npopulation health initiatives.",
+    "authors": [
+      "Mohammad Amin Morid",
+      "Robert E Tillman",
+      "Eran Halperin"
+    ],
+    "published": "2025-06-09T18:34:39Z",
+    "updated": "2025-06-09T18:34:39Z",
+    "categories": [
+      "econ.GN",
+      "q-fin.EC"
+    ],
+    "page_url": "http://arxiv.org/abs/2506.08131v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.08131v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段学术摘要，我需要仔细看看内容。首先，用户是学术论文翻译专家，所以要确保术语准确。比如“Social determinants of health (SDoH)”应该翻译成“社会决定因素（SDoH）”或者“健康的社会决定因素”，这里可能需要确认常用译法，但通常“健康的社会决定因素”更准确。\n\n接下来，用户提到的“Area Deprivation Index (ADI)”是“区域剥夺指数”，这个术语在学术文献中常见，所以直接使用。然后看方法部分，“balanced ADI (bADI)”需要翻译成“平衡区域剥夺指数（bADI）”，保持首字母缩写一致。\n\n用户要求保持逻辑结构和技术细节，所以要注意句子的连贯性。比如“reducing dependence on housing metrics through standardized construction”这里“standardized construction”可能是指标准化构建方法，需要准确表达。\n\n结果部分提到“stronger correlations with clinical outcomes and life expectancy”，要确保“correlations”翻译成“相关性”或“关联性”，这里用“相关性”更合适。另外，“more nuanced pattern”翻译成“更细致的模式”可能不够自然，考虑用“更细致的模式”或“更复杂的模式”，但根据上下文，可能“更细致的模式”更贴切。\n\n结论部分提到“promote equity and cost-effective care”，这里“equity”是公平性，而“cost-effective care”是成本效益护理，需要准确传达。同时注意“ACOs”是“责任医疗组织”，要确认缩写是否在中文中通用，可能需要全称加缩写。\n\n还要检查整个翻译是否流畅，符合中文表达习惯。比如“masking inequalities and poor health outcomes”中的“masking”翻译成“掩盖”是否合适，或者是否有更好的词汇。可能“掩盖”在这里是正确的，但需要确认语境。\n\n最后，确保没有添加任何解释或额外内容，只输出翻译结果。检查是否有遗漏的技术细节，比如“Medicare Fee-for-Service”和“Medicare Advantage”这些专有名词是否需要翻译，通常保留英文并加注释，但用户可能希望直接翻译，如“按服务付费的医疗保险”和“医疗保险优势计划”。\n\n整体上，需要确保术语准确，逻辑清晰，语言自然，符合学术论文的正式风格。同时注意中英文句子结构的差异，调整语序使中文更通顺。例如，英文中的被动语态在中文中可能需要转换为主动语态，或者调整句子结构以避免生硬。\n\n现在开始逐句翻译，确保每个术语正确，句子流畅，保持原文的结构和细节。完成后再次通读检查，确保没有遗漏或错误。\n</think>\n\n背景：随着基于价值的医疗在美国医疗体系中的扩展，减少健康差异已成为优先事项。健康的社会决定因素（SDoH）指数，如广泛使用的区域剥夺指数（ADI），被用于指导患者健康管理和成本控制。然而，ADI对住房相关变量（如中位房屋价值）的依赖性可能削弱其有效性，尤其在高成本地区，这种依赖性可能掩盖不平等现象和不良健康结局。\n\n方法：为克服这一局限性，我们开发了平衡区域剥夺指数（bADI），这是一种新型SDoH指数，通过标准化构建方法减少了对住房指标的依赖。我们使用数百万按服务付费的医疗保险和医疗保险优势计划参保者数据对bADI进行了评估。相关性分析测量了其与临床结局、预期寿命、医疗使用和成本的关联性，并将结果与ADI进行了比较。\n\n结果：与ADI相比，bADI与临床结局和预期寿命的相关性更强。它在高成本地区受住房成本影响较小，且更准确地预测了医疗使用和成本。虽然基于ADI的研究表明最弱势和最不弱势群体的医疗成本均较高，但bADI揭示了更细致的模式，显示了各群体间更准确的成本差异。\n\n结论：bADI对医疗结局和支出具有更强的预测能力，是责任医疗组织（ACOs）的重要工具。通过将资源从较不弱势地区重新分配到更弱势地区，ACOs可利用bADI在人群健康管理计划中促进公平性和成本效益护理。"
+  },
+  {
+    "arxiv_id": "2505.07592v2",
+    "title": "Neural Signatures Within and Between Chess Puzzle Solving and Standard\n  Cognitive Tasks for Brain-Computer Interfaces: A Low-Cost\n  Electroencephalography Study",
+    "abstract": "Consumer-grade electroencephalography (EEG) devices show promise for\nBrain-Computer Interface (BCI) applications, but their efficacy in detecting\nsubtle cognitive states remains understudied. We developed a comprehensive\nstudy paradigm which incorporates a combination of established cognitive tasks\n(N-Back, Stroop, and Mental Rotation) and adds a novel ecological Chess puzzles\ntask. We tested our paradigm with the MUSE 2, a low-cost consumer-grade EEG\ndevice. Using linear mixed-effects modeling we demonstrate successful\ndistinctions of within-task workload levels and cross-task cognitive states\nbased on the spectral power data derived from the MUSE 2 device. With machine\nlearning we further show reliable predictive power to differentiate between\nworkload levels in the N-Back task, and also achieve effective cross-task\nclassification. These findings demonstrate that consumer-grade EEG devices like\nthe MUSE 2 can be used to effectively differentiate between various levels of\ncognitive workload as well as among more nuanced task-based cognitive states,\nand that these tools can be leveraged for real-time adaptive BCI applications\nin practical settings.",
+    "authors": [
+      "Matthew Russell",
+      "Samuel Youkeles",
+      "William Xia",
+      "Kenny Zheng",
+      "Aman Shah",
+      "Robert J. K. Jacob"
+    ],
+    "published": "2025-05-12T14:17:21Z",
+    "updated": "2025-06-03T16:27:47Z",
+    "categories": [
+      "cs.HC"
+    ],
+    "page_url": "http://arxiv.org/abs/2505.07592v2",
+    "pdf_url": "http://arxiv.org/pdf/2505.07592v2",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于消费者级脑电图设备在脑机接口应用中的研究摘要。首先，我需要确保学术术语的准确性，比如“electroencephalography”翻译成“脑电图”是正确的，而“Brain-Computer Interface”通常译为“脑机接口”。接下来，检查是否有专业术语需要特别注意，比如“linear mixed-effects modeling”应该翻译为“线性混合效应模型”，而“machine learning”是“机器学习”。\n\n然后，要确保语言流畅自然，符合中文表达习惯。例如，“show promise for”可以译为“展现出潜力”，而“remains understudied”处理成“仍缺乏充分研究”比较合适。同时，注意句子的结构，避免直译导致的生硬。比如原文中的“incorporates a combination of established cognitive tasks”可以翻译为“结合了多种已建立的认知任务”，这样更符合中文的表达方式。\n\n接下来，保持原文的逻辑结构和技术细节。用户提到的研究方法包括使用N-Back、Stroop和Mental Rotation任务，以及新增的生态棋类谜题任务，这些都需要准确翻译，确保任务名称的正确性。同时，提到的MUSE 2设备和线性混合效应模型、机器学习的应用，这些技术细节必须准确无误。\n\n还要注意用户可能的深层需求。用户可能希望翻译后的摘要不仅准确，还要适合学术发表或报告，因此语言需要正式且专业。此外，用户可能希望翻译后的中文摘要能够被中文读者轻松理解，所以需要避免过于直译的结构，适当调整语序和用词。\n\n最后，检查是否有遗漏的信息或翻译错误。例如，“cross-task cognitive states”翻译为“跨任务认知状态”是否正确？“predictive power”译为“预测能力”是否合适？确保所有术语和数据都准确无误，逻辑连贯。完成后，再通读一遍，确保流畅自然，没有语法错误或不通顺的地方。\n</think>\n\n消费者级脑电图（EEG）设备在脑机接口（BCI）应用中展现出潜力，但其在检测细微认知状态方面的有效性仍缺乏充分研究。我们开发了一种综合研究范式，结合了多种已建立的认知任务（N-Back、Stroop和心理旋转任务），并新增了生态化国际象棋谜题任务。通过低成本消费者级EEG设备MUSE 2进行测试，利用线性混合效应模型分析表明，基于MUSE 2设备获取的频谱功率数据能够有效区分任务内的工作负荷水平和跨任务的认知状态。通过机器学习方法，我们进一步展示了可靠的预测能力，不仅可区分N-Back任务中的工作负荷等级，还实现了有效的跨任务分类。这些发现表明，消费者级EEG设备（如MUSE 2）能够有效区分不同认知负荷水平以及更精细的任务相关认知状态，这些工具可用于实际场景中的实时自适应脑机接口应用。"
+  },
+  {
+    "arxiv_id": "2504.17575v1",
+    "title": "A Multi-Agent, Laxity-Based Aggregation Strategy for Cost-Effective\n  Electric Vehicle Charging and Local Transformer Overload Prevention",
+    "abstract": "The rapid electrification of transportation, driven by stringent\ndecarbonization targets and supportive policies, poses significant challenges\nfor distribution system operators (DSOs). When numerous electric vehicles (EVs)\ncharge concurrently, local transformers risk overloading - a problem that\ncurrent tariff-based strategies do not adequately address. This paper\nintroduces an aggregator-based coordination mechanism that shifts EV charging\nfrom congested to underutilized periods using a rule-based scheduling\nalgorithm. Unlike conventional methods that depend on complex real-time pricing\nsignals or optimization-heavy solutions, the aggregator approach uses a simple\nyet effective \"laxity\" measure to prioritize charging flexibility. To assess\ntechnical and economic viability, a multi-agent simulation was developed to\nreplicate residential user behavior and DSO constraints under the use of a 400\nkVA low-voltage transformer. The results indicate that overloads are completely\neliminated with minimal inconvenience to users, whose increased charging costs\nare offset by the aggregator at an annual total of under DKK 6000 -\nsignificantly lower than the cost of infrastructure reinforcement. This study\ncontributes by (i) quantifying the compensation needed to prevent large-scale\noverloads, (ii) presenting a replicable, computationally feasible, rule-based\naggregator model for DSOs, and (iii) comparing aggregator solutions to costly\ntransformer upgrades, underscoring the aggregator's role as a viable tool for\nfuture distribution systems.",
+    "authors": [
+      "Kristoffer Christensen",
+      "Bo Nørregaard Jørgensen",
+      "Zheng Grace Ma"
+    ],
+    "published": "2025-04-24T14:04:35Z",
+    "updated": "2025-04-24T14:04:35Z",
+    "categories": [
+      "cs.MA"
+    ],
+    "page_url": "http://arxiv.org/abs/2504.17575v1",
+    "pdf_url": "http://arxiv.org/pdf/2504.17575v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的这个翻译请求。首先，用户希望将一段英文摘要翻译成中文，而且有具体的翻译要求。我得仔细看看用户的要求，确保不遗漏任何细节。\n\n首先，用户强调要保持学术术语的准确性。这意味着我需要确认翻译中的专业词汇是否正确，比如“distribution system operators”应该翻译为“配电系统运营商”而不是其他可能的译法。同时，像“laxity”这样的术语可能需要查找是否有标准的中文对应词，或者是否需要保留英文并加注释，但用户要求只输出翻译结果，所以可能需要直接翻译成“宽松度”之类的词汇，但得确保准确。\n\n接下来，语言要流畅自然，符合中文表达习惯。这需要我在翻译时注意句子的结构，避免直译导致的生硬。例如，英文中的被动语态在中文里可能需要调整为主动语态，或者根据上下文调整语序，使句子更通顺。\n\n保持原文的逻辑结构和技术细节也很重要。用户提供的摘要涉及电力系统、电动汽车充电策略和模拟结果，这些内容需要准确传达，不能因为翻译而改变原意。例如，“multi-agent simulation”应该翻译为“多智能体仿真”，确保技术细节不丢失。\n\n用户还要求只输出翻译结果，不要包含任何解释或额外内容。这意味着我需要确保翻译后的文本没有添加任何注释或说明，直接呈现中文内容。同时，要检查是否有拼写错误或格式问题，比如数字和单位是否正确，比如“400 kVA”应保留为“400 kVA”，而“DKK 6000”可能需要翻译为“丹麦克朗6000”或者保留原货币符号，但用户可能希望保留原样，所以需要确认。\n\n现在开始逐句翻译。第一句：“The rapid electrification of transportation, driven by stringent decarbonization targets and supportive policies, poses significant challenges for distribution system operators (DSOs).” 这里的关键点是“rapid electrification”翻译为“交通领域的快速电气化”，“stringent decarbonization targets”是“严格的碳减排目标”，“supportive policies”是“支持性政策”，“poses significant challenges”是“给配电系统运营商（DSO）带来了重大挑战”。需要确保术语准确，句子结构通顺。\n\n接下来，“When numerous electric vehicles (EVs) charge concurrently, local transformers risk overloading - a problem that current tariff-based strategies do not adequately address.” 这里“concurrently”翻译为“同时”或“并发地”，但中文中“同时”更自然。“local transformers risk overloading”是“局部变压器面临过载风险”，后半句“current tariff-based strategies do not adequately address”可以译为“当前基于电价的策略未能有效解决这一问题”。\n\n第三句：“This paper introduces an aggregator-based coordination mechanism that shifts EV charging from congested to underutilized periods using a rule-based scheduling algorithm.” 这里的“aggregator-based”翻译为“聚合商”，“coordination mechanism”是“协调机制”，“shifts EV charging from congested to underutilized periods”需要准确表达时间上的转移，可能译为“将电动汽车充电从拥堵时段转移到低谷时段”，“rule-based scheduling algorithm”是“基于规则的调度算法”。\n\n接下来，“Unlike conventional methods that depend on complex real-time pricing signals or optimization-heavy solutions, the aggregator approach uses a simple yet effective 'laxity' measure to prioritize charging flexibility.” 这里对比传统方法，需要明确“conventional methods”是“传统方法”，“complex real-time pricing signals”是“复杂的实时电价信号”，“optimization-heavy solutions”是“依赖优化的解决方案”，“laxity”可能需要查证，这里可能指“宽松度”或“松弛度”，但根据上下文，可能是指充电灵活性的度量，所以可能需要保留英文并加引号，或者找到合适的中文术语。\n\n然后，“To assess technical and economic viability, a multi-agent simulation was developed to replicate residential user behavior and DSO constraints under the use of a 400 kVA low-voltage transformer.” 这里“technical and economic viability”是“技术经济可行性”，“multi-agent simulation”是“多智能体仿真”，“replicate residential user behavior”是“模拟居民用户行为”，“DSO constraints”是“配电系统运营商的约束”，“400 kVA low-voltage transformer”是“400 kVA低压变压器”。\n\n接下来的结果部分：“The results indicate that overloads are completely eliminated with minimal inconvenience to users, whose increased charging costs are offset by the aggregator at an annual total of under DKK 6000 - significantly lower than the cost of infrastructure reinforcement.” 这里“overloads are completely eliminated”是“过载问题被完全消除”，“minimal inconvenience to users”是“对用户造成的不便极小”，“increased charging costs are offset by the aggregator”是“增加的充电成本由聚合商补偿”，“annual total of under DKK 6000”是“年补偿总额低于6000丹麦克朗”，“significantly lower than the cost of infrastructure reinforcement”是“远低于基础设施升级的成本”。\n\n最后，“This study contributes by (i) quantifying the compensation needed to prevent large-scale overloads, (ii) presenting a replicable, computationally feasible, rule-based aggregator model for DSOs, and (iii) comparing aggregator solutions to costly transformer upgrades, underscoring the aggregator's role as a viable tool for future distribution systems.” 这里需要准确翻译贡献点，确保每个要点清晰，例如“quantifying the compensation”是“量化防止大规模过载所需的补偿”，“replicable, computationally feasible”是“可复制且计算可行”，“comparing aggregator solutions to costly transformer upgrades”是“将聚合商方案与昂贵的变压器升级进行比较”，“underscoring the aggregator's role”是“强调聚合商的作用”。\n\n在翻译过程中，需要注意专业术语的一致性，例如“aggregator”统一译为“聚合商”，“DSO”保留英文缩写并在首次出现时注明中文全称。同时，保持句子的连贯性和逻辑性，确保技术细节不丢失。例如，“laxity”可能需要根据上下文选择合适的中文术语，如果找不到合适的，可能需要保留英文并加引号，但用户可能希望用中文表达，所以可能需要进一步确认，但根据上下文，这里可能指的是充电调度中的灵活性指标，所以“宽松度”可能更合适。\n\n最后检查整个翻译是否符合用户的要求，确保没有添加额外内容，语言流畅，术语准确，逻辑结构清晰。确认无误后，输出翻译结果。\n</think>\n\n交通领域的快速电气化在严格的碳减排目标和支持性政策推动下，给配电系统运营商（DSO）带来了重大挑战。当大量电动汽车（EV）同时充电时，局部变压器面临过载风险——这一问题当前基于电价的策略未能有效解决。本文提出了一种基于聚合商的协调机制，通过基于规则的调度算法将电动汽车充电从拥堵时段转移到低谷时段。与依赖复杂实时电价信号或优化密集型方案的传统方法不同，聚合商方案采用简单有效的“宽松度”指标来优先考虑充电灵活性。为评估技术经济可行性，开发了多智能体仿真系统，在400 kVA低压变压器场景下模拟居民用户行为和DSO约束。结果表明，该方法在几乎不增加用户不便的前提下完全消除了过载问题，用户增加的充电成本由聚合商以年补偿总额低于6000丹麦克朗的代价进行补偿——远低于基础设施升级成本。本研究的贡献在于：（i）量化了防止大规模过载所需的补偿额度；（ii）为DSO提供了可复制、计算可行的基于规则的聚合商模型；（iii）通过将聚合商方案与昂贵的变压器升级方案进行对比，凸显了聚合商作为未来配电系统可行工具的作用。"
+  },
+  {
+    "arxiv_id": "2504.13359v1",
+    "title": "Cost-of-Pass: An Economic Framework for Evaluating Language Models",
+    "abstract": "The widespread adoption of AI systems in the economy hinges on their ability\nto generate economic value that outweighs their inference costs. Evaluating\nthis tradeoff requires metrics that account for both performance and costs. We\npropose a framework grounded in production theory for evaluating language\nmodels by combining accuracy and inference cost. We introduce \"cost-of-pass\",\nthe expected monetary cost of generating a correct solution. We then define the\n\"frontier cost-of-pass\" as the minimum cost-of-pass achievable across available\nmodels or the \"human-expert, using the approximate cost of hiring an expert.\nOur analysis reveals distinct economic insights. First, lightweight models are\nmost cost-effective for basic quantitative tasks, large models for\nknowledge-intensive ones, and reasoning models for complex quantitative\nproblems, despite higher per-token costs. Second, tracking this frontier\ncost-of-pass over the past year reveals significant progress, particularly for\ncomplex quantitative tasks where the cost has roughly halved every few months.\nThird, to trace key innovations driving this progress, we examine\ncounterfactual frontiers: estimates of cost-efficiency without specific model\nclasses. We find that innovations in lightweight, large, and reasoning models\nhave been essential for pushing the frontier in basic quantitative,\nknowledge-intensive, and complex quantitative tasks, respectively. Finally, we\nassess the cost-reductions afforded by common inference-time techniques like\nmajority voting and self-refinement, finding that their marginal accuracy gains\nrarely justify their costs. Our findings underscore that complementary\nmodel-level innovations are the primary drivers of cost-efficiency, and our\neconomic framework provides a principled tool for measuring this progress and\nguiding deployment.",
+    "authors": [
+      "Mehmet Hamza Erol",
+      "Batu El",
+      "Mirac Suzgun",
+      "Mert Yuksekgonul",
+      "James Zou"
+    ],
+    "published": "2025-04-17T21:58:29Z",
+    "updated": "2025-04-17T21:58:29Z",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "page_url": "http://arxiv.org/abs/2504.13359v1",
+    "pdf_url": "http://arxiv.org/pdf/2504.13359v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我得仔细阅读用户提供的原文，确保理解每个术语和句子的意思。用户特别强调要保持学术术语的准确性，所以我要注意专业词汇的正确翻译，比如“inference costs”应该翻译为“推理成本”而不是“推断成本”或者“推论成本”。\n\n接下来，用户要求语言流畅自然，符合中文表达习惯。这意味着我需要调整句子的结构，使其更符合中文的语序和习惯用法。例如，英文中的被动语态在中文里可能需要转换为主动语态，或者调整句子的连接词，使逻辑更清晰。\n\n然后，保持原文的逻辑结构和技术细节是关键。我需要确保翻译后的段落与原文的逻辑关系一致，比如因果关系、对比关系等。同时，技术细节如“cost-of-pass”和“frontier cost-of-pass”需要准确翻译，可能需要保留英文术语并在括号中加注中文解释，或者找到合适的中文对应词，比如“通过成本”和“前沿通过成本”。\n\n用户还提到只输出翻译结果，不要包含任何解释或额外内容。因此，我需要确保翻译后的内容仅包含中文摘要，没有添加任何注释或说明。此外，用户可能希望翻译后的文本在学术场合使用，所以正式和专业的语气很重要。\n\n在翻译过程中，我会逐句处理，先理解每个句子的意思，再选择合适的中文表达。例如，原文中的“Evaluating this tradeoff requires metrics that account for both performance and costs.”需要准确传达“评估这种权衡需要同时考虑性能和成本的指标”。这里“tradeoff”翻译为“权衡”比较合适，而“metrics”翻译为“指标”符合学术用语。\n\n另外，用户提到的“cost-of-pass”和“frontier cost-of-pass”是新提出的概念，我需要确保这些术语在中文中清晰易懂。可能需要使用引号或加注释，但根据用户的要求，可能直接翻译为“通过成本”和“前沿通过成本”即可，同时保持术语的一致性。\n\n最后，检查整个翻译是否流畅，是否符合中文的表达习惯，确保没有遗漏或误译。特别是技术细节和逻辑结构是否准确传达，比如“counterfactual frontiers”翻译为“反事实前沿”是否合适，或者是否有更好的译法。同时，注意数字和时间的表达，如“every few months”翻译为“每几个月”是否准确。\n\n总结来说，我需要确保翻译既准确又自然，符合学术规范，同时保持原文的逻辑和技术细节。完成初稿后，我会通读一遍，检查是否有不通顺的地方，并进行必要的调整，确保最终的翻译结果满足用户的所有要求。\n</think>\n\nAI系统在经济中的广泛应用取决于其生成的经济价值是否超过推理成本。评估这一权衡需要同时考虑性能和成本的指标。我们提出一个基于生产理论的框架，通过结合准确率和推理成本来评估语言模型。我们引入\"通过成本\"（cost-of-pass），即生成正确解决方案的预期货币成本。随后定义\"前沿通过成本\"（frontier cost-of-pass）为在可用模型中或通过雇佣专家（采用专家雇佣的近似成本）可实现的最低通过成本。我们的分析揭示了独特的经济洞见：首先，轻量级模型在基础量化任务中最具成本效益，大模型在知识密集型任务中表现最佳，推理模型则在复杂量化问题中占据优势，尽管其每token成本更高。其次，过去一年追踪该前沿通过成本显示显著进展，尤其在复杂量化任务中成本每几个月下降约一半。第三，为追踪推动这一进展的关键创新，我们分析了反事实前沿（counterfactual frontiers）：排除特定模型类别的成本效率估算。我们发现轻量级、大模型和推理模型的创新分别推动了基础量化、知识密集型和复杂量化任务的前沿突破。最后，我们评估了多数投票和自我优化等常见推理时技术带来的成本削减，发现其边际准确率提升通常难以证明成本合理性。研究结果表明模型层面的互补创新是成本效率提升的主要驱动力，我们的经济框架为衡量这一进展和指导部署提供了原理性工具。"
+  },
+  {
+    "arxiv_id": "2504.07025v1",
+    "title": "Glossy Object Reconstruction with Cost-effective Polarized Acquisition",
+    "abstract": "The challenge of image-based 3D reconstruction for glossy objects lies in\nseparating diffuse and specular components on glossy surfaces from captured\nimages, a task complicated by the ambiguity in discerning lighting conditions\nand material properties using RGB data alone. While state-of-the-art methods\nrely on tailored and/or high-end equipment for data acquisition, which can be\ncumbersome and time-consuming, this work introduces a scalable\npolarization-aided approach that employs cost-effective acquisition tools. By\nattaching a linear polarizer to readily available RGB cameras, multi-view\npolarization images can be captured without the need for advance calibration or\nprecise measurements of the polarizer angle, substantially reducing system\nconstruction costs. The proposed approach represents polarimetric BRDF, Stokes\nvectors, and polarization states of object surfaces as neural implicit fields.\nThese fields, combined with the polarizer angle, are retrieved by optimizing\nthe rendering loss of input polarized images. By leveraging fundamental\nphysical principles for the implicit representation of polarization rendering,\nour method demonstrates superiority over existing techniques through\nexperiments in public datasets and real captured images on both reconstruction\nand novel view synthesis.",
+    "authors": [
+      "Bojian Wu",
+      "Yifan Peng",
+      "Ruizhen Hu",
+      "Xiaowei Zhou"
+    ],
+    "published": "2025-04-09T16:38:51Z",
+    "updated": "2025-04-09T16:38:51Z",
+    "categories": [
+      "cs.CV"
+    ],
+    "page_url": "http://arxiv.org/abs/2504.07025v1",
+    "pdf_url": "http://arxiv.org/pdf/2504.07025v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个技术术语和整体内容。用户提到这是一个关于基于图像的3D重建的挑战，特别是针对光泽物体，需要分离漫反射和镜面反射成分。这里有几个关键点需要注意：学术术语的准确性，比如“diffuse and specular components”要准确翻译为“漫反射和镜面反射成分”；还有像“polarization-aided approach”这样的术语，可能需要译为“偏振辅助方法”。\n\n接下来，用户强调了翻译要求，包括保持学术术语的准确性、语言流畅自然、符合中文表达习惯，以及保持原文的逻辑结构和技术细节。这意味着我需要确保翻译后的句子不仅准确，还要读起来顺畅，避免直译导致的生硬。例如，“state-of-the-art methods”可以译为“最先进的方法”，而“scalable”在这里可能指的是“可扩展的”或“可扩展性”。\n\n然后，我需要检查是否有专业术语需要特别注意。比如“neural implicit fields”应该翻译为“神经隐式场”，“Stokes vectors”是“斯托克斯矢量”，这些都是光学和计算机视觉中的专业术语，必须准确无误。此外，“polarimetric BRDF”需要译为“偏振BRDF”，而BRDF本身是双向反射分布函数，可能需要保留缩写并加注释，但用户要求只输出翻译结果，所以直接使用“偏振BRDF”即可。\n\n用户还提到，现有的方法依赖于定制的或高端的设备，这可能在翻译时需要注意“tailored and/or high-end equipment”译为“定制的和/或高端设备”。同时，用户的方法使用了低成本的工具，比如在普通RGB相机上加装线性偏振片，这里要确保“linear polarizer”正确翻译为“线性偏振片”，并且说明不需要预先校准或精确测量偏振片角度，从而降低成本。\n\n在翻译过程中，还要注意句子的结构。英文中的被动语态在中文中可能需要调整，比如“are retrieved by optimizing the rendering loss”可以译为“通过优化输入偏振图像的渲染损失来检索”。同时，保持逻辑连贯，比如最后一句提到实验在公开数据集和真实捕获图像上的表现，要确保“public datasets”译为“公开数据集”，“novel view synthesis”译为“新视角合成”。\n\n最后，检查整个翻译是否流畅，是否符合学术论文的正式语气，同时确保没有遗漏任何技术细节。例如，“implicit representation of polarization rendering”需要准确译为“偏振渲染的隐式表示”，并确保整个段落的逻辑结构与原文一致。完成这些步骤后，再通读一遍，确认没有错误，然后输出最终的翻译结果。\n</think>\n\n基于图像的光泽物体三维重建面临的挑战在于从捕获图像中分离光泽表面上的漫反射与镜面反射成分，这一任务因仅依赖RGB数据难以区分光照条件和材质属性而变得复杂。尽管现有最先进方法依赖定制化或高端设备进行数据采集，存在操作繁琐且耗时的问题，本文提出了一种可扩展的偏振辅助方法，采用低成本的采集工具。通过在现成的RGB相机上加装线性偏振片，无需预先校准或精确测量偏振片角度即可获取多视角偏振图像，显著降低了系统构建成本。所提方法将偏振BRDF、斯托克斯矢量及物体表面偏振状态表示为神经隐式场，结合偏振片角度，通过优化输入偏振图像的渲染损失来检索这些场。通过利用偏振渲染的隐式表示基本物理原理，该方法在公开数据集和真实捕获图像的重建与新视角合成实验中均展现出优于现有技术的性能。"
+  },
+  {
+    "arxiv_id": "2504.04319v1",
+    "title": "Geo-OLM: Enabling Sustainable Earth Observation Studies with\n  Cost-Efficient Open Language Models & State-Driven Workflows",
+    "abstract": "Geospatial Copilots hold immense potential for automating Earth observation\n(EO) and climate monitoring workflows, yet their reliance on large-scale models\nsuch as GPT-4o introduces a paradox: tools intended for sustainability studies\noften incur unsustainable costs. Using agentic AI frameworks in geospatial\napplications can amass thousands of dollars in API charges or requires\nexpensive, power-intensive GPUs for deployment, creating barriers for\nresearchers, policymakers, and NGOs. Unfortunately, when geospatial Copilots\nare deployed with open language models (OLMs), performance often degrades due\nto their dependence on GPT-optimized logic. In this paper, we present Geo-OLM,\na tool-augmented geospatial agent that leverages the novel paradigm of\nstate-driven LLM reasoning to decouple task progression from tool calling. By\nalleviating the workflow reasoning burden, our approach enables low-resource\nOLMs to complete geospatial tasks more effectively. When downsizing to small\nmodels below 7B parameters, Geo-OLM outperforms the strongest prior geospatial\nbaselines by 32.8% in successful query completion rates. Our method performs\ncomparably to proprietary models achieving results within 10% of GPT-4o, while\nreducing inference costs by two orders of magnitude from \\$500-\\$1000 to under\n\\$10. We present an in-depth analysis with geospatial downstream benchmarks,\nproviding key insights to help practitioners effectively deploy OLMs for EO\napplications.",
+    "authors": [
+      "Dimitrios Stamoulis",
+      "Diana Marculescu"
+    ],
+    "published": "2025-04-06T01:31:04Z",
+    "updated": "2025-04-06T01:31:04Z",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "page_url": "http://arxiv.org/abs/2504.04319v1",
+    "pdf_url": "http://arxiv.org/pdf/2504.04319v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我得仔细阅读原文，理解其内容和结构。这段摘要主要讨论地理空间Copilot工具在自动化地球观测和气候监测中的潜力，以及它们依赖大规模模型如GPT-4o带来的问题，比如成本高和性能下降。用户希望翻译保持学术术语准确，语言流畅自然，符合中文表达习惯，同时保持逻辑结构和技术细节。\n\n首先，我需要确认一些专业术语的正确翻译。例如，“Geospatial Copilots”应该翻译为“地理空间协作者”还是“地理空间助手”？根据上下文，这里可能指的是辅助工具，所以“地理空间协作者”更合适。“Earth observation”是“地球观测”，“climate monitoring”是“气候监测”。“large-scale models”翻译为“大规模模型”没问题。“GPT-4o”直接保留原名，因为是专有名词。\n\n接下来，注意句子的结构。英文中的长句在中文里可能需要拆分，以确保流畅。例如，“Using agentic AI frameworks in geospatial applications can amass thousands of dollars in API charges or requires expensive, power-intensive GPUs for deployment, creating barriers for researchers, policymakers, and NGOs.” 这句话较长，翻译时要分句，可能分成两到三个部分，确保逻辑清晰。\n\n然后，检查技术细节是否准确传达。例如，“state-driven LLM reasoning”翻译为“状态驱动的LLM推理”是否正确？“tool calling”是“工具调用”，这些术语需要保持一致。另外，数字和单位如“32.8%”、“7B parameters”要正确转换，比如“7B参数”中的B代表十亿，中文中通常用“十亿”表示，所以“70亿参数”。\n\n还要注意保持原文的逻辑关系，比如因果关系、对比关系。例如，“In this paper, we present Geo-OLM, a tool-augmented geospatial agent that leverages the novel paradigm of state-driven LLM reasoning to decouple task progression from tool calling.” 这里需要明确Geo-OLM的特点和优势，确保中文读者能理解其创新点。\n\n另外，用户提到要避免任何解释或额外内容，所以翻译时只输出结果，不添加注释。需要确保没有遗漏任何关键信息，比如成本比较部分：“reducing inference costs by two orders of magnitude from \\$500-\\$1000 to under \\$10.” 这里的“two orders of magnitude”是“两个数量级”，即成本从500-1000美元降到10美元以下，需要准确表达。\n\n最后，通读译文，检查是否符合中文表达习惯，是否有生硬或不通顺的地方。例如，“providing key insights to help practitioners effectively deploy OLMs for EO applications.” 可以翻译为“提供关键见解，帮助从业者有效部署OLMs用于地球观测应用”，这样更自然。\n\n总结一下，翻译过程中需要关注术语准确性、句子结构的调整、技术细节的传达、逻辑关系的保持，以及语言的流畅自然。确保最终译文既忠实于原文，又符合中文读者的阅读习惯。\n</think>\n\n地理空间协作者在自动化地球观测和气候监测工作流程方面具有巨大潜力，但其对GPT-4o等大规模模型的依赖引发了一个悖论：旨在可持续性研究的工具往往带来不可持续的成本。在地理空间应用中使用智能体AI框架可能产生数千美元的API费用，或需要昂贵且耗能的GPU进行部署，这对研究人员、政策制定者和非政府组织形成障碍。令人遗憾的是，当地理空间协作者部署开放语言模型（OLMs）时，由于依赖GPT优化的逻辑，其性能通常会下降。本文提出Geo-OLM，这是一种工具增强型地理空间智能体，通过状态驱动的LLM推理新范式，将任务进展与工具调用解耦。通过减轻工作流推理负担，我们的方法使低资源OLMs能更有效地完成地理空间任务。当模型规模缩小到70亿参数以下时，Geo-OLM在成功查询完成率上比最强的先前地理空间基准高出32.8%。我们的方法在性能上可与专有模型媲美，结果与GPT-4o相差不超过10%，同时将推理成本从500-1000美元降低两个数量级至10美元以下。我们通过地理空间下游基准测试进行了深入分析，为从业者有效部署OLMs用于地球观测应用提供了关键见解。"
+  },
+  {
+    "arxiv_id": "2504.00641v1",
+    "title": "Adaptive Pricing for Optimal Coordination in Networked Energy Systems\n  with Nonsmooth Cost Functions",
+    "abstract": "Incentive-based coordination mechanisms for distributed energy consumption\nhave shown promise in aligning individual user objectives with social welfare,\nespecially under privacy constraints. Our prior work proposed a two-timescale\nadaptive pricing framework, where users respond to prices by minimizing their\nlocal cost, and the system operator iteratively updates the prices based on\naggregate user responses. A key assumption was that the system cost need to\nsmoothly depend on the aggregate of the user demands. In this paper, we relax\nthis assumption by considering the more realistic model of where the cost are\ndetermined by solving a DCOPF problem with constraints. We present a\ngeneralization of the pricing update rule that leverages the generalized\ngradients of the system cost function, which may be nonsmooth due to the\nstructure of DCOPF. We prove that the resulting dynamic system converges to a\nunique equilibrium, which solves the social welfare optimization problem. Our\ntheoretical results provide guarantees on convergence and stability using tools\nfrom nonsmooth analysis and Lyapunov theory. Numerical simulations on networked\nenergy systems illustrate the effectiveness and robustness of the proposed\nscheme.",
+    "authors": [
+      "Jiayi Li",
+      "Jiale Wei",
+      "Matthew Motoki",
+      "Yan Jiang",
+      "Baosen Zhang"
+    ],
+    "published": "2025-04-01T10:51:40Z",
+    "updated": "2025-04-01T10:51:40Z",
+    "categories": [
+      "eess.SY",
+      "cs.SY"
+    ],
+    "page_url": "http://arxiv.org/abs/2504.00641v1",
+    "pdf_url": "http://arxiv.org/pdf/2504.00641v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的这个请求。用户希望将一段关于分布式能源消费激励协调机制的英文摘要翻译成中文，并且有具体的翻译要求。首先，我得仔细阅读用户提供的英文内容，确保理解其中的专业术语和学术概念。比如，像“incentive-based coordination mechanisms”、“distributed energy consumption”、“two-timescale adaptive pricing framework”这些术语，都需要准确翻译，同时保持学术严谨性。\n\n接下来，我要检查用户的要求。用户强调要保持学术术语的准确性，语言流畅自然，符合中文表达习惯，还要保持原文的逻辑结构和技术细节。这意味着我不能只是直译，而是需要在理解原文的基础上进行意译，确保专业性和可读性。同时，用户要求只输出翻译结果，不要任何解释或额外内容，所以必须严格遵守，避免添加任何注释或说明。\n\n然后，我会逐句分析英文摘要，确保每个技术细节都被正确传达。例如，“two-timescale adaptive pricing framework”翻译成“双时间尺度自适应定价框架”是否合适？“DCOPF problem”是直流最优潮流问题，这个缩写是否需要展开？用户可能希望保留缩写，但首次出现时最好给出全称，不过原文中已经提到过，可能不需要重复。需要确认上下文中的处理方式。\n\n另外，用户提到之前的假设是系统成本需要平滑依赖于用户需求的总和，现在放松了这个假设，考虑了更现实的模型，即成本由求解带有约束的DCOPF问题决定。这部分需要准确翻译，特别是“relax this assumption”和“more realistic model”这些表达，要确保中文读者能理解其中的逻辑变化。\n\n在翻译过程中，还要注意句子的连贯性和逻辑结构。例如，“We present a generalization of the pricing update rule that leverages the generalized gradients of the system cost function, which may be nonsmooth due to the structure of DCOPF.” 这句话中的“generalization”翻译成“推广”是否合适？可能需要根据上下文选择更贴切的词汇，比如“扩展”或“广义化”。同时，“generalized gradients”需要准确翻译为“广义梯度”，并解释其可能因DCOPF结构而出现的非光滑性。\n\n最后，检查整个翻译是否符合中文的学术表达习惯，比如被动语态的使用是否自然，专业术语是否一致，以及整体段落是否流畅。确保没有遗漏任何技术细节，比如“nonsmooth analysis”和“Lyapunov theory”这些理论工具的正确翻译，以及“numerical simulations”是否译为“数值模拟”或“数值仿真”。\n\n完成初稿后，我会通读一遍，对比原文，确认所有要点都已准确传达，没有偏离原意。同时，检查是否有语法错误或不通顺的地方，确保最终的翻译既专业又易于理解。这样用户的需求就能得到满足，翻译结果符合他们的学术要求。\n</think>\n\n基于激励的分布式能源消费协调机制在协调个体用户目标与社会福利方面展现出潜力，特别是在隐私约束条件下。我们之前的研究提出了一种双时间尺度自适应定价框架，其中用户通过最小化本地成本响应价格，系统运营商则根据用户响应的聚合结果迭代更新价格。一个关键假设是系统成本需平滑依赖于用户需求的总和。在本文中，我们通过考虑更现实的模型放松了这一假设，即成本由求解带有约束的直流最优潮流（DCOPF）问题决定。我们提出了定价更新规则的推广形式，该规则利用了系统成本函数的广义梯度（由于DCOPF的结构特性，成本函数可能呈现非光滑性）。我们证明了由此产生的动态系统将收敛于唯一均衡点，该均衡点可解决社会福利优化问题。理论结果通过非光滑分析和李雅普诺夫理论工具，提供了收敛性和稳定性的严格保证。数值模拟在互联能源系统上的实验验证了所提方案的有效性和鲁棒性。"
+  },
+  {
+    "arxiv_id": "2503.22910v1",
+    "title": "Concept and Demonstration of a Low-cost Compact Electron Microscope\n  Enabled by a Photothermionic Carbon Nanotube Cathode",
+    "abstract": "The scanning electron microscope (SEM) delivers high resolution, high depth\nof focus and an image quality as if microscopic objects are seen by the naked\neye. This makes it not only a powerful scientific instrument, but a tool\ninherently applicable to nearly all fields of study and curiosity involving the\nsmall scale. However, SEMs have remained complex, expensive, and beyond the\nreach of many. To broaden access, we demonstrate an SEM using simple, low-cost,\noff-the-shelf components, and hobby-level electromechanics; this has been\nenabled by a unique thermionic electron source based on a carbon nanotube array\nexcited by low optical power. The instrument offers sub-micrometer resolution,\na depth of focus of several hundred micrometers, and an image quality\ncomparable to commercial SEMs; it also tolerates poor vacuum and moist\nspecimens, making it broadly applicable. It has a flexible design that lends\nitself to easy customization for different use scenarios. We provide the\nconceptual approach and high-level design in this paper; the detailed\nblueprints of our specific implementation will be provided separately online.\nWe hope that specialists and non-specialists alike will build variations that\nfit their own needs and interests, helping electron microscopy expand into\ndiverse new sectors of society and industry.",
+    "authors": [
+      "Casimir Kuzyk",
+      "Alexander Dimitrakopoulos",
+      "Alireza Nojeh"
+    ],
+    "published": "2025-03-28T23:26:14Z",
+    "updated": "2025-03-28T23:26:14Z",
+    "categories": [
+      "physics.app-ph",
+      "cond-mat.mes-hall",
+      "physics.ins-det",
+      "physics.optics"
+    ],
+    "page_url": "http://arxiv.org/abs/2503.22910v1",
+    "pdf_url": "http://arxiv.org/pdf/2503.22910v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的翻译要求，确保完全理解他们的需求。用户强调要保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节。此外，只输出翻译结果，不要包含任何解释或额外内容。\n\n接下来，我会通读提供的英文摘要，理解其内容和结构。这段摘要主要介绍了一种新型的扫描电子显微镜（SEM），使用低成本、现成的组件和业余级机电设备，基于碳纳米管阵列的热阴极电子源，具有高分辨率、大景深和良好的图像质量，适用于多种场景。用户希望翻译后的中文能够准确传达这些技术细节，同时保持学术严谨性。\n\n在翻译过程中，我需要特别注意专业术语的准确性。例如，“scanning electron microscope (SEM)”应译为“扫描电子显微镜（SEM）”，确保缩写保留。同时，“thermionic electron source”翻译为“热阴极电子源”是正确的，而“carbon nanotube array”则是“碳纳米管阵列”。这些术语在学术领域有固定译法，必须准确无误。\n\n接下来是句子的结构和流畅性。英文中的长句在中文中可能需要拆分，以符合中文的表达习惯。例如，“This makes it not only a powerful scientific instrument, but a tool inherently applicable to nearly all fields of study and curiosity involving the small scale.” 这句话在中文中可以调整为“这不仅使其成为一种强大的科学仪器，也成为几乎所有涉及微小尺度的研究和探索领域中固有的工具。”这样既保持了原意，又使句子更通顺。\n\n另外，要注意技术细节的准确传达。例如，“sub-micrometer resolution”应译为“亚微米级分辨率”，“depth of focus of several hundred micrometers”则是“景深可达数百微米”。这些技术参数必须精确，不能有歧义。\n\n用户还提到要保持原文的逻辑结构，因此需要确保翻译后的段落顺序和逻辑关系与原文一致。例如，原文先介绍SEM的优点，再指出其传统上的问题，接着介绍新设计的解决方案，最后说明其应用和提供的资料。翻译时需按照这一逻辑展开，避免打乱顺序。\n\n同时，用户要求只输出翻译结果，不添加任何解释或额外内容。因此，在翻译完成后，我需要检查是否有任何额外的说明或注释，确保只保留翻译后的中文内容。\n\n最后，我会通读整个翻译，检查语言是否流畅自然，是否符合中文的表达习惯，同时确保所有技术术语和数据准确无误。例如，“hobby-level electromechanics”翻译为“业余级机电设备”是否恰当，或者是否有更合适的译法。此外，确认句子之间的衔接是否自然，没有语法错误或不通顺的地方。\n\n完成这些步骤后，我会将最终的翻译结果提交给用户，确保满足所有要求，并且内容准确、专业，符合学术翻译的标准。\n</think>\n\n扫描电子显微镜（SEM）具有高分辨率、大景深以及接近肉眼观察微观物体的图像质量，这不仅使其成为强大的科学仪器，也成为几乎所有涉及微小尺度的研究和探索领域中固有的工具。然而，SEM设备始终存在结构复杂、成本高昂且难以普及的问题。为扩大其可及性，我们展示了一种采用简单、低成本现成组件和业余级机电设备构建的SEM，其核心创新在于基于碳纳米管阵列的热阴极电子源，该电子源仅需低光学功率即可激发。该仪器可实现亚微米级分辨率、数百微米的景深，且图像质量可与商业SEM媲美；同时其对真空条件和湿润样品具有良好的耐受性，具备广泛适用性。该设计具有高度灵活性，可根据不同应用场景进行便捷定制。本文提供了该装置的概念框架和总体设计，具体实施的详细图纸将另行在线发布。我们期待专业人员和非专业用户都能根据自身需求和兴趣构建不同版本，从而推动电子显微技术拓展至更多社会和工业领域。"
+  },
+  {
+    "arxiv_id": "2503.15753v1",
+    "title": "CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based\n  Heterogeneous systems",
+    "abstract": "With the increasing prevalence of chiplet systems in high-performance\ncomputing applications, the number of design options has increased\ndramatically. Instead of chips defaulting to a single die design, now there are\noptions for 2.5D and 3D stacking along with a plethora of choices regarding\nconfigurations and processes. For chiplet-based designs, high-impact decisions\nsuch as those regarding the number of chiplets, the design partitions, the\ninterconnect types, and other factors must be made early in the development\nprocess. In this work, we describe an open-source tool, CATCH, that can be used\nto guide these early design choices. We also present case studies showing some\nof the insights we can draw by using this tool. We look at case studies on\noptimal chip size, defect density, test cost, IO types, assembly processes, and\nsubstrates.",
+    "authors": [
+      "Alexander Graening",
+      "Jonti Talukdar",
+      "Saptadeep Pal",
+      "Krishnendu Chakrabarty",
+      "Puneet Gupta"
+    ],
+    "published": "2025-03-20T00:07:10Z",
+    "updated": "2025-03-20T00:07:10Z",
+    "categories": [
+      "cs.AR"
+    ],
+    "page_url": "http://arxiv.org/abs/2503.15753v1",
+    "pdf_url": "http://arxiv.org/pdf/2503.15753v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于芯片系统设计的英文摘要。首先，我需要仔细阅读原文，理解每个技术术语和句子的意思。比如“chiplet systems”应该翻译为“小芯片系统”，这是当前高算力应用中的热点话题。接下来，“2.5D and 3D stacking”需要准确处理，通常译为“2.5D和3D堆叠技术”。\n\n然后，注意保持学术术语的准确性，比如“design partitions”翻译成“设计划分”比较合适。用户提到要符合中文表达习惯，所以句子结构可能需要调整，比如将长句拆分成更易读的短句。例如原文中的“high-impact decisions such as those regarding the number of chiplets, the design partitions, the interconnect types, and other factors must be made early in the development process.”可以拆分成几个分句，使逻辑更清晰。\n\n还要检查是否有专业术语需要统一，比如“CATCH”作为工具名称，保留英文并加注释可能更合适，但用户要求只输出翻译结果，所以直接保留。另外，案例研究中的“defect density”译为“缺陷密度”，“test cost”是“测试成本”，这些都要确保准确。\n\n最后，通读译文，确保流畅自然，没有遗漏技术细节。比如“substrates”翻译为“基板”是正确的。同时，保持原文的逻辑结构，比如先介绍背景，再描述工具，最后展示案例研究。这样用户的需求就能得到满足，翻译既准确又符合学术规范。\n</think>\n\n随着小芯片系统在高性能计算应用中的日益普及，设计选项的数量急剧增加。与传统单芯片设计相比，当前已出现2.5D和3D堆叠技术，并在配置方案和工艺选择方面提供了大量可能性。针对基于小芯片的设计，开发初期必须就芯片数量、设计划分、互连类型等关键因素做出重要决策。本文介绍了一个开源工具CATCH，该工具可用于指导这些早期设计选择。我们通过案例研究展示了使用该工具获得的若干重要发现，包括最优芯片尺寸、缺陷密度、测试成本、IO类型、封装工艺和基板材料等方面的分析。"
+  },
+  {
+    "arxiv_id": "2503.10613v1",
+    "title": "CoSTA$\\ast$: Cost-Sensitive Toolpath Agent for Multi-turn Image Editing",
+    "abstract": "Text-to-image models like stable diffusion and DALLE-3 still struggle with\nmulti-turn image editing. We decompose such a task as an agentic workflow\n(path) of tool use that addresses a sequence of subtasks by AI tools of varying\ncosts. Conventional search algorithms require expensive exploration to find\ntool paths. While large language models (LLMs) possess prior knowledge of\nsubtask planning, they may lack accurate estimations of capabilities and costs\nof tools to determine which to apply in each subtask. Can we combine the\nstrengths of both LLMs and graph search to find cost-efficient tool paths? We\npropose a three-stage approach \"CoSTA*\" that leverages LLMs to create a subtask\ntree, which helps prune a graph of AI tools for the given task, and then\nconducts A* search on the small subgraph to find a tool path. To better balance\nthe total cost and quality, CoSTA* combines both metrics of each tool on every\nsubtask to guide the A* search. Each subtask's output is then evaluated by a\nvision-language model (VLM), where a failure will trigger an update of the\ntool's cost and quality on the subtask. Hence, the A* search can recover from\nfailures quickly to explore other paths. Moreover, CoSTA* can automatically\nswitch between modalities across subtasks for a better cost-quality trade-off.\nWe build a novel benchmark of challenging multi-turn image editing, on which\nCoSTA* outperforms state-of-the-art image-editing models or agents in terms of\nboth cost and quality, and performs versatile trade-offs upon user preference.",
+    "authors": [
+      "Advait Gupta",
+      "NandaKiran Velaga",
+      "Dang Nguyen",
+      "Tianyi Zhou"
+    ],
+    "published": "2025-03-13T17:55:45Z",
+    "updated": "2025-03-13T17:55:45Z",
+    "categories": [
+      "cs.CV"
+    ],
+    "page_url": "http://arxiv.org/abs/2503.10613v1",
+    "pdf_url": "http://arxiv.org/pdf/2503.10613v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个技术术语和整体结构。用户提到的是关于文本到图像模型在多轮图像编辑中的挑战，以及他们提出的CoSTA*方法。我需要确保翻译后的中文准确传达这些学术概念。\n\n接下来，我要注意用户的具体要求：保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节。这意味着我需要选择合适的中文术语，比如“multi-turn image editing”翻译为“多轮图像编辑”比较合适。同时，像“tool paths”这样的术语可能需要译为“工具路径”或“工具使用路径”，需要根据上下文确定最准确的表达。\n\n然后，我会逐句翻译，确保每个技术细节不被遗漏。例如，“Conventional search algorithms require expensive exploration to find tool paths.” 这里“expensive exploration”可能指的是计算成本高，所以翻译为“高昂的探索成本”比较贴切。同时，要注意句子的连贯性，比如“Can we combine the strengths of both LLMs and graph search to find cost-efficient tool paths?” 这个问题句需要保持疑问语气，同时用中文自然表达。\n\n在处理像CoSTA*这样的专有名词时，需要保留原名，并在首次出现时适当解释，但用户要求只输出翻译结果，所以可能不需要额外解释，直接保留即可。另外，用户提到的“vision-language model (VLM)”需要准确翻译为“视觉-语言模型”，并确保缩写首次出现时有括号注明。\n\n还要注意一些细节，比如“three-stage approach”翻译为“三阶段方法”，“subtask tree”译为“子任务树”等。同时，检查是否有长句需要拆分，以符合中文的阅读习惯。例如，原文中的长句可能需要分成两句，确保逻辑清晰。\n\n最后，通读整个翻译，确保没有遗漏任何信息，术语一致，语句通顺。比如检查“cost-efficient tool paths”是否准确译为“成本高效的工具路径”，以及“cost-quality trade-off”是否译为“成本与质量的权衡”。同时，确认所有技术流程的描述，如A*搜索、子任务评估和失败处理机制，都准确无误地传达出来。\n\n完成这些步骤后，确保只输出翻译结果，不添加任何额外内容或解释，完全符合用户的要求。\n</think>\n\n当前文本到图像生成模型（如Stable Diffusion和DALLE-3）在多轮图像编辑任务中仍面临挑战。我们提出将此类任务解构为工具使用的智能代理工作流（路径），通过不同成本的AI工具序列处理子任务。传统搜索算法需要高昂的探索成本才能找到工具路径。虽然大语言模型（LLMs）具备子任务规划的先验知识，但可能缺乏对工具能力和成本的精确估计，难以确定每个子任务应使用的工具。我们能否结合LLMs与图搜索的优势，找到成本高效的工具路径？本文提出三阶段方法\"CoSTA*\"：首先利用LLMs构建子任务树，辅助剪枝AI工具图谱；随后在小型子图上执行A*搜索确定工具路径。为更好平衡总成本与质量，CoSTA*将每个子任务的工具成本与质量指标结合，引导A*搜索。每个子任务的输出由视觉-语言模型（VLM）评估，失败将触发该工具在子任务上的成本与质量更新，使A*搜索能快速恢复并探索其他路径。此外，CoSTA*可在子任务间自动切换模态，实现更优的成本-质量权衡。我们在构建的多轮图像编辑基准测试中验证了CoSTA*，其在成本与质量指标上均优于现有最先进的图像编辑模型或代理系统，并能根据用户偏好实现灵活的权衡策略。"
+  },
+  {
+    "arxiv_id": "2503.13470v1",
+    "title": "Multimodal Lead-Specific Modeling of ECG for Low-Cost Pulmonary\n  Hypertension Assessment",
+    "abstract": "Pulmonary hypertension (PH) is frequently underdiagnosed in low- and\nmiddle-income countries (LMICs) primarily due to the scarcity of advanced\ndiagnostic tools. Several studies in PH have applied machine learning to\nlow-cost diagnostic tools like 12-lead ECG (12L-ECG), but they mainly focus on\nareas with limited resources, overlooking areas with no diagnostic tools, such\nas rural primary healthcare in LMICs. Recent studies have shown the\neffectiveness of 6-lead ECG (6L-ECG), as a cheaper and portable alternative in\ndetecting various cardiac conditions, but its clinical value for PH detection\nis not well proved. Furthermore, existing methods treat 12L-/6L-ECG as a single\nmodality, capturing only shared features while overlooking lead-specific\nfeatures essential for identifying complex cardiac hemodynamic changes. In this\npaper, we propose Lead-Specific Electrocardiogram Multimodal Variational\nAutoencoder (LS-EMVAE), a model pre-trained on large-population 12L-ECG data\nand fine-tuned on task-specific data (12L-ECG or 6L-ECG). LS-EMVAE models each\n12L-ECG lead as a separate modality and introduces a hierarchical expert\ncomposition using Mixture and Product of Experts for adaptive latent feature\nfusion between lead-specific and shared features. Unlike existing approaches,\nLS-EMVAE makes better predictions on both 12L-ECG and 6L-ECG at inference,\nmaking it an equitable solution for areas with limited or no diagnostic tools.\nWe pre-trained LS-EMVAE on 800,000 publicly available 12L-ECG samples and\nfine-tuned it for two tasks: 1) PH detection and 2) phenotyping\npre-/post-capillary PH, on in-house datasets of 892 and 691 subjects across\n12L-ECG and 6L-ECG settings. Extensive experiments show that LS-EMVAE\noutperforms existing baselines in both ECG settings, while 6L-ECG achieves\nperformance comparable to 12L-ECG, unlocking its potential for global PH\nscreening in areas without diagnostic tools.",
+    "authors": [
+      "Mohammod N. I. Suvon",
+      "Shuo Zhou",
+      "Prasun C. Tripathi",
+      "Wenrui Fan",
+      "Samer Alabed",
+      "Bishesh Khanal",
+      "Venet Osmani",
+      "Andrew J. Swift",
+      " Chen",
+      " Chen",
+      "Haiping Lu"
+    ],
+    "published": "2025-03-03T16:16:38Z",
+    "updated": "2025-03-03T16:16:38Z",
+    "categories": [
+      "eess.SP",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2503.13470v1",
+    "pdf_url": "http://arxiv.org/pdf/2503.13470v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于肺动脉高压和ECG机器学习的英文摘要。首先，我需要确保学术术语的准确性，比如“pulmonary hypertension”要翻译成“肺动脉高压”，“machine learning”是“机器学习”。然后要注意句子的流畅性，符合中文的表达习惯，比如调整语序，避免直译导致的生硬。\n\n接下来，用户提到现有的研究主要集中在资源有限的地区，而忽略了没有诊断工具的地区，比如低收入国家的农村初级卫生保健。这里需要明确“LMICs”是“低收入和中等收入国家”，确保缩写首次出现时有全称。同时，“6-lead ECG”和“12-lead ECG”要准确翻译为“6导联心电图”和“12导联心电图”，并注意导联的正确术语。\n\n然后，用户提出的新模型LS-EMVAE，需要正确翻译模型名称，并解释其结构，比如“Mixture and Product of Experts”翻译为“专家混合与乘积”。这里要注意技术细节的准确性，比如“hierarchical expert composition”要处理为“层次化专家组合”。\n\n用户还提到实验部分，使用了80万份公开数据和两个任务的数据集，需要确保数字和任务描述的准确性。最后，结论部分要突出模型在两种ECG设置下的表现，以及6导联ECG的潜力，确保逻辑结构清晰。\n\n检查是否有遗漏的技术点，比如“latent feature fusion”翻译为“潜在特征融合”，确保专业术语正确。同时，注意句子的连贯性，比如“unlocking its potential”翻译为“释放其潜力”是否合适。最后通读一遍，确保没有语法错误，符合学术论文的正式语气。\n</think>\n\n肺动脉高压（PH）在低收入和中等收入国家（LMICs）中常被漏诊，主要原因是先进诊断工具的匮乏。尽管已有研究将机器学习应用于低成本诊断工具如12导联心电图（12L-ECG）的PH检测，但这些研究主要聚焦于资源受限地区，忽视了如LMICs农村基层医疗机构等完全缺乏诊断工具的区域。近期研究表明，6导联心电图（6L-ECG）作为更经济且便携的替代方案在检测多种心脏疾病方面具有有效性，但其在PH检测中的临床价值尚未得到充分验证。此外，现有方法将12L-/6L-ECG视为单一模态，仅捕捉共享特征而忽略了对复杂心脏血流动力学变化识别至关重要的导联特异性特征。本文提出导联特异性心电图多模态变分自编码器（LS-EMVAE），该模型基于大规模人群12L-ECG数据进行预训练，并针对特定任务数据（12L-ECG或6L-ECG）进行微调。LS-EMVAE将每个12L-ECG导联建模为独立模态，并通过专家混合与乘积的层次化专家组合策略，实现导联特异性特征与共享特征之间的自适应潜在特征融合。与现有方法不同，LS-EMVAE在推理阶段对12L-ECG和6L-ECG均能实现更优预测，为诊断工具匮乏或完全缺失的地区提供公平解决方案。我们在80万份公开12L-ECG样本上预训练LS-EMVAE，并针对两个任务进行微调：1）PH检测；2）毛细血管前/后PH表型分类，在包含892和691名受试者的12L-ECG和6L-ECG数据集上进行验证。大量实验表明，LS-EMVAE在两种心电图设置中均优于现有基线方法，同时6L-ECG的性能可与12L-ECG媲美，释放其在全球无诊断工具地区开展PH筛查的潜力。"
+  },
+  {
+    "arxiv_id": "2502.14885v1",
+    "title": "Pulmonary Tuberculosis Edge Diagnosis System Based on MindSpore\n  Framework: Low-cost and High-precision Implementation with Ascend 310 Chip",
+    "abstract": "Pulmonary Tuberculosis (PTB) remains a major challenge for global health,\nespecially in areas with poor medical resources, where access to specialized\nmedical knowledge and diagnostic tools is limited. This paper presents an\nauxiliary diagnosis system for pulmonary tuberculosis based on Huawei MindSpore\nframework and Ascend310 edge computing chip. Using MobileNetV3 architecture and\nSoftmax cross entropy loss function with momentum optimizer. The system\noperates with FP16 hybrid accuracy on the Orange pie AIPro (Atlas 200 DK) edge\ndevice and performs well. In the test set containing 4148 chest images, the\nmodel accuracy reached 99.1\\% (AUC = 0.99), and the equipment cost was\ncontrolled within \\$150, providing affordable AI-assisted diagnosis scheme for\nprimary care.",
+    "authors": [
+      "HaoYu Li"
+    ],
+    "published": "2025-02-15T15:05:21Z",
+    "updated": "2025-02-15T15:05:21Z",
+    "categories": [
+      "eess.IV",
+      "cs.CV"
+    ],
+    "page_url": "http://arxiv.org/abs/2502.14885v1",
+    "pdf_url": "http://arxiv.org/pdf/2502.14885v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的这个翻译请求。首先，用户希望将一段关于肺结核辅助诊断系统的英文摘要翻译成中文。用户的要求很明确，要保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节，只输出翻译结果，不要任何解释或额外内容。\n\n首先，我需要通读原文，理解每个部分的内容。原文主要介绍了基于华为MindSpore框架和Ascend310边缘计算芯片的肺结核辅助诊断系统。使用了MobileNetV3架构和Softmax交叉熵损失函数，动量优化器。系统在Orange pie AIPro（Atlas 200 DK）边缘设备上以FP16混合精度运行，测试集准确率达到99.1%，AUC为0.99，设备成本控制在150美元以内，为基层医疗提供经济的AI辅助诊断方案。\n\n接下来，我需要确保专业术语的准确翻译。例如，“Pulmonary Tuberculosis (PTB)”应译为“肺结核（PTB）”，“Huawei MindSpore framework”是“华为MindSpore框架”，“Ascend310 edge computing chip”是“Ascend310边缘计算芯片”。这些术语在学术论文中常见，必须准确无误。\n\n然后，注意技术细节的保留。例如，“MobileNetV3 architecture”翻译为“MobileNetV3架构”，“Softmax cross entropy loss function with momentum optimizer”处理为“Softmax交叉熵损失函数结合动量优化器”。这里要注意动词的使用，比如“结合”比“和”更符合中文技术文档的表达习惯。\n\n关于系统运行部分，“FP16 hybrid accuracy”需要准确翻译为“FP16混合精度”，而“Orange pie AIPro (Atlas 200 DK) edge device”应译为“Orange pie AIPro（Atlas 200 DK）边缘设备”。括号内的型号需要保留，确保读者能准确识别设备型号。\n\n测试结果部分，“model accuracy reached 99.1% (AUC = 0.99)”翻译为“模型准确率达到99.1%（AUC = 0.99）”，这里要注意百分比和括号内的指标是否正确对应。同时，“equipment cost was controlled within \\$150”需要处理为“设备成本控制在150美元以内”，注意货币符号和单位的正确转换。\n\n另外，用户提到要符合中文表达习惯，所以需要调整句子结构。例如，原文中的“where access to specialized medical knowledge and diagnostic tools is limited”可以译为“医疗资源匮乏地区，专业医疗知识和诊断工具获取受限”，这样更符合中文的表达方式，同时保持原意。\n\n还要检查逻辑结构是否连贯。原文先介绍问题，再提出解决方案，接着描述方法和结果，最后总结优势。翻译时要确保各部分衔接自然，比如使用“本文提出”、“基于”、“采用”等连接词，使中文读者能够顺畅理解。\n\n最后，确保没有添加任何额外内容，只输出翻译结果。检查是否有遗漏的技术细节，比如“FP16混合精度”是否准确，设备型号是否正确保留，以及数字和单位的格式是否符合中文习惯。例如，美元符号应放在数字后面，使用“150美元”而不是“$150”。\n\n总结来说，翻译过程中需要兼顾专业术语的准确性、技术细节的完整保留、中文表达的流畅性，以及逻辑结构的清晰性。同时，严格遵守用户的要求，不添加任何解释或额外内容，确保输出仅包含翻译后的中文摘要。\n</think>\n\n肺结核（PTB）仍是全球健康领域面临的主要挑战，特别是在医疗资源匮乏地区，专业医疗知识和诊断工具获取受限。本文提出基于华为MindSpore框架与Ascend310边缘计算芯片的肺结核辅助诊断系统。系统采用MobileNetV3架构，结合Softmax交叉熵损失函数与动量优化器，在Orange pie AIPro（Atlas 200 DK）边缘设备上以FP16混合精度运行，表现出优异性能。在包含4148张胸部影像的测试集中，模型准确率达到99.1%（AUC = 0.99），设备成本控制在150美元以内，为基层医疗提供了经济可行的AI辅助诊断方案。"
+  },
+  {
+    "arxiv_id": "2502.03200v1",
+    "title": "CORTEX: A Cost-Sensitive Rule and Tree Extraction Method",
+    "abstract": "Tree-based and rule-based machine learning models play pivotal roles in\nexplainable artificial intelligence (XAI) due to their unique ability to\nprovide explanations in the form of tree or rule sets that are easily\nunderstandable and interpretable, making them essential for applications in\nwhich trust in model decisions is necessary. These transparent models are\ntypically used in surrogate modeling, a post-hoc XAI approach for explaining\nthe logic of black-box models, enabling users to comprehend and trust complex\npredictive systems while maintaining competitive performance. This study\nproposes the Cost-Sensitive Rule and Tree Extraction (CORTEX) method, a novel\nrule-based XAI algorithm grounded in the multi-class cost-sensitive decision\ntree (CSDT) method. The original version of the CSDT is extended to\nclassification problems with more than two classes by inducing the concept of\nan n-dimensional class-dependent cost matrix. The performance of CORTEX as a\nrule-extractor XAI method is compared to other post-hoc tree and rule\nextraction methods across several datasets with different numbers of classes.\nSeveral quantitative evaluation metrics are employed to assess the\nexplainability of generated rule sets. Our findings demonstrate that CORTEX is\ncompetitive with other tree-based methods and can be superior to other\nrule-based methods across different datasets. The extracted rule sets suggest\nthe advantages of using the CORTEX method over other methods by producing\nsmaller rule sets with shorter rules on average across datasets with a diverse\nnumber of classes. Overall, the results underscore the potential of CORTEX as a\npowerful XAI tool for scenarios that require the generation of clear,\nhuman-understandable rules while maintaining good predictive performance.",
+    "authors": [
+      "Marija Kopanja",
+      "Miloš Savić",
+      "Luca Longo"
+    ],
+    "published": "2025-02-05T14:20:34Z",
+    "updated": "2025-02-05T14:20:34Z",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2502.03200v1",
+    "pdf_url": "http://arxiv.org/pdf/2502.03200v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的翻译要求，确保完全理解他们的需求。用户强调学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节，只输出翻译结果，不要任何解释或额外内容。\n\n接下来，我需要通读英文摘要，理解其内容和结构。摘要主要讨论基于树和规则的机器学习模型在可解释人工智能（XAI）中的应用，特别是提出了一种新的方法CORTEX，并与其他方法进行了比较。这里有很多专业术语，比如“explainable artificial intelligence (XAI)”、“surrogate modeling”、“post-hoc XAI approach”、“multi-class cost-sensitive decision tree (CSDT)”等，需要准确翻译，同时保持术语的一致性。\n\n首先处理第一句：“Tree-based and rule-based machine learning models play pivotal roles in explainable artificial intelligence (XAI) due to their unique ability to provide explanations in the form of tree or rule sets that are easily understandable and interpretable, making them essential for applications in which trust in model decisions is necessary.” 这里“pivotal roles”可以译为“关键作用”，“unique ability”是“独特能力”，“easily understandable and interpretable”需要找到合适的中文表达，比如“易于理解和解释”。后半句的“making them essential for applications...”要处理成中文的因果关系，可能用“因此在需要信任模型决策的应用中至关重要”。\n\n接下来，“These transparent models are typically used in surrogate modeling, a post-hoc XAI approach for explaining the logic of black-box models, enabling users to comprehend and trust complex predictive systems while maintaining competitive performance.” 这里“transparent models”是“透明模型”，“surrogate modeling”译为“替代建模”，“post-hoc XAI approach”是“事后XAI方法”，“black-box models”是“黑箱模型”。需要确保这些术语在中文中准确且符合学术习惯。\n\n然后，“This study proposes the Cost-Sensitive Rule and Tree Extraction (CORTEX) method, a novel rule-based XAI algorithm grounded in the multi-class cost-sensitive decision tree (CSDT) method.” 这里“proposes”译为“提出”，“novel”是“新颖的”，“grounded in”可以译为“基于”。注意专有名词如CORTEX和CSDT的首字母大写需要保留，但中文中通常不使用大写，所以可能需要调整，但用户可能希望保留英文缩写。\n\n接下来，“The original version of the CSDT is extended to classification problems with more than two classes by inducing the concept of an n-dimensional class-dependent cost matrix.” 这里“extended”是“扩展”，“inducing the concept”译为“引入了...的概念”，“n-dimensional class-dependent cost matrix”需要准确翻译，可能为“n维类别依赖成本矩阵”。\n\n然后，“The performance of CORTEX as a rule-extractor XAI method is compared to other post-hoc tree and rule extraction methods across several datasets with different numbers of classes.” 这里“rule-extractor XAI method”是“规则提取XAI方法”，“compared to”译为“与...相比”，“datasets with different numbers of classes”是“不同类别数量的数据集”。\n\n接下来，“Several quantitative evaluation metrics are employed to assess the explainability of generated rule sets.” 这里“quantitative evaluation metrics”是“定量评估指标”，“explainability”译为“可解释性”，“generated rule sets”是“生成的规则集”。\n\n然后，“Our findings demonstrate that CORTEX is competitive with other tree-based methods and can be superior to other rule-based methods across different datasets.” 这里“competitive with”是“与...具有竞争力”，“superior to”是“优于”，“across different datasets”译为“在不同数据集上”。\n\n最后，“The extracted rule sets suggest the advantages of using the CORTEX method over other methods by producing smaller rule sets with shorter rules on average across datasets with a diverse number of classes. Overall, the results underscore the potential of CORTEX as a powerful XAI tool for scenarios that require the generation of clear, human-understandable rules while maintaining good predictive performance.” 这里“extracted rule sets”是“提取的规则集”，“smaller rule sets with shorter rules”译为“更小的规则集和更短的规则”，“diverse number of classes”是“不同数量的类别”，“underscore the potential”是“强调了潜力”，“powerful XAI tool”是“强大的XAI工具”，“scenarios that require...”译为“需要...的场景”。\n\n在翻译过程中，需要注意句子的连贯性和逻辑性，确保技术细节不丢失。例如，“inducing the concept of an n-dimensional class-dependent cost matrix”需要准确表达引入新概念的动作。同时，保持专业术语的一致性，如“post-hoc”在XAI领域通常译为“事后”或“事后分析”，这里可能需要根据上下文选择最合适的译法。\n\n另外，用户要求只输出翻译结果，不要任何解释或额外内容，因此需要确保翻译后的文本直接呈现，没有添加任何注释或说明。最后，检查整个翻译是否流畅，是否符合中文的学术表达习惯，确保没有语法错误或不通顺的地方。\n</think>\n\n基于树和规则的机器学习模型在可解释人工智能（XAI）中发挥关键作用，因其具备通过树结构或规则集形式提供解释的独特能力，这些解释易于理解和解释，因此在需要信任模型决策的应用场景中至关重要。这些透明模型通常用于替代建模，这是一种事后XAI方法，用于解释黑箱模型的逻辑，使用户能够在保持竞争性能的同时理解并信任复杂的预测系统。本研究提出了一种新的基于规则的XAI算法——成本敏感规则与树提取（CORTEX）方法，该方法基于多类成本敏感决策树（CSDT）方法。原始CSDT方法通过引入n维类别依赖成本矩阵的概念，被扩展至处理多于两个类别的分类问题。作为规则提取XAI方法，CORTEX的性能在多个具有不同类别数量的数据集上与其它事后树和规则提取方法进行了比较。采用多种定量评估指标对生成规则集的可解释性进行评估。研究结果表明，CORTEX在不同数据集上与其它树方法具有竞争力，且在某些情况下优于其他规则方法。提取的规则集显示，与其它方法相比，CORTEX在具有不同类别数量的数据集上平均生成更小的规则集和更短的规则，体现了其优势。总体而言，结果强调了CORTEX作为强大XAI工具的潜力，适用于需要生成清晰、人类可理解规则同时保持良好预测性能的场景。"
+  },
+  {
+    "arxiv_id": "2501.19282v1",
+    "title": "Low-Cost and Comprehensive Non-textual Input Fuzzing with\n  LLM-Synthesized Input Generators",
+    "abstract": "Modern software often accepts inputs with highly complex grammars. Recent\nadvances in large language models (LLMs) have shown that they can be used to\nsynthesize high-quality natural language text and code that conforms to the\ngrammar of a given input format. Nevertheless, LLMs are often incapable or too\ncostly to generate non-textual outputs, such as images, videos, and PDF files.\nThis limitation hinders the application of LLMs in grammar-aware fuzzing.\n  We present a novel approach to enabling grammar-aware fuzzing over\nnon-textual inputs. We employ LLMs to synthesize and also mutate input\ngenerators, in the form of Python scripts, that generate data conforming to the\ngrammar of a given input format. Then, non-textual data yielded by the input\ngenerators are further mutated by traditional fuzzers (AFL++) to explore the\nsoftware input space effectively. Our approach, namely G2FUZZ, features a\nhybrid strategy that combines a holistic search driven by LLMs and a local\nsearch driven by industrial quality fuzzers. Two key advantages are: (1) LLMs\nare good at synthesizing and mutating input generators and enabling jumping out\nof local optima, thus achieving a synergistic effect when combined with\nmutation-based fuzzers; (2) LLMs are less frequently invoked unless really\nneeded, thus significantly reducing the cost of LLM usage. We have evaluated\nG2FUZZ on a variety of input formats, including TIFF images, MP4 audios, and\nPDF files. The results show that G2FUZZ outperforms SOTA tools such as AFL++,\nFuzztruction, and FormatFuzzer in terms of code coverage and bug finding across\nmost programs tested on three platforms: UNIFUZZ, FuzzBench, and MAGMA.",
+    "authors": [
+      "Kunpeng Zhang",
+      "Zongjie Li",
+      "Daoyuan Wu",
+      "Shuai Wang",
+      "Xin Xia"
+    ],
+    "published": "2025-01-31T16:45:16Z",
+    "updated": "2025-01-31T16:45:16Z",
+    "categories": [
+      "cs.SE"
+    ],
+    "page_url": "http://arxiv.org/abs/2501.19282v1",
+    "pdf_url": "http://arxiv.org/pdf/2501.19282v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于G2FUZZ的英文摘要。首先，我需要通读原文，理解整体内容和结构。摘要主要讲的是现代软件处理复杂语法输入的问题，以及如何利用大语言模型（LLMs）和传统模糊测试工具结合的方法来提升模糊测试的效果。\n\n接下来，我要确保学术术语的准确性。比如“grammar-aware fuzzing”翻译成“语法感知模糊测试”比较合适，而“LLMs”应该保留英文缩写并在首次出现时注明中文全称。另外，“AFL++”这样的工具名不需要翻译，直接保留即可。\n\n然后，注意句子的流畅性和中文表达习惯。例如，“Nevertheless, LLMs are often incapable or too costly to generate non-textual outputs”中的“incapable or too costly”可以译为“能力不足或成本过高”，这样更符合中文的表达方式。同时，保持原文的逻辑结构，比如先提出问题，再介绍方法，最后展示结果。\n\n还要处理一些技术细节，比如“input generators”翻译为“输入生成器”，而“mutation-based fuzzers”则是“基于变异的模糊测试工具”。需要确保这些术语在学术领域中的准确性。\n\n用户可能希望这个翻译用于学术论文或技术文档，所以正式和准确是关键。同时，用户可能没有明确说明，但深层需求可能是希望翻译后的摘要能够清晰传达研究的创新点和优势，比如G2FUZZ的混合策略和成本效益。\n\n最后，检查是否有遗漏或误译的地方，比如“hybrid strategy”是否准确翻译为“混合策略”，以及结果部分的数据是否正确呈现。确保没有添加任何额外内容，只输出翻译结果，符合用户的要求。\n</think>\n\n现代软件通常接受具有高度复杂语法的输入。近年来，大语言模型（LLMs）的进展表明，它们能够合成符合特定输入格式语法的高质量自然语言文本和代码。然而，LLMs在生成非文本输出（如图像、视频和PDF文件）时往往能力不足或成本过高。这一限制阻碍了LLMs在语法感知模糊测试中的应用。\n\n我们提出了一种新颖的方法，通过非文本输入实现语法感知模糊测试。我们利用LLMs合成并变异输入生成器（以Python脚本形式），这些生成器可生成符合给定输入格式语法的数据。随后，由输入生成器产生的非文本数据通过传统模糊测试工具（AFL++）进行进一步变异，从而有效探索软件输入空间。我们的方法G2FUZZ采用混合策略，结合了LLMs驱动的整体搜索和工业级模糊测试工具驱动的局部搜索。其两大核心优势为：（1）LLMs擅长合成和变异输入生成器，能够跳出局部最优，与基于变异的模糊测试工具形成协同效应；（2）LLMs仅在必要时被调用，显著降低了LLM使用成本。我们在多种输入格式（包括TIFF图像、MP4音频和PDF文件）上评估了G2FUZZ。结果表明，G2FUZZ在UNIFUZZ、FuzzBench和MAGMA三个平台测试的大多数程序中，均在代码覆盖率和漏洞发现方面优于AFL++、Fuzztruction和FormatFuzzer等现有最优工具。"
+  },
+  {
+    "arxiv_id": "2501.17176v3",
+    "title": "Prompt-Based Cost-Effective Evaluation and Operation of ChatGPT as a\n  Computer Programming Teaching Assistant",
+    "abstract": "The dream of achieving a student-teacher ratio of 1:1 is closer than ever\nthanks to the emergence of large language models (LLMs). One potential\napplication of these models in the educational field would be to provide\nfeedback to students in university introductory programming courses, so that a\nstudent struggling to solve a basic implementation problem could seek help from\nan LLM available 24/7. This article focuses on studying three aspects related\nto such an application. First, the performance of two well-known models,\nGPT-3.5T and GPT-4T, in providing feedback to students is evaluated. The\nempirical results showed that GPT-4T performs much better than GPT-3.5T,\nhowever, it is not yet ready for use in a real-world scenario. This is due to\nthe possibility of generating incorrect information that potential users may\nnot always be able to detect. Second, the article proposes a carefully designed\nprompt using in-context learning techniques that allows automating important\nparts of the evaluation process, as well as providing a lower bound for the\nfraction of feedbacks containing incorrect information, saving time and effort.\nThis was possible because the resulting feedback has a programmatically\nanalyzable structure that incorporates diagnostic information about the LLM's\nperformance in solving the requested task. Third, the article also suggests a\npossible strategy for implementing a practical learning tool based on LLMs,\nwhich is rooted on the proposed prompting techniques. This strategy opens up a\nwhole range of interesting possibilities from a pedagogical perspective.",
+    "authors": [
+      "Marc Ballestero-Ribó",
+      "Daniel Ortiz-Martínez"
+    ],
+    "published": "2025-01-24T08:15:05Z",
+    "updated": "2025-05-04T13:32:32Z",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "page_url": "http://arxiv.org/abs/2501.17176v3",
+    "pdf_url": "http://arxiv.org/pdf/2501.17176v3",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于大语言模型在教育领域应用的英文摘要。首先，我需要通读整个摘要，理解其核心内容和结构。摘要主要讨论了GPT-3.5T和GPT-4T在编程课程反馈中的表现，以及如何通过提示工程和上下文学习技术优化评估过程，最后提出了一个实用的学习工具策略。\n\n接下来，我要确保学术术语的准确性。比如“student-teacher ratio”翻译成“师生比”比较合适；“large language models”是“大语言模型”，需要保持缩写LLM。还有“in-context learning”应该译为“上下文学习”或“情境学习”，这里根据上下文选择“上下文学习”更贴切。\n\n然后，注意句子的流畅性和中文表达习惯。英文中的被动语态在中文里可能需要调整，比如“is evaluated”可以译为“进行了评估”而不是直译成“被评估”。同时，保持逻辑结构，比如三个研究方面的分点要清晰，使用“首先”、“其次”、“第三”来引导。\n\n技术细节方面，比如“programmatically analyzable structure”要准确翻译为“可编程分析的结构”，确保技术术语不丢失原意。另外，“lower bound for the fraction of feedbacks containing incorrect information”需要处理为“错误信息反馈比例的下限”，这里可能需要调整语序，使中文更通顺。\n\n还要注意专有名词的正确翻译，如GPT-3.5T和GPT-4T保持原名，不需要翻译。最后检查整体是否符合学术论文的正式语气，同时避免直译导致的生硬。例如，“opens up a whole range of interesting possibilities”可以译为“开辟了诸多有趣的教学可能性”，既准确又自然。\n\n完成初稿后，再通读一遍，确保没有遗漏任何信息，逻辑连贯，术语一致。确认用户要求只输出翻译结果，不添加额外内容，所以不需要任何解释或注释。最终确保翻译既准确又符合中文的学术表达习惯。\n</think>\n\n实现1:1师生比的梦想因大语言模型（LLMs）的出现而前所未有地接近。这些模型在教育领域的一个潜在应用是为大学入门编程课程的学生提供反馈，使在解决基础实现问题时遇到困难的学生能够随时寻求LLM的帮助。本文重点研究了与该应用相关的三个方面。首先，对两个知名模型GPT-3.5T和GPT-4T在提供学生反馈方面的性能进行了评估。实证结果表明，GPT-4T的表现显著优于GPT-3.5T，但其在真实场景中的应用仍不成熟，因为存在生成错误信息的可能性，而用户可能难以察觉这些错误。其次，本文提出了一种精心设计的提示方案，通过上下文学习技术实现了评估过程的重要自动化环节，并为错误信息反馈比例设定了下限，从而节省了时间和精力。这得益于生成的反馈具有可编程分析的结构，其中包含了LLM在解决请求任务时的诊断信息。第三，本文还提出了一种基于LLM的实用学习工具实施策略，该策略建立在所提出的提示技术基础上，从教学视角开辟了诸多有趣的可能性。"
+  },
+  {
+    "arxiv_id": "2501.13868v1",
+    "title": "Lost in Siting: The Hidden Carbon Cost of Inequitable Residential Solar\n  Installations",
+    "abstract": "The declining cost of solar photovoltaics (PV) combined with strong federal\nand state-level incentives have resulted in a high number of residential solar\nPV installations in the US. However, these installations are concentrated in\nparticular regions, such as California, and demographics, such as high-income\nAsian neighborhoods. This inequitable distribution creates an illusion that\nfurther increasing residential solar installations will become increasingly\nchallenging. Furthermore, while the inequity in solar installations has\nreceived attention, no prior comprehensive work has been done on understanding\nwhether our current trajectory of residential solar adoption is energy- and\ncarbon-efficient. In this paper, we reveal the hidden energy and carbon cost of\nthe inequitable distribution of existing installations. Using US-based data on\ncarbon offset potential, the amount of avoided carbon emissions from using\nrooftop PV instead of electric grid energy, and the number of existing solar\ninstallations, we surprisingly observe that locations and demographics with a\nhigher carbon offset potential have fewer existing installations. For instance,\nneighborhoods with relatively higher black population have 7.4% higher carbon\noffset potential than average but 36.7% fewer installations; lower-income\nneighborhoods have 14.7% higher potential and 47% fewer installations. We\npropose several equity- and carbon-aware solar siting strategies. In evaluating\nthese strategies, we develop Sunsight, a toolkit that combines\nsimulation/visualization tools and our relevant datasets, which we are\nreleasing publicly. Our projections show that a multi-objective siting strategy\ncan address two problems at once; namely, it can improve societal outcomes in\nterms of distributional equity and simultaneously improve the carbon-efficiency\n(i.e., climate impact) of current installation trends by up to 39.8%.",
+    "authors": [
+      "Cooper Sigrist",
+      "Adam Lechowicz",
+      "Jovan Champ",
+      "Noman Bashir",
+      "Mohammad Hajiesmaili"
+    ],
+    "published": "2025-01-23T17:40:28Z",
+    "updated": "2025-01-23T17:40:28Z",
+    "categories": [
+      "cs.CE"
+    ],
+    "page_url": "http://arxiv.org/abs/2501.13868v1",
+    "pdf_url": "http://arxiv.org/pdf/2501.13868v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于太阳能光伏安装分布不均及其对碳效率影响的学术摘要。首先，我需要确保术语准确，比如“solar photovoltaics”要翻译成“太阳能光伏”，保持专业性。然后，注意句子的流畅性，比如“declining cost”翻译成“成本下降”比较自然。\n\n接下来，用户提到安装集中在特定地区和高收入亚裔社区，这里要准确传达“inequitable distribution”为“分布不均”，并确保逻辑结构清晰。用户还强调现有的研究没有关注当前太阳能采用的能源和碳效率，这部分需要明确表达“energy- and carbon-efficient”为“能源和碳效率”。\n\n在翻译数据部分时，比如“7.4% higher carbon offset potential”要准确处理百分比和比较级，确保数字和单位正确。同时，注意工具名称“Sunsight”直接保留不译，并说明其功能。最后，检查整体结构是否符合中文表达习惯，避免直译导致的生硬。确保没有遗漏任何技术细节，比如“multi-objective siting strategy”翻译成“多目标选址策略”，保持学术严谨性。完成后，通读一遍确认流畅自然，没有添加额外内容。\n</think>\n\n太阳能光伏（PV）成本的下降以及联邦和州级的激励政策促使美国住宅太阳能光伏安装数量大幅增长。然而，这些安装主要集中在特定地区（如加利福尼亚州）和特定人口群体（如高收入亚裔社区）。这种分布不均的现象导致人们误以为进一步提升住宅太阳能安装量将变得愈发困难。尽管太阳能安装的不平等性已引起关注，但目前尚无系统性研究探讨当前住宅太阳能采用趋势在能源和碳排放效率方面的表现。本文揭示了现有安装分布不均所隐藏的能源与碳排放成本。基于美国碳抵消潜力数据、屋顶光伏替代电网电力所产生的碳减排量以及现有太阳能安装数量，我们意外发现：碳抵消潜力较高的地区和人口群体反而拥有更少的安装数量。例如，黑人人口比例相对较高的社区碳抵消潜力比平均水平高7.4%，但安装数量却少36.7%；低收入社区的碳抵消潜力高14.7%，但安装数量少47%。我们提出了多项兼顾公平性与碳排放意识的太阳能选址策略。在评估这些策略时，我们开发了Sunsight工具包，该工具集成了模拟/可视化工具及相关数据集，现已公开发布。我们的预测显示，多目标选址策略能够同时解决两个问题：一方面提升分布式公平性的社会效益，另一方面可使当前安装趋势的碳排放效率（即气候影响）提高最高达39.8%。"
+  },
+  {
+    "arxiv_id": "2501.09853v1",
+    "title": "Greening the Grid: Electricity Market Clearing with Consumer-Based\n  Carbon Cost",
+    "abstract": "To enhance decarbonization efforts in electric power systems, we propose a\nnovel electricity market clearing model that internalizes the allocation of\nemissions from generations to loads and allows for consideration of\nconsumer-side carbon costs. Specifically, consumers can not only bid for power\nbut also assign a cost to the carbon emissions incurred by their electricity\nuse. These carbon costs provide consumers, ranging from carbon-agnostic to\ncarbon-sensitive, with a tool to actively manage their roles in carbon emission\nmitigation. By incorporating carbon allocation and consumer-side carbon costs,\nthe market clearing is influenced not solely by production and demand dynamics\nbut also by the allocation of carbon emission responsibilities. To demonstrate\nthe effect of our proposed model, we conduct a case study comparing market\nclearing outcomes across various percentages of carbon-sensitive consumers with\ndiffering carbon costs.",
+    "authors": [
+      "Wenqian Jiang",
+      "Line Roald"
+    ],
+    "published": "2025-01-16T21:48:24Z",
+    "updated": "2025-01-16T21:48:24Z",
+    "categories": [
+      "eess.SY",
+      "cs.SY"
+    ],
+    "page_url": "http://arxiv.org/abs/2501.09853v1",
+    "pdf_url": "http://arxiv.org/pdf/2501.09853v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段英文摘要成中文，而且有很多具体要求。首先，我需要仔细阅读原文，理解每个技术术语和句子的结构。用户提到要保持学术术语的准确性，所以像“decarbonization”、“electricity market clearing model”这些词得找对应的中文专业词汇，比如“脱碳”、“电力市场出清模型”。\n\n接下来，要确保语言流畅自然，符合中文表达习惯。比如原文中的“internalizes the allocation of emissions from generations to loads”可能需要调整语序，让中文读起来更顺。同时，保持原文的逻辑结构和技术细节，不能遗漏任何关键点，比如消费者如何参与碳成本分配。\n\n用户还特别指出不要添加任何解释或额外内容，所以翻译时必须严格忠实原文，只转换语言。另外，注意术语的一致性，比如“carbon-agnostic”和“carbon-sensitive”可能需要翻译成“碳中性”和“碳敏感”这样的术语，确保在全文中统一使用。\n\n然后，检查是否有复杂的句子结构需要拆分，比如长句可能需要分成几个短句，但又要保持原意。例如，“By incorporating carbon allocation and consumer-side carbon costs, the market clearing is influenced not solely by production and demand dynamics but also by the allocation of carbon emission responsibilities.” 这句话在中文里可能需要调整结构，使逻辑更清晰。\n\n最后，通读一遍译文，确保没有语法错误，术语准确，整体流畅。同时，确认是否只输出了翻译结果，没有加入任何额外内容。用户可能是在准备学术论文，所以准确性和专业性至关重要，必须仔细校对每一个细节。\n</think>\n\n为增强电力系统的脱碳努力，我们提出了一种新型电力市场出清模型，该模型将发电侧到负荷侧的碳排放分配内化，并允许考虑用户侧的碳成本。具体而言，消费者不仅可以申报电力需求，还可以为其用电行为产生的碳排放分配成本。这些碳成本为从碳中性到碳敏感的各类消费者提供了一种主动管理其碳减排角色的工具。通过整合碳分配机制和用户侧碳成本，市场出清过程不再仅由生产与需求动态决定，还需考虑碳排放责任的分配。为验证所提模型的效果，我们通过案例研究比较了不同碳敏感消费者比例及差异化碳成本下的市场出清结果。"
+  },
+  {
+    "arxiv_id": "2412.18405v1",
+    "title": "Generalized Mean Absolute Directional Loss as a Solution to Overfitting\n  and High Transaction Costs in Machine Learning Models Used in High-Frequency\n  Algorithmic Investment Strategies",
+    "abstract": "Regardless of the selected asset class and the level of model complexity\n(Transformer versus LSTM versus Perceptron/RNN), the GMADL loss function\nproduces superior results than standard MSE-type loss functions and has better\nnumerical properties in the context of optimization than MADL. Better results\nmean the possibility of achieving a higher risk-weighted return based on buy\nand sell signals built on forecasts generated by a given theoretical model\nestimated using the GMADL versus MSE or MADL function. In practice, GMADL\nsolves the problem of selecting the most preferable feature in both\nclassification and regression problems, improving the performance of each\nestimation. What is important is that, through additional parameterization,\nGMADL also solves the problem of optimizing investment systems on\nhigh-frequency data in such a way that they focus on strategy variants that\ncontain fewer transactions so that transaction costs do not reduce the\neffectiveness of a given strategy to zero. Moreover, the implementation\nleverages state-of-the-art machine learning tools, including frameworks for\nhyperparameter tuning, architecture testing, and walk-forward optimization,\nensuring robust and scalable solutions for real-world algorithmic trading.",
+    "authors": [
+      "Jakub Michańków",
+      "Paweł Sakowski",
+      "Robert Ślepaczuk"
+    ],
+    "published": "2024-12-24T12:51:40Z",
+    "updated": "2024-12-24T12:51:40Z",
+    "categories": [
+      "q-fin.CP",
+      "q-fin.TR"
+    ],
+    "page_url": "http://arxiv.org/abs/2412.18405v1",
+    "pdf_url": "http://arxiv.org/pdf/2412.18405v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的这个翻译请求。首先，用户希望将一段英文摘要翻译成中文，而且有具体的翻译要求。我得仔细看看这些要求，确保不遗漏任何细节。\n\n首先，用户强调要保持学术术语的准确性。这意味着我需要确认一些专业术语的正确翻译，比如“GMADL loss function”应该翻译成“GMADL损失函数”，而“MSE-type loss functions”则是“均方误差（MSE）类型的损失函数”。这些术语在机器学习领域很常见，必须准确无误。\n\n接下来是语言流畅自然，符合中文表达习惯。这需要我在翻译时调整句子结构，使其更符合中文的语序和表达方式。例如，英文中的被动语态在中文里可能需要转换为主动语态，或者调整句子的连接词，让整体读起来更顺畅。\n\n然后，保持原文的逻辑结构和技术细节。我需要确保翻译后的中文内容不仅准确，还要保留原文的逻辑顺序和技术细节。比如，原文提到GMADL在分类和回归问题中都能选择最优特征，这部分需要明确表达出来，不能因为翻译而让读者产生误解。\n\n用户还要求只输出翻译结果，不要包含任何解释或额外内容。这意味着我需要专注于翻译本身，避免添加任何注释或说明，确保输出干净整洁。\n\n现在，我需要通读用户提供的英文摘要，理解其核心内容。摘要主要讨论GMADL损失函数在不同资产类别和模型复杂度下的优越性，以及其在优化投资系统中的应用，特别是减少交易成本的影响。同时，提到了使用先进的机器学习工具来确保解决方案的稳健性和可扩展性。\n\n在翻译过程中，我会逐句处理，确保每个技术术语都正确对应。例如，“Transformer versus LSTM versus Perceptron/RNN”需要准确翻译为“Transformer、LSTM与感知机/RNN”，保持对比的结构。另外，“risk-weighted return”翻译成“风险加权回报”比较合适，符合金融领域的术语。\n\n还要注意一些细节，比如“walk-forward optimization”翻译为“走步式优化”是否正确，可能需要确认是否有更常用的中文术语。不过根据上下文，这里应该是指一种优化方法，所以“走步式优化”是合适的。\n\n最后，检查整个翻译是否流畅，是否符合中文的表达习惯。例如，原文中的“improving the performance of each estimation”翻译为“提升每次估计的性能”是否自然，可能需要调整为“提升每次估计的性能”或者“提高每次估计的效果”，但根据上下文，“性能”更贴切。\n\n完成翻译后，我会再次通读一遍，确保没有遗漏任何信息，并且所有技术术语都准确无误，逻辑结构清晰，语言流畅自然。这样用户的需求就能得到满足，翻译结果也符合学术论文的要求。\n</think>\n\n无论选择何种资产类别和模型复杂度（Transformer、LSTM与感知机/RNN），GMADL损失函数均能产生优于标准均方误差（MSE）类型损失函数的结果，并在优化过程中展现出比MADL更优越的数值特性。更优的结果意味着基于GMADL与MSE或MADL函数估计的理论模型所生成的买卖信号，能够实现更高的风险加权回报。实际上，GMADL通过额外参数化设计，不仅解决了分类和回归问题中最优特征选择的难题，还提升了每次估计的性能。值得注意的是，GMADL通过参数扩展有效解决了高频数据投资系统的优化问题，使系统更关注交易次数较少的策略变体，从而避免交易成本将策略效果削弱至零。此外，该实现方案整合了最先进的机器学习工具，包括超参数调优框架、架构测试方法和走步式优化技术，为实际算法交易提供了稳健且可扩展的解决方案。"
+  },
+  {
+    "arxiv_id": "2412.15369v1",
+    "title": "Scalable and low-cost remote lab platforms: Teaching industrial robotics\n  using open-source tools and understanding its social implications",
+    "abstract": "With recent advancements in industrial robots, educating students in new\ntechnologies and preparing them for the future is imperative. However, access\nto industrial robots for teaching poses challenges, such as the high cost of\nacquiring these robots, the safety of the operator and the robot, and\ncomplicated training material. This paper proposes two low-cost platforms built\nusing open-source tools like Robot Operating System (ROS) and its latest\nversion ROS 2 to help students learn and test algorithms on remotely connected\nindustrial robots. Universal Robotics (UR5) arm and a custom mobile rover were\ndeployed in different life-size testbeds, a greenhouse, and a warehouse to\ncreate an Autonomous Agricultural Harvester System (AAHS) and an Autonomous\nWarehouse Management System (AWMS). These platforms were deployed for a period\nof 7 months and were tested for their efficacy with 1,433 and 1,312 students,\nrespectively. The hardware used in AAHS and AWMS was controlled remotely for\n160 and 355 hours, respectively, by students over a period of 3 months.",
+    "authors": [
+      "Amit Kumar",
+      "Jaison Jose",
+      "Archit Jain",
+      "Siddharth Kulkarni",
+      "Kavi Arya"
+    ],
+    "published": "2024-12-19T20:03:13Z",
+    "updated": "2024-12-19T20:03:13Z",
+    "categories": [
+      "cs.RO"
+    ],
+    "page_url": "http://arxiv.org/abs/2412.15369v1",
+    "pdf_url": "http://arxiv.org/pdf/2412.15369v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段学术摘要，我需要仔细看看内容。首先，用户提到工业机器人的最新进展，教育学生新技术的重要性，但获取工业机器人用于教学存在挑战，比如成本高、安全性和培训材料复杂。然后他们提出了两个低成本平台，使用ROS和ROS 2开源工具，帮助学生学习和测试算法。接着是具体的应用场景，比如温室和仓库，创建了AAHS和AWMS系统，部署了7个月，测试了1433和1312名学生，硬件远程控制了160和355小时。\n\n首先，我需要确保术语准确，比如“Robot Operating System”翻译成“机器人操作系统（ROS）”，“Universal Robotics (UR5) arm”应该是“通用机器人（UR5）机械臂”。注意保持学术严谨性，比如“low-cost platforms”翻译为“低成本平台”比较合适。\n\n然后，检查逻辑结构是否连贯。原文先讲问题，再提出解决方案，接着是实验设置和结果。翻译时要保持这个顺序，确保中文读者能顺畅理解。例如，“However, access to industrial robots for teaching poses challenges”翻译成“然而，将工业机器人用于教学面临诸多挑战”比较自然。\n\n还要注意数字和单位的正确转换，比如“1,433 and 1,312 students”要保留逗号，中文中通常用顿号，但学术翻译可能保留原格式。同样，“160 and 355 hours”直接翻译为“160小时和355小时”即可。\n\n另外，注意专有名词的翻译，比如“Autonomous Agricultural Harvester System”翻译成“自主农业收获系统（AAHS）”，首字母缩写要保留，并在括号中注明中文全称。同样，“Autonomous Warehouse Management System”是“自主仓储管理系统（AWMS）”。\n\n最后，确保语句流畅，符合中文表达习惯。例如，“deployed in different life-size testbeds”可以译为“部署在不同实际尺寸的测试平台中”，而“tested for their efficacy”翻译为“测试其有效性”比较准确。\n\n检查是否有遗漏的技术细节，比如ROS 2的最新版本，是否需要特别说明。但用户要求保持原文技术细节，所以直接翻译即可。另外，时间跨度“7 months”和“3 months”要准确转换，保持原意。\n\n总结一下，我需要逐句对照，确保术语准确，结构清晰，数字正确，同时语言自然流畅。完成后，再通读一遍，确认没有语法错误或不通顺的地方。\n</think>\n\n随着工业机器人技术的最新进展，教育学生掌握新技术并为其未来发展做好准备变得至关重要。然而，将工业机器人用于教学面临诸多挑战，包括机器人采购成本高昂、操作人员与机器人安全性问题以及培训材料的复杂性。本文提出两个基于机器人操作系统（ROS）及其最新版本ROS 2构建的低成本平台，帮助学生在远程连接的工业机器人上学习和测试算法。通用机器人（UR5）机械臂和定制移动探测车分别部署在温室和仓库等不同实际尺寸的测试平台中，构建了自主农业收获系统（AAHS）和自主仓储管理系统（AWMS）。这两个平台部署持续了7个月，分别对1,433名和1,312名学生进行了有效性测试。在为期3个月的实验中，AAHS和AWMS的硬件设备分别被学生远程控制运行了160小时和355小时。"
+  },
+  {
+    "arxiv_id": "2412.01271v2",
+    "title": "MuLan: Adapting Multilingual Diffusion Models for Hundreds of Languages\n  with Negligible Cost",
+    "abstract": "In this work, we explore a cost-effective framework for multilingual image\ngeneration. We find that, unlike models tuned on high-quality images with\nmultilingual annotations, leveraging text encoders pre-trained on widely\navailable, noisy Internet image-text pairs significantly enhances data\nefficiency in text-to-image (T2I) generation across multiple languages.Based on\nthis insight, we introduce MuLan, Multi-Language adapter, a lightweight\nlanguage adapter with fewer than 20M parameters, trained alongside a frozen\ntext encoder and image diffusion model. Compared to previous multilingual T2I\nmodels, this framework offers: (1) Cost efficiency. Using readily accessible\nEnglish data and off-the-shelf multilingual text encoders minimizes the\ntraining cost; (2) High performance. Achieving comparable generation\ncapabilities in over 110 languages with CLIP similarity scores nearly matching\nthose in English (39.57 for English vs. 39.61 for other languages); and (3)\nBroad applicability. Seamlessly integrating with compatible community tools\nlike LoRA, LCM, ControlNet, and IP-Adapter, expanding its potential use cases.",
+    "authors": [
+      "Sen Xing",
+      "Muyan Zhong",
+      "Zeqiang Lai",
+      "Liangchen Li",
+      "Jiawen Liu",
+      "Yaohui Wang",
+      "Jifeng Dai",
+      "Wenhai Wang"
+    ],
+    "published": "2024-12-02T08:38:19Z",
+    "updated": "2025-06-05T10:34:56Z",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "page_url": "http://arxiv.org/abs/2412.01271v2",
+    "pdf_url": "http://arxiv.org/pdf/2412.01271v2",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的翻译要求，确保完全理解他们的需求。用户强调要保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节。此外，只输出翻译结果，不要包含任何解释或额外内容。\n\n接下来，我需要通读用户提供的英文摘要，理解其内容和结构。摘要主要介绍了一种成本效益高的多语言图像生成框架MuLan，讨论了使用预训练文本编码器和冻结模型的优势，以及该框架在成本效率、高性能和广泛适用性方面的表现。我需要确保在翻译过程中准确传达这些技术细节，尤其是涉及专业术语的部分，比如“text encoders pre-trained on widely available, noisy Internet image-text pairs”需要找到合适的中文对应词，可能翻译为“在广泛可用的、带有噪声的互联网图文对上预训练的文本编码器”。\n\n然后，我会逐句翻译，注意保持句子的逻辑关系和学术严谨性。例如，“leveraging text encoders pre-trained on widely available, noisy Internet image-text pairs significantly enhances data efficiency”需要准确表达“利用...显著提高数据效率”。同时，要确保数字和指标如“39.57 for English vs. 39.61 for other languages”正确无误地转换，并保持格式一致。\n\n还要注意用户提到的框架名称“MuLan, Multi-Language adapter”，需要保留英文名称并在括号中注明中文翻译，如“MuLan（多语言适配器）”。此外，技术术语如“LoRA, LCM, ControlNet, and IP-Adapter”应保留英文原名，因为这些是特定的技术或工具名称，通常在中文文献中也会直接使用英文缩写。\n\n在翻译过程中，我会检查是否有重复或冗余的表达，确保中文句子流畅自然。例如，原文中的“Compared to previous multilingual T2I models, this framework offers”可以翻译为“与之前的多语言文本到图像（T2I）模型相比，该框架具有以下优势：”，这样既保持了原意，又符合中文的表达习惯。\n\n最后，我会通读整个翻译，确保没有遗漏任何技术细节，并且所有要点都准确传达。同时，检查是否符合用户的所有要求，特别是只输出翻译结果，不添加任何额外内容。确认无误后，将翻译结果提交给用户。\n</think>\n\n在本研究中，我们探索了一种具有成本效益的多语言图像生成框架。我们发现，与针对高质量多语言标注图像进行调优的模型不同，利用在广泛可用的、带有噪声的互联网图文对上预训练的文本编码器，能够显著提升多语言文本到图像（T2I）生成中的数据效率。基于这一发现，我们提出了MuLan（多语言适配器），这是一个参数量少于2000万的轻量级语言适配器，与冻结的文本编码器和图像扩散模型联合训练。与之前的多语言T2I模型相比，该框架具有以下优势：（1）成本效率：通过使用现成的英语数据和开箱即用的多语言文本编码器，最大限度降低训练成本；（2）高性能：在110多种语言中实现可比的生成能力，CLIP相似度得分几乎与英语相当（英语39.57 vs. 其他语言39.61）；（3）广泛适用性：可无缝集成LoRA、LCM、ControlNet和IP-Adapter等兼容的社区工具，扩展其潜在应用场景。"
+  },
+  {
+    "arxiv_id": "2411.16313v3",
+    "title": "CATP-LLM: Empowering Large Language Models for Cost-Aware Tool Planning",
+    "abstract": "Utilizing large language models (LLMs) for tool planning has emerged as a\npromising avenue for developing general AI systems, where LLMs automatically\nschedule external tools (e.g., vision models) to tackle complex tasks based on\ntask descriptions. To push this paradigm toward practical applications, it is\ncrucial for LLMs to consider tool execution costs (e.g., execution time) for\ntool planning. Unfortunately, prior studies overlook the tool execution costs,\nleading to the generation of expensive plans whose costs outweigh their\nbenefits in terms of task performance. To fill this gap, we propose the\nCost-Aware Tool Planning with LLMs (CATP-LLM) framework, which for the first\ntime provides a coherent design to empower LLMs for cost-aware tool planning.\nSpecifically, To facilitate efficient concurrent tool execution and cost\nreduction, we design a tool planning language to enhance the LLM for creating\nmulti-branch non-sequential plans. Moreover, we propose a cost-aware offline\nreinforcement learning algorithm to fine-tune the LLM to optimize the\nperformance-cost trade-off in tool planning. In the lack of public cost-related\ndatasets, we further present OpenCATP, the first dataset for cost-aware\nplanning, which comprises 11,100 evaluation samples from diverse tasks.\nExtensive experiments show that CATP-LLM outperforms GPT-4 even when using\nLlama2-7B as its backbone, with the average improvement of 1.5%-93.9% in terms\nof plan quality. Codes and dataset are available at:\nhttps://github.com/duowuyms/OpenCATP-LLM.",
+    "authors": [
+      "Duo Wu",
+      "Jinghe Wang",
+      "Yuan Meng",
+      "Yanning Zhang",
+      "Le Sun",
+      "Zhi Wang"
+    ],
+    "published": "2024-11-25T12:05:49Z",
+    "updated": "2025-07-13T10:15:07Z",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2411.16313v3",
+    "pdf_url": "http://arxiv.org/pdf/2411.16313v3",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个术语和句子的意思。用户提到这是一个学术论文的摘要，所以翻译时要保持学术术语的准确性，同时语言要流畅自然，符合中文的表达习惯。\n\n接下来，我需要检查是否有特定的术语或缩写需要特别注意。比如“LLMs”应该翻译为“大语言模型”，而“CATP-LLM”可能需要保留英文缩写，但首次出现时要给出中文全称。另外，像“OpenCATP”这样的专有名词也需要保留，可能需要在翻译时加上注释，但用户要求不要添加额外内容，所以直接保留即可。\n\n然后，我要确保逻辑结构和技术细节不被遗漏。原文讨论了使用大语言模型进行工具规划，考虑执行成本的问题，并提出了CATP-LLM框架。这些关键点必须准确传达。例如，“cost-aware tool planning”翻译为“成本感知的工具规划”比较合适，既准确又符合中文习惯。\n\n在处理句子结构时，要注意中英文的差异。比如英文中的被动语态在中文中可能需要调整，或者将长句拆分成更短的句子，使阅读更顺畅。例如，“To push this paradigm toward practical applications, it is crucial for LLMs to consider tool execution costs”可以翻译为“要推动这一范式走向实际应用，大语言模型必须考虑工具执行成本”，这样更符合中文的表达方式。\n\n另外，用户要求只输出翻译结果，不要包含任何解释或额外内容，所以我要确保翻译后的内容没有添加任何注释或说明。同时，检查是否有遗漏的信息，比如网址和数据集名称，确保这些内容正确无误地保留。\n\n最后，通读一遍翻译后的中文内容，确保流畅自然，没有语法错误，并且所有技术细节都准确无误。确认所有术语一致，比如“tool planning”统一翻译为“工具规划”，“reinforcement learning”翻译为“强化学习”等。同时，注意数字和百分比的正确表达，如“1.5%-93.9%”应保持原样，但可能需要在中文中使用全角符号，不过用户没有特别说明，所以保持半角即可。\n\n完成这些步骤后，就可以将翻译结果输出给用户了，确保完全符合他们的要求。\n</think>\n\n利用大语言模型（LLMs）进行工具规划已成为开发通用人工智能系统的重要方向，其中LLMs能够根据任务描述自动调度外部工具（如视觉模型）以解决复杂任务。要推动这一范式走向实际应用，LLMs必须考虑工具执行成本（如执行时间）以进行工具规划。遗憾的是，现有研究忽视了工具执行成本，导致生成的规划方案成本高昂，其成本效益在任务性能上难以平衡。为解决这一问题，我们提出了首个面向成本感知的工具规划框架——基于大语言模型的成本感知工具规划框架（Cost-Aware Tool Planning with LLMs, CATP-LLM），首次系统性地设计了使LLMs具备成本感知能力的解决方案。具体而言，为实现高效的并行工具执行与成本降低，我们设计了一种工具规划语言以增强LLMs生成多分支非顺序规划的能力。此外，我们提出了一种成本感知的离线强化学习算法，通过微调LLM优化工具规划中的性能-成本权衡。在缺乏公开成本相关数据集的情况下，我们进一步构建了OpenCATP——首个面向成本感知规划的数据集，包含来自多样化任务的11,100个评估样本。大量实验表明，即使采用Llama2-7B作为基础模型，CATP-LLM在规划质量上仍显著优于GPT-4，平均提升幅度达1.5%-93.9%。代码和数据集已开源：https://github.com/duowuyms/OpenCATP-LLM"
+  },
+  {
+    "arxiv_id": "2411.15290v1",
+    "title": "GreenMachine: Automatic Design of Zero-Cost Proxies for Energy-Efficient\n  NAS",
+    "abstract": "Artificial Intelligence (AI) has driven innovations and created new\nopportunities across various sectors. However, leveraging domain-specific\nknowledge often requires automated tools to design and configure models\neffectively. In the case of Deep Neural Networks (DNNs), researchers and\npractitioners usually resort to Neural Architecture Search (NAS) approaches,\nwhich are resource- and time-intensive, requiring the training and evaluation\nof numerous candidate architectures. This raises sustainability concerns,\nparticularly due to the high energy demands involved, creating a paradox: the\npursuit of the most effective model can undermine sustainability goals. To\nmitigate this issue, zero-cost proxies have emerged as a promising alternative.\nThese proxies estimate a model's performance without the need for full\ntraining, offering a more efficient approach. This paper addresses the\nchallenges of model evaluation by automatically designing zero-cost proxies to\nassess DNNs efficiently. Our method begins with a randomly generated set of\nzero-cost proxies, which are evolved and tested using the NATS-Bench benchmark.\nWe assess the proxies' effectiveness using both randomly sampled and stratified\nsubsets of the search space, ensuring they can differentiate between low- and\nhigh-performing networks and enhance generalizability. Results show our method\noutperforms existing approaches on the stratified sampling strategy, achieving\nstrong correlations with ground truth performance, including a Kendall\ncorrelation of 0.89 on CIFAR-10 and 0.77 on CIFAR-100 with NATS-Bench-SSS and a\nKendall correlation of 0.78 on CIFAR-10 and 0.71 on CIFAR-100 with\nNATS-Bench-TSS.",
+    "authors": [
+      "Gabriel Cortês",
+      "Nuno Lourenço",
+      "Penousal Machado"
+    ],
+    "published": "2024-11-22T17:24:19Z",
+    "updated": "2024-11-22T17:24:19Z",
+    "categories": [
+      "cs.LG",
+      "cs.NE"
+    ],
+    "page_url": "http://arxiv.org/abs/2411.15290v1",
+    "pdf_url": "http://arxiv.org/pdf/2411.15290v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，理解其内容和结构。这段摘要主要讨论人工智能在各个领域的创新，特别是深度神经网络中的神经架构搜索（NAS）方法存在的资源消耗问题，以及零成本代理方法的解决方案。用户希望翻译保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节。\n\n接下来，我需要确认用户的具体要求。用户强调只输出翻译结果，不要包含任何解释或额外内容。因此，我必须确保翻译后的文本严格遵循原文的结构，不添加任何个人见解或注释。同时，要注意学术术语的正确翻译，例如“Neural Architecture Search”应译为“神经架构搜索”，“zero-cost proxies”译为“零成本代理”等。\n\n在翻译过程中，我会逐句分析，确保每个技术细节都被准确传达。例如，原文提到“NATS-Bench benchmark”，需要确认这是已有的基准测试名称，应保留不译。同时，注意数字和统计结果的正确转换，如“Kendall correlation of 0.89 on CIFAR-10”要准确翻译为“Kendall相关系数达到0.89（CIFAR-10）”。\n\n另外，要检查句子的流畅性，确保中文表达自然。例如，原文中的“This raises sustainability concerns, particularly due to the high energy demands involved, creating a paradox: the pursuit of the most effective model can undermine sustainability goals.” 需要处理成符合中文逻辑的句子，可能调整为“这引发了可持续性问题，特别是由于涉及的高能耗需求，导致了一个悖论：追求最有效的模型可能会损害可持续性目标。”\n\n还要注意专业术语的一致性，例如“zero-cost proxies”在全文中应统一译为“零成本代理”，避免前后不一致。同时，保持原文的被动语态和学术语气，例如“are evolved and tested”翻译为“通过进化和测试”。\n\n最后，通读整个翻译，检查是否有遗漏或错误，确保技术细节和逻辑结构与原文一致，语言流畅自然，符合学术论文的要求。确认无误后，输出最终的翻译结果，不添加任何额外内容。\n</think>\n\n人工智能（AI）已推动了各行业的创新并创造了新机遇。然而，有效利用领域特定知识通常需要自动化工具来设计和配置模型。在深度神经网络（DNNs）领域，研究人员和实践者通常依赖神经架构搜索（NAS）方法，这些方法资源密集且耗时，需要训练和评估大量候选架构。这引发了可持续性问题，特别是由于涉及的高能耗需求，导致了一个悖论：追求最有效的模型可能会损害可持续性目标。为缓解这一问题，零成本代理方法作为有前景的替代方案出现。这些代理方法无需完整训练即可估计模型性能，提供了更高效的方法。本文通过自动设计零成本代理来解决模型评估的挑战，从而高效评估DNNs。我们的方法从随机生成的零成本代理集合开始，使用NATS-Bench基准对其进行进化和测试。我们通过随机采样和分层子集的搜索空间评估代理的有效性，确保其能够区分低性能与高性能网络并增强泛化能力。实验结果表明，我们的方法在分层采样策略上优于现有方法，与真实性能表现出强相关性，包括在CIFAR-10上与NATS-Bench-SSS的Kendall相关系数达到0.89，在CIFAR-100上为0.77，与NATS-Bench-TSS在CIFAR-10上为0.78，在CIFAR-100上为0.71。"
+  },
+  {
+    "arxiv_id": "2411.09111v8",
+    "title": "Reducing Reasoning Costs: The Path of Optimization for Chain of Thought\n  via Sparse Attention Mechanism",
+    "abstract": "In order to address the chain of thought in the large language model\ninference cost surge, this research proposes to use a sparse attention\nmechanism that only focuses on a few relevant tokens. The researcher\nconstructed a new attention mechanism and used GiantRabbit trained with custom\nGPTs as an experimental tool. The experiment tested and compared the reasoning\ntime, correctness score and chain of thought length of this model and o1\nPreview in solving the linear algebra test questions of MIT OpenCourseWare. The\nresults show that GiantRabbit's reasoning time and chain of thought length are\nsignificantly lower than o1 Preview. It verifies the feasibility of sparse\nattention mechanism for optimizing chain of thought reasoning. Detailed\narchitectural details and experimental process have been uploaded to Github,\nthe link is:https://github.com/brucewang123456789/GeniusTrail.git.",
+    "authors": [
+      "Libo Wang"
+    ],
+    "published": "2024-11-14T00:59:13Z",
+    "updated": "2025-07-09T19:21:45Z",
+    "categories": [
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2411.09111v8",
+    "pdf_url": "http://arxiv.org/pdf/2411.09111v8",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段学术摘要，我需要仔细处理。首先，要确保术语准确，比如“sparse attention mechanism”应该翻译成“稀疏注意力机制”。然后，检查句子结构是否符合中文习惯，比如“inference cost surge”可能需要调整为“推理成本激增”。还要注意逻辑结构，确保实验方法和结果部分清晰。用户提到使用GiantRabbit和o1 Preview进行比较，这些专有名词要保留原样。另外，链接部分要正确无误地保留。需要避免添加任何解释，只输出翻译结果。最后，通读一遍确保流畅自然，没有遗漏技术细节。现在开始逐句翻译，确保每个部分都准确传达原意。\n</think>\n\n为解决大语言模型推理过程中思维链成本激增的问题，本研究提出采用仅关注少量相关token的稀疏注意力机制。研究人员构建了新的注意力机制，并使用基于自定义GPT训练的GiantRabbit作为实验工具。实验通过对比该模型与o1 Preview在MIT OpenCourseWare线性代数测试题中的表现，测试并比较了推理时间、正确性评分和思维链长度三个指标。结果显示，GiantRabbit的推理时间和思维链长度均显著低于o1 Preview，验证了稀疏注意力机制在优化思维链推理中的可行性。详细的架构设计和实验过程已上传至GitHub，链接为：https://github.com/brucewang123456789/GeniusTrail.git。"
+  },
+  {
+    "arxiv_id": "2410.04410v1",
+    "title": "Blocks Architecture (BloArk): Efficient, Cost-Effective, and Incremental\n  Dataset Architecture for Wikipedia Revision History",
+    "abstract": "Wikipedia (Wiki) is one of the most widely used and publicly available\nresources for natural language processing (NLP) applications. Wikipedia\nRevision History (WikiRevHist) shows the order in which edits were made to any\nWiki page since its first modification. While the most up-to-date Wiki has been\nwidely used as a training source, WikiRevHist can also be valuable resources\nfor NLP applications. However, there are insufficient tools available to\nprocess WikiRevHist without having substantial computing resources, making\nadditional customization, and spending extra time adapting others' works.\nTherefore, we report Blocks Architecture (BloArk), an efficiency-focused data\nprocessing architecture that reduces running time, computing resource\nrequirements, and repeated works in processing WikiRevHist dataset. BloArk\nconsists of three parts in its infrastructure: blocks, segments, and\nwarehouses. On top of that, we build the core data processing pipeline: builder\nand modifier. The BloArk builder transforms the original WikiRevHist dataset\nfrom XML syntax into JSON Lines (JSONL) format for improving the concurrent and\nstorage efficiency. The BloArk modifier takes previously-built warehouses to\noperate incremental modifications for improving the utilization of existing\ndatabases and reducing the cost of reusing others' works. In the end, BloArk\ncan scale up easily in both processing Wikipedia Revision History and\nincrementally modifying existing dataset for downstream NLP use cases. The\nsource code, documentations, and example usages are publicly available online\nand open-sourced under GPL-2.0 license.",
+    "authors": [
+      "Lingxi Li",
+      "Zonghai Yao",
+      "Sunjae Kwon",
+      "Hong Yu"
+    ],
+    "published": "2024-10-06T08:58:14Z",
+    "updated": "2024-10-06T08:58:14Z",
+    "categories": [
+      "cs.CL",
+      "I.7; I.2.7; E.1"
+    ],
+    "page_url": "http://arxiv.org/abs/2410.04410v1",
+    "pdf_url": "http://arxiv.org/pdf/2410.04410v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个术语和句子的意思。用户提到这是一个学术论文的摘要，所以翻译时要保持学术术语的准确性，同时语言要流畅自然，符合中文的表达习惯。\n\n首先，我会通读整个摘要，了解整体结构和内容。摘要主要介绍了一个名为BloArk的数据处理架构，用于处理维基百科修订历史（WikiRevHist）数据集。用户强调要保持逻辑结构和技术细节，所以需要确保翻译后的中文在结构上与原文一致，技术术语如“Wikipedia Revision History”要准确翻译为“维基百科修订历史”。\n\n接下来，我会逐句翻译，注意专业术语的正确对应。例如，“natural language processing (NLP)”应译为“自然语言处理（NLP）”，保持缩写的一致性。同时，像“Blocks Architecture (BloArk)”这样的专有名词需要保留英文名称，并在括号中注明中文翻译，如“模块化架构（BloArk）”。\n\n然后，检查句子的流畅性。例如，原文中的“While the most up-to-date Wiki has been widely used as a training source, WikiRevHist can also be valuable resources for NLP applications.”翻译时要注意中文的语序，可能需要调整为“尽管最新的维基百科版本已被广泛用作训练资源，但维基百科修订历史（WikiRevHist）同样可以作为自然语言处理（NLP）应用的宝贵资源。”\n\n还要注意一些技术细节，比如“XML syntax into JSON Lines (JSONL) format”要准确翻译为“将原始维基百科修订历史数据集从XML语法转换为JSON Lines（JSONL）格式”，确保技术术语的正确性。同时，保持原文中的逻辑连接词，如“However”、“Therefore”等，确保翻译后的中文逻辑清晰。\n\n另外，用户要求只输出翻译结果，不要包含任何解释或额外内容，所以需要确保翻译后的文本没有添加任何注释或说明。同时，注意格式的正确性，比如项目符号或编号是否需要保留，但根据用户提供的原文，这里没有使用项目符号，所以直接翻译即可。\n\n最后，通读整个翻译，检查是否有遗漏或错误，确保术语一致，句子通顺，符合学术论文摘要的正式语气。例如，确认“GPL-2.0 license”正确翻译为“GPL-2.0许可证”，并且所有技术细节如“concurrent and storage efficiency”准确表达为“并发和存储效率”。\n\n完成这些步骤后，确保翻译结果符合用户的所有要求：学术准确性、语言流畅、逻辑结构清晰，并且没有多余内容。这样用户就能得到一个高质量的翻译，满足他们的需求。\n</think>\n\n维基百科（Wiki）是自然语言处理（NLP）应用中最广泛使用且公开获取的资源之一。维基百科修订历史（WikiRevHist）记录了自维基页面首次修改以来所有编辑操作的顺序。尽管最新的维基百科版本已被广泛用作训练资源，但维基百科修订历史（WikiRevHist）同样可以作为自然语言处理（NLP）应用的宝贵资源。然而，当前缺乏无需大量计算资源、无需额外定制化开发且无需额外时间适配他人工作的工具来处理WikiRevHist数据集。因此，我们提出模块化架构（BloArk），一种以效率为核心的数据处理架构，通过减少运行时间、降低计算资源需求以及避免重复工作来优化WikiRevHist数据集的处理。BloArk的基础设施由三个核心组件构成：模块（blocks）、分段（segments）和仓库（warehouses）。在此基础上，我们构建了核心数据处理流水线：构建器（builder）和修改器（modifier）。BloArk构建器将原始WikiRevHist数据集从XML语法转换为JSON Lines（JSONL）格式，以提升并发处理和存储效率。BloArk修改器通过操作已构建的仓库实现增量修改，从而提高现有数据库的利用率并降低重复使用他人工作的成本。最终，BloArk能够轻松扩展以处理维基百科修订历史数据，并通过增量方式修改现有数据集以满足下游NLP应用场景需求。源代码、文档和示例用法已在线公开，并采用GPL-2.0许可证开源。"
+  },
+  {
+    "arxiv_id": "2410.03939v1",
+    "title": "A Feasibility Study of a Soft, Low-Cost, 6-Axis Load Cell for Haptics",
+    "abstract": "Haptic devices have shown to be valuable in supplementing surgical training,\nespecially when providing haptic feedback based on user performance metrics\nsuch as wrench applied by the user on the tool. However, current 6-axis\nforce/torque sensors are prohibitively expensive. This paper presents the\ndesign and calibration of a low-cost, six-axis force/torque sensor specially\ndesigned for laparoscopic haptic training applications. The proposed design\nuses Hall-effect sensors to measure the change in the position of magnets\nembedded in a silicone layer that results from an applied wrench to the device.\nPreliminary experimental validation demonstrates that these sensors can achieve\nan accuracy of 0.45 N and 0.014 Nm, and a theoretical XY range of +/-50N, Z\nrange of +/-20N, and torque range of +/-0.2Nm. This study indicates that the\nproposed low-cost 6-axis force/torque sensor can accurately measure user force\nand provide useful feedback during laparoscopic training on a haptic device.",
+    "authors": [
+      "Madison Veliky",
+      "Garrison L. H. Johnston",
+      "Ahmet Yildiz",
+      "Nabil Simaan"
+    ],
+    "published": "2024-10-04T21:42:01Z",
+    "updated": "2024-10-04T21:42:01Z",
+    "categories": [
+      "cs.RO"
+    ],
+    "page_url": "http://arxiv.org/abs/2410.03939v1",
+    "pdf_url": "http://arxiv.org/pdf/2410.03939v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于触觉设备的英文摘要。首先，我需要通读原文，理解每个技术术语和整体结构。用户提到触觉设备在补充外科手术培训中的价值，特别是基于用户性能指标的触觉反馈，比如用户施加在工具上的力矩。这里的关键术语有“haptic devices”、“6-axis force/torque sensors”、“Hall-effect sensors”等，需要准确翻译成中文。\n\n接下来，用户指出当前的六轴力/力矩传感器价格昂贵，所以他们设计了一个低成本的传感器。这里要注意“prohibitively expensive”翻译成“价格昂贵”是否合适，或者是否需要更强烈的词汇，但根据上下文，保持原意即可。然后，设计部分提到使用霍尔效应传感器测量嵌入硅胶层的磁铁位置变化，这部分需要确保技术细节准确，比如“Hall-effect sensors”翻译为“霍尔效应传感器”，“silicone layer”是“硅胶层”。\n\n实验验证部分显示传感器的精度和理论范围，这些数据必须准确无误地转换。例如，“0.45 N”和“0.014 Nm”要保留单位符号，中文中通常使用“牛”和“牛·米”，但用户可能希望保持原文的符号格式。理论范围中的“+/-50N”等，中文习惯用“±50N”，所以需要调整符号。\n\n还要注意句子的流畅性，比如“Preliminary experimental validation demonstrates that these sensors can achieve...”翻译成“初步实验验证表明这些传感器可以达到...”是否通顺。另外，最后一句总结研究结果，要确保逻辑连贯，突出低成本传感器的优势。\n\n用户可能希望翻译后的摘要既专业又易于理解，所以需要平衡学术术语和中文表达习惯。例如，“laparoscopic haptic training applications”翻译为“腹腔镜触觉训练应用”是否准确，可能需要确认“腹腔镜”是否正确，但根据上下文，应该是正确的。此外，检查是否有重复或冗余的表达，确保译文简洁。\n\n最后，确保不添加任何额外内容，只输出翻译结果。检查格式是否正确，比如单位符号、标点符号是否符合中文习惯。例如，中文使用全角符号，而英文是半角，但用户可能希望保留原文的符号格式，所以需要确认。不过根据常规学术翻译，可能需要调整标点符号为中文格式。\n\n总结来说，我需要确保技术术语准确，数据无误，句子流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和细节。完成翻译后，再通读一遍，检查是否有遗漏或错误，确保最终译文符合用户的要求。\n</think>\n\n触觉设备已被证明在补充外科手术培训方面具有重要价值，特别是在基于用户性能指标（如用户施加在工具上的力矩）提供触觉反馈方面。然而，当前的六轴力/力矩传感器价格昂贵。本文提出了一种专为腹腔镜触觉训练应用设计的低成本六轴力/力矩传感器的结构设计与校准方法。该设计采用霍尔效应传感器测量施加力矩导致嵌入硅胶层磁铁位置变化的位移。初步实验验证表明，该传感器可实现0.45 N的力精度和0.014 Nm的力矩精度，理论测量范围为XY轴±50N、Z轴±20N、扭矩±0.2Nm。本研究表明，该低成本六轴力/力矩传感器能够准确测量用户施加的力，并在触觉设备的腹腔镜训练中提供有效的反馈。"
+  },
+  {
+    "arxiv_id": "2410.01864v1",
+    "title": "Dynamic Portfolio Rebalancing: A Hybrid new Model Using GNNs and\n  Pathfinding for Cost Efficiency",
+    "abstract": "This paper introduces a novel approach to optimizing portfolio rebalancing by\nintegrating Graph Neural Networks (GNNs) for predicting transaction costs and\nDijkstra's algorithm for identifying cost-efficient rebalancing paths. Using\nhistorical stock data from prominent technology firms, the GNN is trained to\nforecast future transaction costs, which are then applied as edge weights in a\nfinancial asset graph. Dijkstra's algorithm is used to find the least costly\npath for reallocating capital between assets. Empirical results show that this\nhybrid approach significantly reduces transaction costs, offering a powerful\ntool for portfolio managers, especially in high-frequency trading environments.\nThis methodology demonstrates the potential of combining advanced machine\nlearning techniques with classical optimization algorithms to improve financial\ndecision-making processes. Future research will explore expanding the asset\nuniverse and incorporating reinforcement learning for continuous portfolio\noptimization.",
+    "authors": [
+      "Diego Vallarino"
+    ],
+    "published": "2024-10-02T11:00:52Z",
+    "updated": "2024-10-02T11:00:52Z",
+    "categories": [
+      "q-fin.PM",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2410.01864v1",
+    "pdf_url": "http://arxiv.org/pdf/2410.01864v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段英文摘要，需要保持学术术语准确，语言流畅自然，符合中文表达习惯。首先，我得通读一遍原文，理解整体结构和内容。这篇摘要主要讲的是用图神经网络（GNN）预测交易成本，结合Dijkstra算法优化投资组合再平衡路径，最后展示实证结果和未来研究方向。\n\n接下来，我需要确保专业术语的正确翻译。比如“Graph Neural Networks”应该翻译为“图神经网络”，而“Dijkstra's algorithm”是“Dijkstra算法”。要注意术语的一致性，比如“transaction costs”翻译成“交易成本”比较合适。另外，“portfolio rebalancing”是“投资组合再平衡”，这里可能需要确认是否有更常用的中文术语，但通常这个翻译是准确的。\n\n然后，处理句子结构。英文摘要中的长句需要拆分成更符合中文习惯的短句。例如，“Using historical stock data from prominent technology firms, the GNN is trained to forecast future transaction costs, which are then applied as edge weights in a financial asset graph.” 这里可以分成两部分，先说明使用历史数据训练GNN，再说明如何应用预测结果作为边权重。\n\n还要注意逻辑的连贯性。原文提到实证结果和未来研究，翻译时要保持这些部分的清晰。比如“Empirical results show that this hybrid approach significantly reduces transaction costs...” 这里“hybrid approach”可以译为“混合方法”或“融合方法”，根据上下文选择更合适的词汇。\n\n另外，用户要求只输出翻译结果，不要包含任何解释或额外内容。所以必须确保翻译后的内容准确，没有添加任何个人见解或注释。同时，要检查是否有遗漏的技术细节，比如“high-frequency trading environments”翻译为“高频交易环境”是否正确，是否有更专业的术语。\n\n最后，通读一遍译文，确保流畅自然，没有语法错误，并且符合学术论文的正式语气。比如“Future research will explore expanding the asset universe and incorporating reinforcement learning for continuous portfolio optimization.” 这里“expanding the asset universe”可以译为“扩展资产范围”，而“reinforcement learning”是“强化学习”，要确认这些术语的准确性。\n\n总结一下，整个翻译过程需要兼顾术语准确、结构清晰和语言流畅，同时严格遵守用户的格式和内容要求。确保每个技术细节都被正确传达，保持原文的逻辑和学术严谨性。\n</think>\n\n本文提出了一种融合图神经网络（GNN）与Dijkstra算法的投资组合再平衡优化新方法。通过选取知名科技公司的历史股票数据，GNN模型被训练用于预测未来交易成本，并将预测结果作为金融资产图谱中的边权重。Dijkstra算法则用于识别资本在资产间再分配的最低成本路径。实证研究表明，该混合方法可显著降低交易成本，为投资组合管理者提供了强有力的工具，尤其适用于高频交易环境。该方法验证了将先进机器学习技术与经典优化算法相结合在提升金融决策质量方面的潜力。后续研究将探索扩展资产范围，并引入强化学习实现投资组合的持续优化。"
+  },
+  {
+    "arxiv_id": "2409.10175v1",
+    "title": "VideoRun2D: Cost-Effective Markerless Motion Capture for Sprint\n  Biomechanics",
+    "abstract": "Sprinting is a determinant ability, especially in team sports. The kinematics\nof the sprint have been studied in the past using different methods specially\ndeveloped considering human biomechanics and, among those methods, markerless\nsystems stand out as very cost-effective. On the other hand, we have now\nmultiple general methods for pixel and body tracking based on recent machine\nlearning breakthroughs with excellent performance in body tracking, but these\nexcellent trackers do not generally consider realistic human biomechanics. This\ninvestigation first adapts two of these general trackers (MoveNet and\nCoTracker) for realistic biomechanical analysis and then evaluate them in\ncomparison to manual tracking (with key points manually marked using the\nsoftware Kinovea).\n  Our best resulting markerless body tracker particularly adapted for sprint\nbiomechanics is termed VideoRun2D. The experimental development and assessment\nof VideoRun2D is reported on forty sprints recorded with a video camera from 5\ndifferent subjects, focusing our analysis in 3 key angles in sprint\nbiomechanics: inclination of the trunk, flex extension of the hip and the knee.\nThe CoTracker method showed huge differences compared to the manual labeling\napproach. However, the angle curves were correctly estimated by the MoveNet\nmethod, finding errors between 3.2{\\deg} and 5.5{\\deg}.\n  In conclusion, our proposed VideoRun2D based on MoveNet core seems to be a\nhelpful tool for evaluating sprint kinematics in some scenarios. On the other\nhand, the observed precision of this first version of VideoRun2D as a\nmarkerless sprint analysis system may not be yet enough for highly demanding\napplications. Future research lines towards that purpose are also discussed at\nthe end: better tracking post-processing and user- and time-dependent\nadaptation.",
+    "authors": [
+      "Gonzalo Garrido-Lopez",
+      "Luis F. Gomez",
+      "Julian Fierrez",
+      "Aythami Morales",
+      "Ruben Tolosana",
+      "Javier Rueda",
+      "Enrique Navarro"
+    ],
+    "published": "2024-09-16T11:10:48Z",
+    "updated": "2024-09-16T11:10:48Z",
+    "categories": [
+      "cs.CV"
+    ],
+    "page_url": "http://arxiv.org/abs/2409.10175v1",
+    "pdf_url": "http://arxiv.org/pdf/2409.10175v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的这个翻译请求。首先，用户希望将一篇关于短跑运动学分析的英文摘要翻译成中文，并且有具体的翻译要求。我得仔细看看这些要求，确保翻译符合学术规范，同时保持语言流畅自然。\n\n首先，用户提到要保持学术术语的准确性。这意味着我需要确认一些专业术语的正确中文对应词，比如“markerless systems”应该翻译为“无标记系统”还是“无标记追踪系统”？根据上下文，这里可能指的是不需要物理标记的追踪技术，所以“无标记追踪系统”更合适。另外，“biomechanics”是“生物力学”，这个术语在中文文献中比较常见，应该没问题。\n\n接下来是语言流畅自然，符合中文表达习惯。英文和中文的句子结构不同，比如英文多用被动语态，而中文更倾向于主动语态。例如，“The kinematics of the sprint have been studied...”可以翻译为“短跑运动学已被研究...”，但可能需要调整结构，使其更符合中文习惯，比如“短跑运动学的研究过去一直采用不同的方法...”。\n\n然后，保持原文的逻辑结构和技术细节。用户提供的摘要分为几个部分：引言、方法、结果和结论。我需要确保每个部分的信息在翻译后仍然清晰，技术细节如角度误差（3.2°到5.5°）要准确无误地保留。同时，注意专有名词如“MoveNet”和“CoTracker”是否需要音译或保留英文，通常学术翻译中保留英文名称更合适，但可能需要加注中文解释，不过用户没有特别说明，所以直接保留。\n\n用户还强调只输出翻译结果，不要包含任何解释或额外内容。因此，我需要确保翻译后的内容不添加任何注释或评论，只提供准确的中文版本。\n\n现在开始逐句翻译。第一句：“Sprinting is a determinant ability, especially in team sports.” 这里“determinant ability”可以译为“关键能力”或“决定性能力”，结合上下文，“关键能力”更自然。所以翻译为“短跑是一项关键能力，尤其在团队运动中。”\n\n接下来：“The kinematics of the sprint have been studied in the past using different methods specially developed considering human biomechanics and, among those methods, markerless systems stand out as very cost-effective.” 这里需要注意“specially developed considering human biomechanics”要准确表达，可能翻译为“专门针对人体生物力学开发的方法”。整句可以调整为：“过去，短跑运动学的研究一直采用专门针对人体生物力学开发的不同方法，其中无标记追踪系统因其高性价比而脱颖而出。”\n\n然后：“On the other hand, we have now multiple general methods for pixel and body tracking based on recent machine learning breakthroughs with excellent performance in body tracking, but these excellent trackers do not generally consider realistic human biomechanics.” 这里“general methods”可能指通用方法，翻译为“通用方法”或“通用技术”。后半句强调这些方法未考虑真实人体生物力学，所以翻译为：“另一方面，如今基于机器学习最新突破的像素和身体追踪通用方法在身体追踪方面表现出色，但这些优秀的追踪器通常未考虑真实的人体生物力学。”\n\n接下来的方法部分：“This investigation first adapts two of these general trackers (MoveNet and CoTracker) for realistic biomechanical analysis and then evaluate them in comparison to manual tracking (with key points manually marked using the software Kinovea).” 这里“adapts”翻译为“调整”或“适配”，“manual tracking”是“手动追踪”。整句可以译为：“本研究首先对其中两种通用追踪器（MoveNet和CoTracker）进行了调整，以适用于真实的生物力学分析，并随后将其与手动追踪（使用Kinovea软件手动标记关键点）进行比较评估。”\n\n结果部分：“Our best resulting markerless body tracker particularly adapted for sprint biomechanics is termed VideoRun2D. The experimental development and assessment of VideoRun2D is reported on forty sprints recorded with a video camera from 5 different subjects, focusing our analysis in 3 key angles in sprint biomechanics: inclination of the trunk, flex extension of the hip and the knee.” 这里“particularly adapted”翻译为“特别适配”，“flex extension”是“屈伸”，所以翻译为：“我们为短跑生物力学特别适配的最佳无标记身体追踪器被命名为VideoRun2D。VideoRun2D的实验开发与评估基于使用摄像机记录的40次短跑，来自5名不同受试者，分析重点集中在短跑生物力学的三个关键角度：躯干倾斜、髋关节和膝关节的屈伸。”\n\n关于CoTracker和MoveNet的结果：“The CoTracker method showed huge differences compared to the manual labeling approach. However, the angle curves were correctly estimated by the MoveNet method, finding errors between 3.2{\\deg} and 5.5{\\deg}.” 这里“huge differences”可以译为“显著差异”，“angle curves”是“角度曲线”，所以翻译为：“CoTracker方法与手动标注方法相比存在显著差异。然而，MoveNet方法正确估计了角度曲线，误差在3.2°至5.5°之间。”\n\n结论部分：“In conclusion, our proposed VideoRun2D based on MoveNet core seems to be a helpful tool for evaluating sprint kinematics in some scenarios. On the other hand, the observed precision of this first version of VideoRun2D as a markerless sprint analysis system may not be yet enough for highly demanding applications. Future research lines towards that purpose are also discussed at the end: better tracking post-processing and user- and time-dependent adaptation.” 这里“helpful tool”翻译为“有用工具”，“highly demanding applications”是“高要求的应用场景”，“post-processing”是“后处理”，“user- and time-dependent adaptation”是“用户和时间依赖的自适应”。整句翻译为：“综上所述，基于MoveNet核心的VideoRun2D在某些场景下可作为评估短跑运动学的有用工具。然而，该第一版VideoRun2D作为无标记短跑分析系统的观测精度可能尚未满足高要求的应用场景。最后还讨论了未来的研究方向：改进追踪后处理以及实现用户和时间依赖的自适应。”\n\n检查整个翻译是否符合用户的要求：学术术语准确，语言流畅，逻辑结构清晰，没有添加额外内容。确认无误后，输出最终的中文翻译。\n</think>\n\n短跑是一项关键能力，尤其在团队运动中。过去，短跑运动学的研究一直采用专门针对人体生物力学开发的不同方法，其中无标记追踪系统因其高性价比而脱颖而出。另一方面，如今基于机器学习最新突破的像素和身体追踪通用方法在身体追踪方面表现出色，但这些优秀的追踪器通常未考虑真实的人体生物力学。本研究首先对其中两种通用追踪器（MoveNet和CoTracker）进行了调整，以适用于真实的生物力学分析，并随后将其与手动追踪（使用Kinovea软件手动标记关键点）进行比较评估。\n\n我们为短跑生物力学特别适配的最佳无标记身体追踪器被命名为VideoRun2D。VideoRun2D的实验开发与评估基于使用摄像机记录的40次短跑，来自5名不同受试者，分析重点集中在短跑生物力学的三个关键角度：躯干倾斜、髋关节和膝关节的屈伸。CoTracker方法与手动标注方法相比存在显著差异。然而，MoveNet方法正确估计了角度曲线，误差在3.2°至5.5°之间。\n\n综上所述，基于MoveNet核心的VideoRun2D在某些场景下可作为评估短跑运动学的有用工具。然而，该第一版VideoRun2D作为无标记短跑分析系统的观测精度可能尚未满足高要求的应用场景。最后还讨论了未来的研究方向：改进追踪后处理以及实现用户和时间依赖的自适应。"
+  },
+  {
+    "arxiv_id": "2409.08612v2",
+    "title": "Asymptotics for Random Quadratic Transportation Costs",
+    "abstract": "We establish the validity of asymptotic limits for the general transportation\nproblem between random i.i.d. points and their common distribution, with\nrespect to the squared Euclidean distance cost, in any dimension larger than\nthree. Previous results were essentially limited to the two (or one)\ndimensional case, or to distributions whose absolutely continuous part is\nuniform.\n  The proof relies upon recent advances in the stability theory of optimal\ntransportation, combined with functional analytic techniques and some ideas\nfrom quantitative stochastic homogenization. The key tool we develop is a\nquantitative upper bound for the usual quadratic optimal transportation problem\nin terms of its boundary variant, where points can be freely transported along\nthe boundary. The methods we use are applicable to more general random\nmeasures, including occupation measure of Brownian paths, and may open the door\nto further progress on challenging problems at the interface of analysis,\nprobability, and discrete mathematics.",
+    "authors": [
+      "Martin Huesmann",
+      "Michael Goldman",
+      "Dario Trevisan"
+    ],
+    "published": "2024-09-13T07:58:40Z",
+    "updated": "2025-02-17T16:39:35Z",
+    "categories": [
+      "math.PR",
+      "math.FA",
+      "math.ST",
+      "stat.TH",
+      "49Q22, 60L99, 60D05, 90C05, 35B27"
+    ],
+    "page_url": "http://arxiv.org/abs/2409.08612v2",
+    "pdf_url": "http://arxiv.org/pdf/2409.08612v2",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段英文摘要成中文，要求保持学术术语准确，语言流畅自然，符合中文表达习惯，还要保持原文的逻辑结构和技术细节，只输出翻译结果，不要解释或额外内容。首先，我需要通读原文，理解每个术语和句子的意思。\n\n第一句提到“asymptotic limits for the general transportation problem between random i.i.d. points and their common distribution”，这里的关键术语是“asymptotic limits”（渐近极限）、“transportation problem”（运输问题）、“i.i.d. points”（独立同分布点）、“common distribution”（共同分布）。需要确保这些术语在中文中准确对应，比如“i.i.d.”通常翻译为“独立同分布”，而“transportation problem”在运筹学中常译为“运输问题”。\n\n接下来是“squared Euclidean distance cost”，这里“squared Euclidean distance”是“平方欧几里得距离”，“cost”在这里是“成本”或“费用”，所以整个短语应该是“平方欧几里得距离成本”。然后“in any dimension larger than three”需要准确翻译为“在任意大于三维的空间中”。\n\n第二段提到“previous results were essentially limited to the two (or one) dimensional case”，这里要注意括号内的内容是否需要保留，中文中括号使用可能需要调整，但用户要求保持原文结构，所以应该保留。然后“distributions whose absolutely continuous part is uniform”中的“absolutely continuous part”是“绝对连续部分”，“uniform”是“均匀的”，所以整个短语是“绝对连续部分为均匀分布”。\n\n第三段的“proof relies upon recent advances in the stability theory of optimal transportation”中的“stability theory”是“稳定性理论”，“optimal transportation”是“最优运输”。接下来的“functional analytic techniques”是“泛函分析技术”，“quantitative stochastic homogenization”是“定量随机均匀化”。需要确保这些术语在中文中准确无误。\n\n“key tool we develop is a quantitative upper bound for the usual quadratic optimal transportation problem in terms of its boundary variant”中的“quantitative upper bound”是“定量上界”，“boundary variant”是“边界变体”，这里可能需要调整语序，使中文更通顺，比如“通过其边界变体的定量上界”。\n\n最后一句提到“applicable to more general random measures, including occupation measure of Brownian paths”，“occupation measure”是“占据测度”，“Brownian paths”是“布朗路径”。需要确认这些术语在中文数学文献中的标准译法。\n\n在翻译过程中，需要注意句子的连贯性和逻辑性，比如原文中的“combined with functional analytic techniques and some ideas from quantitative stochastic homogenization”需要处理为“结合泛函分析技术和定量随机均匀化的一些思想”，保持并列结构清晰。\n\n另外，用户强调只输出翻译结果，不要任何解释，所以必须确保没有添加额外内容。同时，要检查是否有遗漏的技术细节，比如“in any dimension larger than three”是否准确翻译为“在任意大于三维的空间中”，而不仅仅是“三维以上”。\n\n最后，通读整个翻译，确保术语一致，语句流畅，符合学术论文的正式语气，同时保持原文的结构和逻辑。例如，原文中的“The methods we use are applicable to...”翻译为“我们使用的方法适用于...”是否准确，是否需要调整语序。\n\n总结来说，需要逐句分析，确保每个术语准确，句子结构符合中文习惯，同时保持原文的技术细节和逻辑结构，不添加任何额外内容。\n</think>\n\n我们建立了在任意大于三维的空间中，关于独立同分布随机点与其共同分布之间的广义运输问题的渐近极限的有效性，该问题以平方欧几里得距离成本为度量。此前的研究结果主要局限于二维（或一维）情形，或绝对连续部分为均匀分布的测度。\n\n证明依赖于最优运输稳定性理论的最新进展，结合泛函分析技术以及定量随机均匀化的一些思想。我们开发的关键工具是通过其边界变体（允许沿边界自由运输）对常规二次最优运输问题建立定量上界。所采用的方法适用于更一般的随机测度，包括布朗路径的占据测度，可能为分析、概率论与离散数学交叉领域的挑战性问题开辟新的研究路径。"
+  },
+  {
+    "arxiv_id": "2409.02366v1",
+    "title": "The Hidden Costs of Automation: An Empirical Study on GitHub Actions\n  Workflow Maintenance",
+    "abstract": "GitHub Actions (GA) is an orchestration platform that streamlines the\nautomatic execution of software engineering tasks such as building, testing,\nand deployment. Although GA workflows are the primary means for automation,\naccording to our experience and observations, human intervention is necessary\nto correct defects, update dependencies, or refactor existing workflow files.\nIn fact, previous research has shown that software artifacts similar to\nworkflows, such as build files and bots, can introduce additional maintenance\ntasks in software projects. This suggests that workflow files, which are also\nused to automate repetitive tasks in professional software production, may\ngenerate extra workload for developers. However, the nature of such effort has\nnot been well studied. This paper presents a large-scale empirical\ninvestigation towards characterizing the maintenance of GA workflows by\nstudying the evolution of workflow files in almost 200 mature GitHub projects\nacross ten programming languages. Our findings largely confirm the results of\nprevious studies on the maintenance of similar artifacts, while also revealing\nGA-specific insights such as bug fixing and CI/CD improvement being among the\nmajor drivers of GA maintenance. A direct implication is that practitioners\nshould be aware of proper resource planning and allocation for maintaining GA\nworkflows, thus exposing the ``hidden costs of automation.'' Our findings also\ncall for identifying and documenting best practices for such maintenance, and\nfor enhanced tool features supporting dependency tracking and better error\nreporting of workflow specifications.",
+    "authors": [
+      "Pablo Valenzuela-Toledo",
+      "Alexandre Bergel",
+      "Timo Kehrer",
+      "Oscar Nierstrasz"
+    ],
+    "published": "2024-09-04T01:33:16Z",
+    "updated": "2024-09-04T01:33:16Z",
+    "categories": [
+      "cs.SE"
+    ],
+    "page_url": "http://arxiv.org/abs/2409.02366v1",
+    "pdf_url": "http://arxiv.org/pdf/2409.02366v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将英文摘要翻译成中文。首先，我要仔细阅读用户提供的英文内容，确保理解每个术语和句子的意思。用户提到GitHub Actions（GA）是一个自动化平台，用于执行软件工程任务，比如构建、测试和部署。接下来，用户指出虽然GA工作流是自动化的主要手段，但根据他们的经验和观察，人类干预是必要的，比如修复缺陷、更新依赖或重构工作流文件。\n\n接下来，我需要确保翻译的学术术语准确。例如，“orchestration platform”应该翻译为“编排平台”，“CI/CD improvement”要译为“持续集成/持续交付（CI/CD）改进”。同时，要注意句子的流畅性，符合中文的表达习惯。例如，“according to our experience and observations”可以译为“根据我们的经验和观察”，保持原意的同时让句子更自然。\n\n然后，用户提到之前的研究显示类似工作流的软件工件（如构建文件和机器人）会引入额外的维护任务。这里要注意“software artifacts”翻译为“软件工件”是否准确，可能需要确认，但根据上下文，这里应该没问题。接下来，“hidden costs of automation”需要准确传达“自动化隐藏成本”的概念，可能需要加引号或解释，但用户要求保持原文结构，所以直接翻译即可。\n\n用户还要求只输出翻译结果，不要包含任何解释或额外内容。因此，我需要确保翻译后的内容严格对应原文，不添加任何注释或修改。同时，检查逻辑结构是否与原文一致，比如研究方法部分提到的“large-scale empirical investigation”应译为“大规模实证调查”，保持学术严谨性。\n\n最后，通读整个翻译，确保没有遗漏技术细节，比如“ten programming languages”翻译为“十种编程语言”，以及“direct implication”译为“直接意义”。还要注意标点符号和格式，比如英文引号改为中文引号，但用户可能希望保持英文引号，需要确认。不过根据用户提供的例子，他们使用了中文引号，所以这里应该使用中文引号。\n\n总结来说，我需要确保翻译准确、流畅，符合学术要求，同时保持原文的结构和细节。检查每个术语的准确性，调整句子结构使其更符合中文习惯，最后通读一遍确保没有错误。\n</think>\n\nGitHub Actions（GA）是一个用于编排软件工程任务（如构建、测试和部署）自动执行的平台。尽管GA工作流是实现自动化的首要手段，但根据我们的经验和观察，人类干预在修正缺陷、更新依赖项或重构现有工作流文件时仍属必要。事实上，先前研究表明，类似工作流的软件工件（如构建文件和机器人）可能引入额外的维护任务。这表明在专业软件生产中用于自动化重复性任务的工作流文件，也可能为开发者带来额外工作量。然而，此类工作量的性质尚未得到充分研究。本文通过大规模实证调查，对近200个成熟GitHub项目中跨越十种编程语言的工作流文件演化过程进行分析，以表征GA工作流的维护特征。我们的研究结果在很大程度上验证了关于类似工件维护的既有研究结论，同时揭示了GA特有的发现，例如错误修复和持续集成/持续交付（CI/CD）改进是GA维护的主要驱动力。直接意义在于，实践者应意识到维护GA工作流所需的资源规划与分配，从而暴露\"自动化隐藏成本\"。研究结果还呼吁识别并记录此类维护的最佳实践，并开发增强型工具功能以支持依赖项追踪和更优的工作流规范错误报告。"
+  },
+  {
+    "arxiv_id": "2408.14611v1",
+    "title": "Scalable, reproducible, and cost-effective processing of large-scale\n  medical imaging datasets",
+    "abstract": "Curating, processing, and combining large-scale medical imaging datasets from\nnational studies is a non-trivial task due to the intense computation and data\nthroughput required, variability of acquired data, and associated financial\noverhead. Existing platforms or tools for large-scale data curation,\nprocessing, and storage have difficulty achieving a viable cost-to-scale ratio\nof computation speed for research purposes, either being too slow or too\nexpensive. Additionally, management and consistency of processing large data in\na team-driven manner is a non-trivial task. We design a BIDS-compliant method\nfor an efficient and robust data processing pipeline of large-scale\ndiffusion-weighted and T1-weighted MRI data compatible with low-cost,\nhigh-efficiency computing systems. Our method accomplishes automated querying\nof data available for processing and process running in a consistent and\nreproducible manner that has long-term stability, while using heterogenous\nlow-cost computational resources and storage systems for efficient processing\nand data transfer. We demonstrate how our organizational structure permits\nefficiency in a semi-automated data processing pipeline and show how our method\nis comparable in processing time to cloud-based computation while being almost\n20 times more cost-effective. Our design allows for fast data throughput speeds\nand low latency to reduce the time for data transfer between storage servers\nand computation servers, achieving an average of 0.60 Gb/s compared to 0.33\nGb/s for using cloud-based processing methods. The design of our workflow\nengine permits quick process running while maintaining flexibility to adapt to\nnewly acquired data.",
+    "authors": [
+      "Michael E. Kim",
+      "Karthik Ramadass",
+      "Chenyu Gao",
+      "Praitayini Kanakaraj",
+      "Nancy R. Newlin",
+      "Gaurav Rudravaram",
+      "Kurt G. Schilling",
+      "Blake E. Dewey",
+      "Derek Archer",
+      "Timothy J. Hohman",
+      "Zhiyuan Li",
+      "Shunxing Bao",
+      "Bennett A. Landman",
+      "Nazirah Mohd Khairi"
+    ],
+    "published": "2024-08-26T20:09:48Z",
+    "updated": "2024-08-26T20:09:48Z",
+    "categories": [
+      "cs.DC",
+      "cs.DB"
+    ],
+    "page_url": "http://arxiv.org/abs/2408.14611v1",
+    "pdf_url": "http://arxiv.org/pdf/2408.14611v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，理解其内容和结构。这段摘要主要讨论了处理大规模医学影像数据的挑战，以及他们设计的BIDS兼容方法的优势。用户的要求很明确，要保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节，只输出翻译结果，不要任何解释或额外内容。\n\n首先，我需要确认自己对原文中的专业术语有正确的理解。比如“BIDS-compliant method”应该翻译为“符合BIDS标准的方法”，因为BIDS是Brain Imaging Data Structure的缩写，这是一个在神经影像领域常用的数据结构标准。另外，“diffusion-weighted and T1-weighted MRI data”需要准确翻译为“扩散加权和T1加权磁共振成像数据”，确保术语的准确性。\n\n接下来，要注意句子的流畅性和逻辑结构。例如，原文中的“Curating, processing, and combining large-scale medical imaging datasets from national studies is a non-trivial task due to the intense computation and data throughput required, variability of acquired data, and associated financial overhead.”这句话较长，包含多个原因，翻译时需要合理断句，确保中文表达自然。可能会拆分成几个短句，同时保持因果关系的清晰。\n\n然后，检查是否有技术细节需要特别注意。例如，“average of 0.60 Gb/s compared to 0.33 Gb/s for using cloud-based processing methods”中的数据对比，要确保数值和单位的正确转换，同时保持比较的明确性。此外，“semi-automated data processing pipeline”应译为“半自动化数据处理流程”，保持术语的一致性。\n\n还要注意用户提到的“只输出翻译结果，不要包含任何解释或额外内容”，所以翻译完成后要确保没有添加任何注释或说明，直接呈现中文内容。同时，要避免使用过于口语化的表达，保持学术论文的正式语气。\n\n在翻译过程中，可能会遇到一些长句或复杂结构，需要调整语序以适应中文的表达习惯。例如，原文中的“management and consistency of processing large data in a team-driven manner is a non-trivial task.”可以调整为“在团队协作模式下处理大规模数据的管理与一致性同样是一项非同寻常的挑战。”这样更符合中文的表达方式。\n\n最后，通读整个翻译，检查是否所有技术术语都准确无误，逻辑是否连贯，语言是否流畅自然。确保没有遗漏任何关键信息，并且数据对比和结论部分清晰明了。这样用户的需求就能得到满足，翻译结果既专业又符合要求。\n</think>\n\n构建、处理和整合来自国家研究的大规模医学影像数据集是一项具有挑战性的任务，这主要由于所需的高强度计算和数据吞吐量、获取数据的变异性以及相关的财务成本。现有用于大规模数据整理、处理和存储的平台或工具在研究目的的计算速度与规模成本比方面难以达到可行的平衡，要么处理速度过慢，要么成本过高。此外，在团队协作模式下处理大规模数据的管理与一致性同样是一项非同寻常的挑战。我们设计了一种符合BIDS标准的高效且稳健的数据处理流程，适用于大规模扩散加权和T1加权磁共振成像数据，该流程兼容低成本、高效率的计算系统。我们的方法实现了数据处理的自动化查询和流程运行的一致性与可重复性，同时利用异构的低成本计算资源和存储系统实现高效的数据处理与传输。我们展示了组织结构如何在半自动化数据处理流程中实现效率，并证明该方法的处理时间与基于云的计算相当，但成本效益高出近20倍。我们的设计实现了快速的数据吞吐速度和低延迟，减少了存储服务器与计算服务器间的数据传输时间，平均达到0.60 Gb/s的传输速度，相比基于云的处理方法的0.33 Gb/s有显著提升。工作流引擎的设计允许快速执行流程，同时保持对新获取数据的适应性灵活性。"
+  },
+  {
+    "arxiv_id": "2409.03770v1",
+    "title": "A Cost-effective Edge Computing Gateway for Smart Buildings",
+    "abstract": "The retrofitting of existing buildings with building management systems\npresents significant challenges, primarily due to the need for labor and cost\nefficiency. Wireless technology offers a promising solution to these challenges\nby minimizing the need for extensive wiring and structural alterations.\nHowever, achieving retrofitting in a cost-effective manner necessitates the use\nof low-cost wireless technologies. This paper introduces a framework for\nconstructing a Zigbee gateway using open-source tools combined with low-cost\nhardware. The proposed architecture addresses large-scale IoT deployments\nwithin the Zigbee ecosystem. By leveraging edge computing with the robustness\nand scalability offered by Zigbee technology, this architecture significantly\nreduces the economic barriers to retrofit buildings with building management\nsystems. The results underscore the potential of open-source Zigbee technology\nin aligning with sustainability goals, providing a cost-effective pathway for\nretrofitting buildings into smart, energy-efficient living environments.",
+    "authors": [
+      "Simon Madsen",
+      "Benjamin Staugaard",
+      "Zheng Ma",
+      "Salman Yussof",
+      "Bo Jørgensen"
+    ],
+    "published": "2024-08-21T07:03:52Z",
+    "updated": "2024-08-21T07:03:52Z",
+    "categories": [
+      "cs.NI"
+    ],
+    "page_url": "http://arxiv.org/abs/2409.03770v1",
+    "pdf_url": "http://arxiv.org/pdf/2409.03770v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于建筑管理系统改造的英文摘要。首先，我需要仔细阅读原文，理解每个技术术语和整体结构。用户提到使用Zigbee网关和开源工具，这些是关键点，必须准确翻译。\n\n接下来，我要确保学术术语的准确性。比如“retrofitting”翻译成“改造”比较合适，“Zigbee gateway”应该是“Zigbee网关”。还要注意像“edge computing”这样的术语，正确译为“边缘计算”。\n\n然后，保持逻辑结构。原文先讲问题，再提出解决方案，接着介绍框架，最后结果。翻译时要维持这个顺序，确保中文读者能顺畅理解。例如，原文提到无线技术减少布线和结构改动，这部分要清晰表达。\n\n还要注意语言流畅自然。中文和英文的表达习惯不同，比如被动语态在中文里可能需要调整。例如，“is introduced”可以译为“提出”或“介绍”，根据上下文选择最合适的动词。\n\n另外，用户要求只输出翻译结果，不要额外内容。所以我要检查是否有添加解释或注释的地方，确保只提供纯翻译。同时，要避免使用过于生硬的直译，保持句子的连贯性。\n\n最后，通读一遍译文，确认技术细节没有遗漏，比如“low-cost hardware”翻译为“低成本硬件”，“sustainability goals”译为“可持续发展目标”。确保所有专业术语准确，整体段落逻辑清晰，符合中文的学术写作习惯。\n</think>\n\n现有建筑加装建筑管理系统面临重大挑战，主要源于人力与成本效率的需求。无线技术通过减少大量布线和结构改造需求，为这些挑战提供了有前景的解决方案。然而，以经济高效的方式实现改造需要采用低成本无线技术。本文提出了一种基于开源工具与低成本硬件构建Zigbee网关的框架。该架构解决了Zigbee生态系统中的大规模物联网部署问题。通过结合边缘计算与Zigbee技术的稳健性和可扩展性，该架构显著降低了建筑管理系统改造的经济门槛。研究结果突显了开源Zigbee技术在实现可持续发展目标方面的潜力，为建筑改造为智能节能居住环境提供了经济高效的实施路径。"
+  },
+  {
+    "arxiv_id": "2408.10824v3",
+    "title": "Emerging clean technologies: policy-driven cost reductions, implications\n  and perspectives",
+    "abstract": "Hydrogen production from water electrolysis, direct air capture (DAC), and\nsynthetic kerosene derived from hydrogen and CO2 (`e-kerosene') are expected to\nplay an important role in global decarbonization efforts. So far, the economics\nof these nascent technologies hamper their market diffusion. However, a wave of\nrecent policy support in the United States, Europe, China, and elsewhere is\nanticipated to drive their commercial liftoff and bring their costs down. To\nthis end, we evaluate the potential cost reductions driven by policy-induced\nscale-up of these emerging technologies through 2030 using an experience curves\napproach accounting for both local and global learning effects. We then analyze\nthe consequences of projected cost declines on the competitiveness of these\nnascent technologies compared to conventional fossil alternatives, where\napplicable, and highlight some of the tradeoffs associated with their\nexpansion. Our findings indicate that enacted policies could lead to\nsubstantial capital cost reductions for electrolyzers. Nevertheless,\nelectrolytic hydrogen production at $1-2/kg would still require some form of\npolicy support. Given expected costs and experience curves, it is unlikely that\nliquid solvent DAC (L-DAC) scale-up will bring removal costs to stated targets\nof $100/tCO2, though a $200/tCO2 may eventually be within reach. We also\nunderscore the importance of tackling methane leakage for natural gas-powered\nL-DAC: unmitigated leaks amplify net removal costs, exacerbate the investment\nrequirements to reach targeted costs, and cast doubt on L-DAC's role in the\nclean energy transition. Lastly, despite reductions in electrolysis and L-DAC\ncosts, e-kerosene remains considerably more expensive than fossil jet fuel. The\neconomics of e-kerosene and the resources required for production raise\nquestions about the fuel's ultimate viability as a decarbonization tool for\naviation.",
+    "authors": [
+      "Mohamed Atouife",
+      "Jesse Jenkins"
+    ],
+    "published": "2024-08-20T13:21:21Z",
+    "updated": "2024-09-10T20:30:36Z",
+    "categories": [
+      "eess.SY",
+      "cs.SY"
+    ],
+    "page_url": "http://arxiv.org/abs/2408.10824v3",
+    "pdf_url": "http://arxiv.org/pdf/2408.10824v3",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个技术术语和整体内容。用户提到的几个关键点包括水电解制氢、直接空气捕集（DAC）和合成航空煤油（e-kerosene），这些都是与全球脱碳相关的新兴技术。用户特别强调要保持学术术语的准确性，所以我要确保这些术语在中文中有对应的正确翻译，比如“electrolyzers”应该翻译为“电解槽”，“L-DAC”可能需要保留英文缩写并加注释。\n\n接下来，我需要检查原文的结构和逻辑，确保翻译后的中文保持原有的逻辑顺序。例如，原文先介绍技术的重要性，然后讨论经济性问题，接着分析政策支持的影响，最后评估成本下降和竞争力。翻译时要保持这种结构，避免信息错位。\n\n用户还要求语言流畅自然，符合中文表达习惯。这意味着我需要避免直译，而是采用更符合中文习惯的表达方式。例如，“market diffusion”翻译为“市场推广”比“市场扩散”更合适。同时，要注意句子的连贯性，比如使用适当的连接词，使段落之间过渡自然。\n\n另外，用户提到要只输出翻译结果，不要包含任何解释或额外内容。因此，我需要确保翻译后的内容不添加任何注释或评论，严格遵循原文的信息。同时，要检查是否有遗漏的技术细节，比如成本数字和单位，确保准确无误地转换，例如“$1-2/kg”应译为“1-2美元/千克”。\n\n在处理具体句子时，需要注意一些复杂结构的处理。例如，“We then analyze the consequences of projected cost declines on the competitiveness of these nascent technologies compared to conventional fossil alternatives, where applicable, and highlight some of the tradeoffs associated with their expansion.” 这句话较长，需要拆分成更易理解的中文句子，同时保持原意。可能需要分句处理，确保每个部分都清晰传达。\n\n还要注意专业术语的一致性，比如“experience curves approach”应译为“经验曲线方法”，而“learning effects”译为“学习效应”。此外，像“natural gas-powered L-DAC”需要准确翻译为“天然气驱动的L-DAC”，以明确技术细节。\n\n最后，通读整个翻译，检查是否符合学术论文的正式语气，同时确保没有语法错误或用词不当的地方。例如，“cast doubt on L-DAC's role”可以译为“对L-DAC在清洁能源转型中的作用产生质疑”，这样既准确又符合中文表达习惯。\n\n总结来说，我需要确保翻译不仅准确传达技术内容，还要符合中文的学术写作规范，保持逻辑清晰和语言流畅。同时，严格遵循用户的要求，不添加任何额外内容，确保输出仅包含翻译后的文本。\n</think>\n\n水电解制氢、直接空气捕集（DAC）以及由氢气和二氧化碳合成的航空煤油（e-kerosene）有望在全球脱碳进程中发挥重要作用。然而，这些新兴技术目前的经济性阻碍了其市场推广。近期美国、欧洲、中国及其他地区的政策支持浪潮预计将推动其商业化起飞并降低相关成本。为此，我们采用经验曲线方法评估了2030年前政策驱动下这些新兴技术规模化带来的潜在成本下降，该方法同时考虑了本地和全球学习效应。随后，我们分析了预计成本下降对这些新兴技术与传统化石燃料替代方案竞争力的影响（如适用），并强调了其扩展过程中的一些权衡关系。研究发现，已实施的政策可能导致电解槽资本成本大幅下降。然而，即使达到1-2美元/千克的电解制氢成本，仍需要某种形式的政策支持。根据预期成本和经验曲线，液体溶剂DAC（L-DAC）的规模化不太可能将碳移除成本降至100美元/吨CO₂的目标，但200美元/吨CO₂的成本可能最终可实现。我们还强调了应对天然气驱动L-DAC甲烷泄漏的重要性：未控制的泄漏会放大净移除成本，加剧达到目标成本所需的投资需求，并对L-DAC在清洁能源转型中的作用产生质疑。最后，尽管电解和L-DAC成本有所下降，e-kerosene仍明显高于化石航空燃料。e-kerosene的经济性和生产所需资源引发了该燃料作为航空脱碳工具最终可行性的质疑。"
+  },
+  {
+    "arxiv_id": "2408.07244v1",
+    "title": "Sign language recognition based on deep learning and low-cost\n  handcrafted descriptors",
+    "abstract": "In recent years, deep learning techniques have been used to develop sign\nlanguage recognition systems, potentially serving as a communication tool for\nmillions of hearing-impaired individuals worldwide. However, there are inherent\nchallenges in creating such systems. Firstly, it is important to consider as\nmany linguistic parameters as possible in gesture execution to avoid ambiguity\nbetween words. Moreover, to facilitate the real-world adoption of the created\nsolution, it is essential to ensure that the chosen technology is realistic,\navoiding expensive, intrusive, or low-mobility sensors, as well as very complex\ndeep learning architectures that impose high computational requirements. Based\non this, our work aims to propose an efficient sign language recognition system\nthat utilizes low-cost sensors and techniques. To this end, an object detection\nmodel was trained specifically for detecting the interpreter's face and hands,\nensuring focus on the most relevant regions of the image and generating inputs\nwith higher semantic value for the classifier. Additionally, we introduced a\nnovel approach to obtain features representing hand location and movement by\nleveraging spatial information derived from centroid positions of bounding\nboxes, thereby enhancing sign discrimination. The results demonstrate the\nefficiency of our handcrafted features, increasing accuracy by 7.96% on the\nAUTSL dataset, while adding fewer than 700 thousand parameters and incurring\nless than 10 milliseconds of additional inference time. These findings\nhighlight the potential of our technique to strike a favorable balance between\ncomputational cost and accuracy, making it a promising approach for practical\nsign language recognition applications.",
+    "authors": [
+      "Alvaro Leandro Cavalcante Carneiro",
+      "Denis Henrique Pinheiro Salvadeo",
+      "Lucas de Brito Silva"
+    ],
+    "published": "2024-08-14T00:56:51Z",
+    "updated": "2024-08-14T00:56:51Z",
+    "categories": [
+      "cs.CV",
+      "I.2.10; I.4.8; I.4.7; I.5.1"
+    ],
+    "page_url": "http://arxiv.org/abs/2408.07244v1",
+    "pdf_url": "http://arxiv.org/pdf/2408.07244v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于深度学习在手语识别系统中的应用的英文摘要。首先，我需要通读整个摘要，理解其核心内容和结构。摘要主要讨论了使用深度学习技术开发手语识别系统面临的挑战，以及他们提出的方法和结果。\n\n接下来，我要确保学术术语的准确性。比如“deep learning techniques”翻译成“深度学习技术”比较合适，“sign language recognition systems”是“手语识别系统”。要注意专业词汇的正确对应，比如“object detection model”是“目标检测模型”，“bounding boxes”是“边界框”。\n\n然后，保持语言流畅自然，符合中文表达习惯。英文中的被动语态在中文里可能需要调整，比如“it is important to consider”可以翻译为“需要考虑”或“应尽可能考虑”。同时，注意句子的连贯性，比如“Moreover, to facilitate the real-world adoption...”可以处理为“此外，为了促进所提出解决方案的实际应用...”。\n\n还要注意逻辑结构和技术细节的保留。原文提到挑战包括语言参数的考虑、传感器的成本和计算复杂度，这些都需要在翻译中明确表达。例如，“low-cost sensors and techniques”翻译为“低成本传感器和方法”，“computational requirements”是“计算需求”。\n\n用户可能希望翻译后的摘要既专业又易于理解，所以需要平衡学术性和可读性。例如，“leveraging spatial information derived from centroid positions of bounding boxes”可以译为“利用边界框质心位置的空间信息”，既准确又简洁。\n\n最后，检查是否有遗漏的技术细节，比如准确率提高了7.96%，参数增加不到70万，推理时间增加不到10毫秒，这些数字和单位要准确无误。同时，确保结论部分突出技术的优势，如平衡计算成本和准确性，适合实际应用。\n\n完成翻译后，再通读一遍，确保没有语法错误，术语一致，逻辑清晰。这样用户就能得到一份准确、流畅的中文摘要，满足学术交流的需求。\n</think>\n\n近年来，深度学习技术被用于开发手语识别系统，有望成为全球数百万听障人士的沟通工具。然而，构建此类系统存在固有挑战。首先，在手势执行过程中需要尽可能考虑多种语言参数，以避免词语之间的歧义。此外，为了促进所提出解决方案的实际应用，必须确保所选技术具有可行性，避免使用昂贵、侵入性或低移动性的传感器，以及计算需求过高的复杂深度学习架构。基于此，我们的研究旨在提出一种高效的低成本手语识别系统。为此，我们专门训练了一个目标检测模型用于识别手语者的面部和手部，确保图像中最相关区域的聚焦，并为分类器生成语义价值更高的输入。同时，我们提出了一种新方法，通过利用边界框质心位置的空间信息来获取表征手部位置和运动的特征，从而增强手势区分能力。实验结果表明，我们设计的特征在AUTSL数据集上将准确率提升了7.96%，同时参数数量增加不足70万，额外推理时间低于10毫秒。这些发现凸显了该技术在计算成本与准确率之间取得良好平衡的潜力，为实际手语识别应用提供了有前景的解决方案。"
+  },
+  {
+    "arxiv_id": "2408.00540v3",
+    "title": "The Energy Cost of Artificial Intelligence Lifecycle in Communication\n  Networks",
+    "abstract": "Artificial Intelligence (AI) is being incorporated in several optimization,\nscheduling, orchestration as well as in native communication network functions.\nWhile this paradigm shift results in increased energy consumption, quantifying\nthe end-toend energy consumption of adding intelligence to such systems is\nparticularly challenging. Conventional metrics focus on either communication,\ncomputation infrastructure, or model development. To address this, we propose a\nnew metric, the Energy Cost of AI Lifecycle (eCAL) of one AI model in a system.\neCAL captures the energy consumption throughout the development and deployment\nof an AI-model providing intelligence in a wireless communication network by\nanalyzing the complexity of data collection and manipulation in individual\ncomponents and deriving overall and per-bit energy consumption. We show that\nthe better a model is and the more it is used, the more energy efficient an\ninference is. For a simple case study, eCAL for making 100 inferences is 2.73\ntimes higher than for 1000 inferences. Additionally, we have developed a\nmodular and extendable opensource simulation tool to enable researchers,\npractitioners, and engineers to calculate the end-to-end energy cost with\nvarious configurations and across various systems, ensuring adaptability to\ndiverse use cases.",
+    "authors": [
+      "Shih-Kai Chou",
+      "Jernej Hribar",
+      "Vid Hanžel",
+      "Mihael Mohorčič",
+      "Carolina Fortuna"
+    ],
+    "published": "2024-08-01T13:23:15Z",
+    "updated": "2025-05-12T11:18:06Z",
+    "categories": [
+      "cs.ET",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2408.00540v3",
+    "pdf_url": "http://arxiv.org/pdf/2408.00540v3",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，理解其内容和结构。这段摘要主要讨论人工智能在通信网络中的应用及其能源消耗问题，提出了一个新的度量指标eCAL，并介绍了相关的开源工具。\n\n接下来，我需要确保翻译的准确性，尤其是学术术语。例如，“Artificial Intelligence (AI)”应该翻译为“人工智能（AI）”，而“Energy Cost of AI Lifecycle (eCAL)”需要保留英文缩写，同时给出中文解释。此外，像“end-to-end energy consumption”这样的术语要准确传达其含义，可能需要译为“端到端能耗”。\n\n然后，我要注意保持原文的逻辑结构和技术细节。原文分为几个部分：AI在通信网络中的应用、现有度量的不足、提出的eCAL指标、案例研究结果以及开源工具的开发。在翻译时，要确保这些部分的衔接和连贯性，避免信息丢失或错位。\n\n同时，用户要求语言流畅自然，符合中文表达习惯。这意味着在翻译过程中，可能需要调整句子的结构，使其更符合中文的语序和表达方式。例如，英文中的被动语态在中文中可能需要转换为主动语态，或者调整句子的连接词，使整体读起来更顺畅。\n\n还要检查是否有专业术语需要特别处理，比如“modular and extendable opensource simulation tool”应译为“模块化且可扩展的开源仿真工具”，确保技术细节的准确性。此外，数字和单位的转换也要正确，比如“2.73 times higher”要准确翻译为“2.73倍”。\n\n最后，确保不添加任何解释或额外内容，只输出翻译结果。需要通读一遍译文，确认没有遗漏或错误，并且符合用户的所有要求。例如，检查是否所有技术术语都正确翻译，逻辑是否清晰，语言是否自然流畅。如果有不确定的地方，可能需要查阅相关领域的中文文献，确保术语的一致性。\n\n总结来说，这个过程需要细致的阅读、准确的术语处理、逻辑结构的保持以及语言的自然流畅，同时严格遵守用户的翻译要求，确保最终输出的译文既专业又易于理解。\n</think>\n\n人工智能（AI）正在被集成到多种优化、调度、编排以及原生通信网络功能中。尽管这种范式转变导致了能源消耗的增加，但量化在这些系统中添加智能功能的端到端能耗仍是一个特别具有挑战性的任务。传统度量标准仅关注通信、计算基础设施或模型开发中的某一方面。为解决这一问题，我们提出了一种新的度量指标——系统中单个AI模型的AI生命周期能耗（eCAL）。eCAL通过分析数据收集和处理在各个组件中的复杂性，并推导整体及每比特能耗，来捕捉AI模型在无线通信网络中提供智能功能的整个开发和部署过程中的能耗。我们证明，模型性能越优且使用频率越高，推理过程的能效越高。在简单案例研究中，生成100次推理的eCAL是生成1000次推理的2.73倍。此外，我们开发了一个模块化且可扩展的开源仿真工具，使研究人员、从业者和工程师能够根据不同的配置和系统计算端到端能耗，确保对多样化应用场景的适应性。"
+  },
+  {
+    "arxiv_id": "2407.12057v1",
+    "title": "NinjaLLM: Fast, Scalable and Cost-effective RAG using Amazon SageMaker\n  and AWS Trainium and Inferentia2",
+    "abstract": "Retrieval-augmented generation (RAG) techniques are widely used today to\nretrieve and present information in a conversational format. This paper\npresents a set of enhancements to traditional RAG techniques, focusing on large\nlanguage models (LLMs) fine-tuned and hosted on AWS Trainium and Inferentia2 AI\nchips via SageMaker. These chips are characterized by their elasticity,\naffordability, and efficient performance for AI compute tasks. Besides enabling\ndeployment on these chips, this work aims to improve tool usage, add citation\ncapabilities, and mitigate the risks of hallucinations and unsafe responses due\nto context bias. We benchmark our RAG system's performance on the Natural\nQuestions and HotPotQA datasets, achieving an accuracy of 62% and 59%\nrespectively, exceeding other models such as DBRX and Mixtral Instruct.",
+    "authors": [
+      "Tengfei Xue",
+      "Xuefeng Li",
+      "Roman Smirnov",
+      "Tahir Azim",
+      "Arash Sadrieh",
+      "Babak Pahlavan"
+    ],
+    "published": "2024-07-11T05:04:44Z",
+    "updated": "2024-07-11T05:04:44Z",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "I.2.7"
+    ],
+    "page_url": "http://arxiv.org/abs/2407.12057v1",
+    "pdf_url": "http://arxiv.org/pdf/2407.12057v1",
+    "abstract_cn": "<think>\n好的，用户让我翻译一段关于RAG技术的英文摘要。首先，我需要确认自己理解原文内容。RAG是检索增强生成技术，现在广泛用于对话式信息检索和呈现。论文提出了对传统RAG的改进，特别是使用AWS的Trainium和Inferentia2芯片，通过SageMaker进行微调和部署。这些芯片的特点是弹性、成本效益和高效性能。此外，改进还包括工具使用、引用能力，以及减少幻觉和不安全响应的风险。最后在两个数据集上进行了基准测试，准确率超过其他模型。\n\n接下来，我要确保学术术语的准确性。比如“retrieval-augmented generation”翻译成“检索增强生成”是正确的。AWS的芯片名称需要保留原文，但可能需要加注中文解释，不过用户没有特别要求，所以直接保留英文名称。SageMaker是AWS的服务，通常直接使用英文名。\n\n然后，检查句子的流畅性。例如，“This paper presents a set of enhancements to traditional RAG techniques”可以译为“本文提出了一组对传统RAG技术的改进”，保持原意。注意中文的语序和连接词，比如“Besides enabling deployment on these chips”翻译成“除了实现这些芯片上的部署之外”，符合中文表达习惯。\n\n技术细节方面，要确保准确传达芯片的特性：弹性、成本效益、高效性能。原文中的“elasticity, affordability, and efficient performance”对应“弹性、成本效益和高效性能”。另外，提到的改进措施如工具使用、引用能力、缓解幻觉和不安全响应的风险，需要准确对应，比如“mitigate the risks of hallucinations and unsafe responses due to context bias”译为“缓解因上下文偏差导致的幻觉和不安全响应风险”。\n\n最后，数据集和准确率部分，“Natural Questions”和“HotPotQA”通常保留英文，但可能需要确认是否有通用的中文译名。如果没有，直接保留英文。准确率62%和59%，以及对比模型DBRX和Mixtral Instruct，同样保留英文名称。\n\n检查是否有遗漏或误译。例如，“fine-tuned and hosted on AWS Trainium and Inferentia2 AI chips via SageMaker”中的“via”翻译成“通过”是合适的。确保所有技术术语和专有名词都正确无误，没有添加额外内容，只输出翻译结果。最后通读一遍，确保逻辑结构清晰，语言流畅自然。\n</think>\n\n检索增强生成（RAG）技术目前被广泛用于以对话形式检索和呈现信息。本文提出了一组对传统RAG技术的改进方案，重点针对在AWS Trainium和Inferentia2 AI芯片上通过SageMaker进行微调和部署的大语言模型（LLMs）。这些芯片以弹性、成本效益和高效的AI计算性能为特点。除了实现这些芯片上的部署之外，本研究还旨在提升工具使用能力、添加引用功能，并缓解因上下文偏差导致的幻觉和不安全响应风险。我们在Natural Questions和HotPotQA数据集上对RAG系统的性能进行了基准测试，分别达到了62%和59%的准确率，超越了DBRX和Mixtral Instruct等其他模型。"
+  },
+  {
+    "arxiv_id": "2406.19113v1",
+    "title": "MegIS: High-Performance, Energy-Efficient, and Low-Cost Metagenomic\n  Analysis with In-Storage Processing",
+    "abstract": "Metagenomics has led to significant advances in many fields. Metagenomic\nanalysis commonly involves the key tasks of determining the species present in\na sample and their relative abundances. These tasks require searching large\nmetagenomic databases. Metagenomic analysis suffers from significant data\nmovement overhead due to moving large amounts of low-reuse data from the\nstorage system. In-storage processing can be a fundamental solution for\nreducing this overhead. However, designing an in-storage processing system for\nmetagenomics is challenging because existing approaches to metagenomic analysis\ncannot be directly implemented in storage effectively due to the hardware\nlimitations of modern SSDs. We propose MegIS, the first in-storage processing\nsystem designed to significantly reduce the data movement overhead of the\nend-to-end metagenomic analysis pipeline. MegIS is enabled by our lightweight\ndesign that effectively leverages and orchestrates processing inside and\noutside the storage system. We address in-storage processing challenges for\nmetagenomics via specialized and efficient 1) task partitioning, 2)\ndata/computation flow coordination, 3) storage technology-aware algorithmic\noptimizations, 4) data mapping, and 5) lightweight in-storage accelerators.\nMegIS's design is flexible, capable of supporting different types of\nmetagenomic input datasets, and can be integrated into various metagenomic\nanalysis pipelines. Our evaluation shows that MegIS outperforms the\nstate-of-the-art performance- and accuracy-optimized software metagenomic tools\nby 2.7$\\times$-37.2$\\times$ and 6.9$\\times$-100.2$\\times$, respectively, while\nmatching the accuracy of the accuracy-optimized tool. MegIS achieves\n1.5$\\times$-5.1$\\times$ speedup compared to the state-of-the-art metagenomic\nhardware-accelerated (using processing-in-memory) tool, while achieving\nsignificantly higher accuracy.",
+    "authors": [
+      "Nika Mansouri Ghiasi",
+      "Mohammad Sadrosadati",
+      "Harun Mustafa",
+      "Arvid Gollwitzer",
+      "Can Firtina",
+      "Julien Eudine",
+      "Haiyu Mao",
+      "Joël Lindegger",
+      "Meryem Banu Cavlak",
+      "Mohammed Alser",
+      "Jisung Park",
+      "Onur Mutlu"
+    ],
+    "published": "2024-06-27T11:52:17Z",
+    "updated": "2024-06-27T11:52:17Z",
+    "categories": [
+      "cs.AR",
+      "cs.DC",
+      "q-bio.GN"
+    ],
+    "page_url": "http://arxiv.org/abs/2406.19113v1",
+    "pdf_url": "http://arxiv.org/pdf/2406.19113v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，理解其内容和结构。这段摘要主要讨论了元基因组学中的数据处理问题，以及提出的MegIS系统如何通过存储内处理来减少数据移动开销。\n\n接下来，我需要确保翻译的准确性，尤其是学术术语。比如“metagenomics”应该翻译为“元基因组学”，“in-storage processing”可能需要译为“存储内处理”或“存储中处理”。同时，要注意保持原文的逻辑结构，比如问题陈述、解决方案、方法和实验结果的顺序。\n\n用户的要求中提到要符合中文表达习惯，所以需要调整句子的结构，使其更自然。例如，英文中的被动语态在中文里可能需要转换为主动语态，或者调整语序。此外，技术细节如“1.5×-5.1× speedup”需要正确转换为中文的倍数表达，比如“1.5倍至5.1倍的加速”。\n\n还要注意一些细节，比如单位符号“×”在中文中通常用“倍”表示，数字和单位之间是否需要空格。例如“2.7$\\times$-37.2$\\times$”应转换为“2.7倍至37.2倍”。同时，检查是否有专业术语需要统一，比如“SSDs”应译为“固态硬盘”。\n\n另外，用户强调只输出翻译结果，不要任何解释或额外内容。因此，我需要确保翻译后的文本没有添加任何注释或说明，保持简洁。最后，通读一遍译文，确保流畅自然，没有语法错误，并且准确传达了原文的技术内容和实验结果。\n</think>\n\n元基因组学已在多个领域取得了显著进展。元基因组分析通常涉及确定样本中所含物种及其相对丰度等关键任务，这些任务需要搜索大型元基因组数据库。由于需要从存储系统中移动大量低复用数据，元基因组分析面临显著的数据移动开销问题。存储内处理可成为减少此类开销的根本性解决方案。然而，为元基因组学设计存储内处理系统具有挑战性，因为现有元基因组分析方法由于现代固态硬盘的硬件限制无法有效直接在存储中实现。我们提出了MegIS，这是首个专为显著降低端到端元基因组分析流水线数据移动开销而设计的存储内处理系统。MegIS通过轻量级设计实现，该设计有效利用并协调存储系统内外的处理能力。我们通过以下五个专门化且高效的策略解决元基因组学的存储内处理挑战：1）任务划分，2）数据/计算流协调，3）存储技术感知的算法优化，4）数据映射，5）轻量级存储内加速器。MegIS的设计具有灵活性，能够支持不同类型的元基因组输入数据集，并可集成到各种元基因组分析流水线中。我们的评估表明，MegIS在性能和准确率优化的软件元基因组工具中分别实现了2.7倍至37.2倍和6.9倍至100.2倍的性能提升，同时保持与准确率优化工具相当的准确性。与最先进的元基因组硬件加速（采用存内计算）工具相比，MegIS实现了1.5倍至5.1倍的加速，同时显著提高了准确性。"
+  },
+  {
+    "arxiv_id": "2402.06598v2",
+    "title": "CigaR: Cost-efficient Program Repair with LLMs",
+    "abstract": "Large language models (LLM) have proven to be effective at automated program\nrepair (APR). However, using LLMs can be costly, with companies invoicing users\nby the number of tokens. In this paper, we propose CigaR, the first LLM-based\nAPR tool that focuses on minimizing the repair cost. CigaR works in two major\nsteps: generating a first plausible patch and multiplying plausible patches.\nCigaR optimizes the prompts and the prompt setting to maximize the information\ngiven to LLMs using the smallest possible number of tokens. Our experiments on\n429 bugs from the widely used Defects4J and HumanEval-Java datasets shows that\nCigaR reduces the token cost by 73%. On average, CigaR spends 127k tokens per\nbug while the baseline uses 467k tokens per bug. On the subset of bugs that are\nfixed by both, CigaR spends 20k per bug while the baseline uses 608k tokens, a\ncost saving of 96%. Our extensive experiments show that CigaR is a\ncost-effective LLM-based program repair tool that uses a low number of tokens\nto automatically generate patches.",
+    "authors": [
+      "Dávid Hidvégi",
+      "Khashayar Etemadi",
+      "Sofia Bobadilla",
+      "Martin Monperrus"
+    ],
+    "published": "2024-02-09T18:21:45Z",
+    "updated": "2024-04-18T15:00:59Z",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2402.06598v2",
+    "pdf_url": "http://arxiv.org/pdf/2402.06598v2",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一篇英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个术语和句子的意思。用户提到这是一个关于大型语言模型（LLM）在自动程序修复（APR）中的应用的论文摘要，重点在于降低成本。\n\n接下来，我需要确认翻译的要求：保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节。用户还强调只输出翻译结果，不要任何解释或额外内容。因此，我必须确保翻译后的中文不仅准确，还要符合学术论文的正式风格。\n\n首先，处理术语部分。例如，“Large language models (LLM)”应该翻译为“大型语言模型（LLM）”，保持缩写的一致性。“Automated program repair (APR)”对应“自动程序修复（APR）”。这些术语在学术领域有固定译法，必须准确无误。接下来，“token cost”需要翻译为“令牌成本”，因为“token”在机器学习领域通常译为“令牌”或“标记”，这里根据上下文选择“令牌”更合适。\n\n然后，注意句子的结构。英文中的被动语态在中文中可能需要调整，比如“have proven to be effective”可以译为“已被证明有效”，保持被动结构但符合中文习惯。另外，原文中的数据部分，如“73%”、“127k tokens”等，需要确保数字和单位的正确转换，例如“k”在中文中通常表示“千”，所以“127k tokens”应译为“127,000个令牌”。\n\n还要注意逻辑连接词的使用，比如“However”翻译为“然而”，保持转折关系。“In this paper, we propose CigaR”需要准确传达出论文提出的新工具，因此译为“在本文中，我们提出了CigaR”。同时，工具名称CigaR作为专有名词，应保留不译，并在首次出现时给出中文解释，但用户可能希望直接保留英文名称，所以需要确认是否需要翻译。根据用户提供的例子，他们保留了CigaR，因此我也保持原样。\n\n在处理技术细节时，比如“generating a first plausible patch and multiplying plausible patches”，需要准确表达出两个步骤：“生成首个可行补丁”和“生成多个可行补丁”。这里的“multiplying”可能是指生成多个，所以译为“生成多个”更合适。\n\n另外，注意数据对比部分，例如“CigaR spends 127k tokens per bug while the baseline uses 467k tokens per bug.”需要明确比较，译为“CigaR每修复一个缺陷平均消耗127,000个令牌，而基线方法则需要467,000个令牌”。同时，百分比的计算要准确，如“73%”和“96%”的节省，确保数字正确无误。\n\n最后，检查整个翻译的流畅性和一致性，确保没有遗漏任何技术细节，并且符合中文的学术写作规范。例如，确保“extensive experiments”翻译为“大量实验”而不是直译为“广泛的实验”，以更符合中文表达习惯。\n\n总结来说，我需要逐句分析原文，确保术语准确，数据正确，逻辑清晰，同时保持语言的自然流畅。完成初稿后，再通读一遍，检查是否有不通顺或错误的地方，确保最终翻译结果符合用户的所有要求。\n</think>\n\n大型语言模型（LLM）已被证明在自动程序修复（APR）中具有有效性。然而，使用LLM的成本较高，企业通常按令牌数量向用户计费。在本文中，我们提出了CigaR——首个专注于降低修复成本的基于LLM的APR工具。CigaR通过两个主要步骤工作：生成首个可行补丁和生成多个可行补丁。CigaR通过优化提示词和提示设置，在最小化令牌数量的同时最大化向LLM提供的信息量。我们在广泛使用的Defects4J和HumanEval-Java数据集中的429个缺陷上进行了实验，结果表明CigaR将令牌成本降低了73%。平均而言，CigaR每修复一个缺陷消耗127,000个令牌，而基线方法需要467,000个令牌。在两个方法都能修复的缺陷子集中，CigaR每缺陷仅消耗20,000个令牌，而基线方法需要608,000个令牌，成本节省率达96%。我们的大量实验证明，CigaR是一种高效的基于LLM的程序修复工具，能够以少量令牌自动生成补丁。"
+  },
+  {
+    "arxiv_id": "2402.05977v1",
+    "title": "Tool wear monitoring using an online, automatic and low cost system\n  based on local texture",
+    "abstract": "In this work we propose a new online, low cost and fast approach based on\ncomputer vision and machine learning to determine whether cutting tools used in\nedge profile milling processes are serviceable or disposable based on their\nwear level. We created a new dataset of 254 images of edge profile cutting\nheads which is, to the best of our knowledge, the first publicly available\ndataset with enough quality for this purpose. All the inserts were segmented\nand their cutting edges were cropped, obtaining 577 images of cutting edges:\n301 functional and 276 disposable. The proposed method is based on (1) dividing\nthe cutting edge image in different regions, called Wear Patches (WP), (2)\ncharacterising each one as worn or serviceable using texture descriptors based\non different variants of Local Binary Patterns (LBP) and (3) determine, based\non the state of these WP, if the cutting edge (and, therefore, the tool) is\nserviceable or disposable. We proposed and assessed five different patch\ndivision configurations. The individual WP were classified by a Support Vector\nMachine (SVM) with an intersection kernel. The best patch division\nconfiguration and texture descriptor for the WP achieves an accuracy of 90.26%\nin the detection of the disposable cutting edges. These results show a very\npromising opportunity for automatic wear monitoring in edge profile milling\nprocesses.",
+    "authors": [
+      "M. T. García-Ordás",
+      "E. Alegre-Gutiérrez",
+      "R. Alaiz-Rodríguez",
+      "V. González-Castro"
+    ],
+    "published": "2024-02-07T22:25:54Z",
+    "updated": "2024-02-07T22:25:54Z",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "page_url": "http://arxiv.org/abs/2402.05977v1",
+    "pdf_url": "http://arxiv.org/pdf/2402.05977v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的这个翻译请求。首先，用户希望将一篇学术论文的摘要翻译成中文，而且有具体的翻译要求。我得仔细看看这些要求，确保不遗漏任何细节。\n\n首先，用户强调要保持学术术语的准确性。这意味着我需要确保像“Local Binary Patterns (LBP)”这样的术语正确翻译，可能需要查找对应的中文标准译名。比如，“Local Binary Patterns”通常翻译为“局部二值模式”，所以这里应该用这个术语。\n\n接下来是语言流畅自然，符合中文表达习惯。学术论文的摘要通常比较正式，但中文表达可能需要调整句子结构，使其更符合中文的逻辑顺序。例如，英文中的被动语态在中文里可能需要转换为主动语态，或者调整语序，让句子更通顺。\n\n然后，保持原文的逻辑结构和技术细节。我需要确保翻译后的中文摘要不仅准确传达技术内容，还要保持原有的逻辑流程。比如，原文提到的方法分为三个步骤，翻译时要明确这三个步骤，使用适当的连接词，如“首先”、“其次”、“最后”来增强逻辑性。\n\n用户还要求只输出翻译结果，不要包含任何解释或额外内容。这意味着我需要专注于翻译本身，避免添加任何注释或评论，确保输出简洁。\n\n现在，我需要通读原文，理解每个部分的内容。摘要主要介绍了一种基于计算机视觉和机器学习的新方法，用于判断铣削过程中刀具的磨损状态。他们创建了一个新的数据集，分割了刀具图像，并提出了一个基于Wear Patches（磨损区域）的方法，使用LBP纹理描述符和SVM分类器进行分类，最终达到了较高的准确率。\n\n在翻译过程中，需要注意专业术语的正确性，比如“Support Vector Machine (SVM)”应译为“支持向量机（SVM）”，“intersection kernel”可能需要译为“交集核”或“交核”，但需要确认是否是标准译法。另外，“Wear Patches”这里翻译为“磨损区域”比较合适，但需要保持首字母缩写的一致性，可能需要在首次出现时注明英文缩写。\n\n另外，数据集的描述部分需要准确，比如“254 images of edge profile cutting heads”应译为“254张边缘轮廓铣削刀头图像”，确保数字和单位的正确性。同时，注意中文中数字和单位的使用习惯，比如“301 functional and 276 disposable”应译为“301张功能正常和276张需报废的刀具边缘图像”。\n\n在处理方法部分，原文提到的三个步骤需要清晰呈现，使用适当的连接词，如“首先”、“其次”、“最后”来分步骤说明。同时，注意技术细节的准确性，比如“texture descriptors based on different variants of Local Binary Patterns (LBP)”应译为“基于不同变体的局部二值模式（LBP）的纹理描述符”。\n\n最后，检查整个翻译是否流畅，是否符合中文的表达习惯，确保没有遗漏任何技术细节，并且术语使用一致。例如，确保“Wear Patches”在全文中统一译为“磨损区域”，并在首次出现时注明英文缩写。同时，注意句子的连贯性，避免直译导致的生硬表达。\n\n完成翻译后，再通读一遍，确认所有要求都已满足，特别是学术术语的准确性、语言流畅性以及逻辑结构的保持。确保没有添加任何额外内容，只输出翻译结果。\n</think>\n\n本文提出了一种基于计算机视觉和机器学习的在线、低成本且快速的新方法，用于根据边缘轮廓铣削过程中刀具的磨损程度判断其是否可继续使用或需报废。我们创建了一个包含254张边缘轮廓铣削刀头图像的新数据集，据我们所知，这是首个具有足够质量用于该目的的公开数据集。所有刀具均被分割并裁剪出切削刃区域，最终获得577张切削刃图像：其中301张为功能正常，276张为需报废。所提出的方法包含三个步骤：（1）将切削刃图像划分为若干称为磨损区域（Wear Patches, WP）的子区域；（2）通过基于局部二值模式（LBP）不同变体的纹理描述符对每个WP进行磨损或可使用状态的特征描述；（3）根据这些WP的状态判断切削刃（进而判断整个刀具）是否可继续使用或需报废。我们提出了并评估了五种不同的区域划分配置方案，采用交集核的支持向量机（SVM）对单个WP进行分类。最佳区域划分配置与纹理描述符组合在报废切削刃检测中达到了90.26%的准确率。这些结果表明，在边缘轮廓铣削过程中实现自动磨损监测具有非常有前景的应用潜力。"
+  },
+  {
+    "arxiv_id": "2401.17701v1",
+    "title": "Towards a low-cost universal access cloud framework to assess STEM\n  students",
+    "abstract": "Government-imposed lockdowns have challenged academic institutions to\ntransition from traditional face-to-face education into hybrid or fully remote\nlearning models. This transition has focused on the technological challenge of\nguaranteeing the continuity of sound pedagogy and granting safe access to\nonline digital university services. However, a key requisite involves adapting\nthe evaluation process as well. In response to this need, the authors of this\npaper tailored and implemented a cloud deployment to provide universal access\nto online summative assessment of university students in a computer programming\ncourse that mirrored a traditional in-person monitored computer laboratory\nunder strictly controlled exam conditions. This deployment proved easy to\nintegrate with the university systems and many commercial proctoring tools.\nThis cloud deployment is not only a solution for extraordinary situations; it\ncan also be adapted daily for online collaborative coding assignments,\npractical lab sessions, formative assessments, and masterclasses where the\nstudents connect using their equipment. Connecting from home facilitates access\nto education for students with physical disabilities. It also allows\nparticipation with their students' own adapted equipment in the evaluation\nprocesses, simplifying assessment for those with hearing or visual impairments.\nIn addition to these benefits and the evident commitment to the safety rules,\nthis solution has proven cheaper and more flexible than on-premise equivalent\ninstallations.",
+    "authors": [
+      "L. F. S Merchante",
+      "Carlos M. Vallez",
+      "Carrie Szczerbik"
+    ],
+    "published": "2024-01-31T09:45:41Z",
+    "updated": "2024-01-31T09:45:41Z",
+    "categories": [
+      "cs.CY",
+      "97P40, 97U50, 97U70"
+    ],
+    "page_url": "http://arxiv.org/abs/2401.17701v1",
+    "pdf_url": "http://arxiv.org/pdf/2401.17701v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，理解其内容和结构。这段摘要主要讨论政府实施的封锁措施对学术机构的影响，特别是转向混合或完全远程学习模式的挑战，以及作者提出的基于云的解决方案。\n\n接下来，我需要确保翻译符合用户的要求：学术术语准确，语言流畅自然，保持逻辑结构和技术细节，只输出翻译结果。首先，我会逐句分析原文，识别关键术语，比如“hybrid or fully remote learning models”应译为“混合或完全远程学习模式”，“cloud deployment”译为“云部署”等。这些术语需要准确对应，不能随意替换。\n\n然后，注意句子的结构和逻辑关系。例如，原文提到“the authors of this paper tailored and implemented a cloud deployment...”，这里需要保持被动语态的转换，同时确保中文表达的流畅。可能需要调整语序，使中文更符合习惯，比如将“in response to this need”译为“为应对这一需求”放在句首更自然。\n\n还要注意一些细节，比如“strictly controlled exam conditions”翻译为“严格控制的考试条件”是否准确，或者是否需要更符合中文表达的词汇。同时，检查是否有专业术语需要特别处理，比如“proctoring tools”译为“监考工具”是否合适。\n\n另外，用户提到要保持原文的逻辑结构，所以需要确保每个段落的衔接和过渡词正确传达。例如，“However, a key requisite involves adapting the evaluation process as well.”中的“However”在中文中通常用“然而”或“但是”，这里选择“然而”更正式，符合学术文本的风格。\n\n还要注意一些长句的处理，避免直译导致的中文句子冗长。例如，“This cloud deployment is not only a solution for extraordinary situations; it can also be adapted daily for online collaborative coding assignments, practical lab sessions, formative assessments, and masterclasses where the students connect using their equipment.”这句话需要拆分成几个短句，确保中文读起来顺畅，同时保留所有信息点。\n\n最后，通读整个翻译，检查是否遗漏了任何技术细节，比如“connecting from home facilitates access to education for students with physical disabilities”中的“connecting from home”是否准确译为“在家连接”，以及是否传达了促进残疾学生教育访问的意思。同时，确保所有数字、数据和专有名词（如“on-premise equivalent installations”）正确无误地翻译。\n\n完成这些步骤后，再对比原文和译文，确认没有偏离原意，术语一致，结构清晰，语言自然流畅。这样就能满足用户的需求，提供一个高质量的学术翻译。\n</think>\n\n政府实施的封锁措施促使学术机构将传统面对面教学模式转变为混合或完全远程学习模式。这一转变聚焦于技术层面的挑战，即确保教学连续性并提供安全访问在线数字大学服务的途径。然而，一个关键要求在于评估过程的适应性调整。为应对这一需求，本文作者定制并实施了一种云部署方案，以实现大学计算机编程课程中在线总结性评估的普遍访问，该方案在严格控制的考试条件下模拟了传统现场监控的计算机实验室环境。该云部署方案不仅易于与大学系统及众多商业监考工具集成，而且不仅适用于特殊情境，还可每日用于在线协作编程作业、实践实验课、形成性评估及大师班等场景，学生可使用自有设备参与。在家连接方式为身体残疾学生提供了教育访问便利，同时也允许学生在评估过程中使用自有的适应性设备，简化了听障或视障学生的评估流程。除上述优势及对安全规则的明显承诺外，该解决方案已被证明比本地同类安装更具成本效益和灵活性。"
+  },
+  {
+    "arxiv_id": "2401.16009v1",
+    "title": "SpectroGLY: A Low-Cost IoT-Based Ecosystem for the Detection of\n  Glyphosate Residues in Waters",
+    "abstract": "Glyphosate contamination in waters is becoming a major health problem that\nneeds to be urgently addressed, as accidental spraying, drift or leakage of\nthis highly water-soluble herbicide can impact aquatic ecosystems. Researchers\nare increasingly concerned about exposure to glyphosate and the risks its poses\nto human health, since it may cause substantial damage, even in small doses.\nThe detection of glyphosate residues in waters is not a simple task, as it\nrequires complex and expensive equipment and qualified personnel. New\ntechnological tools need to be designed and developed, based on proven, but\nalso cost-efficient, agile and user-friendly, analytical techniques, which can\nbe used in the field and in the lab, enabled by connectivity and multi-platform\nsoftware applications. This paper presents the design, development and testing\nof an innovative low-cost VIS-NIR (Visible and Near-Infrared) spectrometer\n(called SpectroGLY), based on IoT (Internet of Things) technologies, which\nallows potential glyphosate contamination in waters to be detected. SpectroGLY\ncombines the functional concept of a traditional lab spectrometer with the IoT\ntechnological concept, enabling the integration of several connectivity options\nfor rural and urban settings and digital visualization and monitoring platforms\n(Mobile App and Dashboard Web). Thanks to its portability, it can be used in\nany context and provides results in 10 minutes. Additionally, it is unnecessary\nto transfer the sample to a laboratory (optimizing time, costs and the capacity\nfor corrective actions by the authorities). In short, this paper proposes an\ninnovative, low-cost, agile and highly promising solution to avoid potential\nintoxications that may occur due to ingestion of water contaminated by this\nherbicide.",
+    "authors": [
+      "Javier Aira",
+      "Teresa Olivares",
+      "Francisco M. Delicado"
+    ],
+    "published": "2024-01-29T09:56:35Z",
+    "updated": "2024-01-29T09:56:35Z",
+    "categories": [
+      "cs.NI",
+      "cs.CY"
+    ],
+    "page_url": "http://arxiv.org/abs/2401.16009v1",
+    "pdf_url": "http://arxiv.org/pdf/2401.16009v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的原文，确保理解每个技术术语和句子的意思。用户提到草甘膦污染在水中的问题，这是一个环境健康问题，需要准确翻译相关术语，比如“glyphosate”要翻译成“草甘膦”，“VIS-NIR spectrometer”是“可见光-近红外光谱仪”。\n\n接下来，我需要检查翻译要求：保持学术术语的准确性，语言流畅自然，符合中文表达习惯，保持逻辑结构和技术细节，只输出翻译结果。用户特别强调不要包含任何解释或额外内容，所以我要确保翻译后的内容严格对应原文，不添加任何个人见解。\n\n然后，我会逐句翻译，注意句子的连贯性和专业性。例如，“Researchers are increasingly concerned about exposure to glyphosate and the risks its poses to human health”要准确表达研究人员对草甘膦暴露及其健康风险的关注。同时，注意技术细节，比如“SpectroGLY”这个设备名称需要保留英文，可能需要在括号中注明中文翻译，但用户没有特别说明，所以直接保留英文。\n\n还要处理一些复杂结构，比如“based on proven, but also cost-efficient, agile and user-friendly, analytical techniques”，这里需要确保中文表达流畅，可能调整语序为“基于经过验证但同时具备成本效益、敏捷且用户友好的分析技术”。此外，注意连接词和逻辑关系，比如“since it may cause substantial damage, even in small doses”要准确传达因果关系。\n\n最后，通读整个翻译，检查是否符合中文的学术表达习惯，确保没有遗漏技术细节，比如设备的功能、使用场景和优势。例如，“Thanks to its portability, it can be used in any context and provides results in 10 minutes”要翻译成“得益于其便携性，该设备可在任何场景下使用，并在10分钟内提供检测结果”，保持原意和流畅性。\n\n确认所有要求都已满足后，输出最终的翻译结果，确保没有多余内容，格式正确，符合用户的需求。\n</think>\n\n草甘膦污染水体已成为亟需解决的重大健康问题，因为这种高水溶性除草剂的意外喷洒、漂移或泄漏可能影响水生生态系统。研究人员日益关注草甘膦暴露及其对人类健康的风险，因为即使在小剂量下也可能造成显著损害。水体中草甘膦残留的检测并非易事，这需要复杂的昂贵设备和专业人员。需要设计和开发基于经过验证但同时具备成本效益、敏捷且用户友好的分析技术的新技术工具，这些工具既可在现场也可在实验室使用，并通过连接性和多平台软件应用实现功能。本文介绍了基于物联网（IoT）技术的创新低成本可见光-近红外（VIS-NIR）光谱仪SpectroGLY的设计、开发与测试，该设备可检测水体中潜在的草甘膦污染。SpectroGLY将传统实验室光谱仪的功能概念与物联网技术理念相结合，支持多种连接选项以适应城乡环境，并集成数字可视化与监测平台（移动应用和网页仪表盘）。得益于其便携性，该设备可在任何场景下使用，并在10分钟内提供检测结果。此外，无需将样本送至实验室（可节省时间、成本，并提升主管部门采取补救措施的能力）。简而言之，本文提出了一种创新、低成本、敏捷且极具前景的解决方案，可避免因摄入该除草剂污染的水而引发的潜在中毒事件。"
+  },
+  {
+    "arxiv_id": "2401.09554v1",
+    "title": "Entanglement cost for infinite-dimensional physical systems",
+    "abstract": "We prove that the entanglement cost equals the regularized entanglement of\nformation for any infinite-dimensional quantum state $\\rho_{AB}$ with finite\nquantum entropy on at least one of the subsystems $A$ or $B$. This generalizes\na foundational result in quantum information theory that was previously\nformulated only for operations and states on finite-dimensional systems. The\nextension to infinite dimensions is nontrivial because the conventional tools\nfor establishing both the direct and converse bounds, i.e., strong typically,\nmonotonicity, and asymptotic continuity, are no longer directly applicable. To\naddress this problem, we construct a new entanglement dilution protocol for\ninfinite-dimensional states implementable by local operations and a finite\namount of one-way classical communication (one-way LOCC), using weak and strong\ntypicality multiple times. We also prove the optimality of this protocol among\nall protocols even under infinite-dimensional separable operations by\ndeveloping an argument based on alternative forms of monotonicity and\nasymptotic continuity of the entanglement of formation for infinite-dimensional\nstates. Along the way, we derive a new integral representation for the quantum\nentropy of infinite-dimensional states, which we believe to be of independent\ninterest. Our results allow us to fully characterize an important operational\nentanglement measure -- the entanglement cost -- for all infinite-dimensional\nphysical systems.",
+    "authors": [
+      "Hayata Yamasaki",
+      "Kohdai Kuroiwa",
+      "Patrick Hayden",
+      "Ludovico Lami"
+    ],
+    "published": "2024-01-17T19:12:10Z",
+    "updated": "2024-01-17T19:12:10Z",
+    "categories": [
+      "quant-ph",
+      "math-ph",
+      "math.MP"
+    ],
+    "page_url": "http://arxiv.org/abs/2401.09554v1",
+    "pdf_url": "http://arxiv.org/pdf/2401.09554v1",
+    "abstract_cn": "<think>\n好的，我现在需要处理用户的请求，将一段英文摘要翻译成中文。首先，我要仔细阅读用户提供的翻译要求，确保完全理解他们的需求。用户强调要保持学术术语的准确性，语言流畅自然，符合中文表达习惯，同时保持原文的逻辑结构和技术细节，只输出翻译结果，不要任何解释或额外内容。\n\n接下来，我需要通读提供的英文摘要，理解其内容和结构。这段摘要涉及量子信息理论中的纠缠成本和纠缠形成等概念，属于专业领域，因此术语的准确性至关重要。比如“entanglement cost”应该翻译为“纠缠成本”，“regularized entanglement of formation”可能需要译为“正则化纠缠形成”。同时，要注意一些专业术语的复数形式或特定用法，例如“infinite-dimensional quantum state”应译为“无限维量子态”。\n\n然后，我会逐句翻译，确保每个技术细节都被准确传达。例如，“finite quantum entropy on at least one of the subsystems A or B”需要准确表达为“至少在一个子系统A或B上具有有限量子熵”。同时，注意句子的连贯性和逻辑关系，比如“generalizes a foundational result”要处理为“推广了量子信息理论中的一个基础性结果”。\n\n在翻译过程中，可能会遇到一些复杂的句子结构，比如长句或嵌套结构。这时候需要拆分句子，使其符合中文的表达习惯，同时不丢失原意。例如，“The extension to infinite dimensions is nontrivial because...”可以译为“将结果扩展到无限维是不平凡的，因为...”，保持因果关系的清晰。\n\n另外，用户提到要使用弱典型性和强典型性多次，这部分需要确保术语的一致性，可能需要查阅相关文献确认标准译法。同时，注意缩写如“LOCC”在中文中的处理，通常保留英文缩写并加注释，但用户没有特别说明，可能直接使用“LOCC”即可。\n\n最后，检查整个翻译是否流畅，是否符合学术论文的正式语气，同时确保没有遗漏任何技术细节。例如，最后一句提到的新积分表示法，要确保“integral representation”正确翻译为“积分表示”，并保持其学术准确性。\n\n完成初稿后，我会通读一遍，对照原文确认每个术语和句子都准确无误，逻辑结构清晰，语言自然流畅。确保没有添加任何额外内容，只输出翻译结果，满足用户的所有要求。\n</think>\n\n我们证明，对于任意无限维量子态$\\rho_{AB}$，只要至少在一个子系统A或B上具有有限量子熵，其纠缠成本就等于正则化纠缠形成。这一结果推广了量子信息理论中的一个基础性结论，该结论此前仅适用于有限维系统上的操作和态。将结果扩展到无限维是不平凡的，因为传统用于建立直接和反向界限的工具——即强典型性、单调性和渐近连续性——不再直接适用。为解决这一问题，我们构造了一个适用于无限维态的新纠缠稀释协议，该协议可通过局部操作和有限量的单向经典通信（one-way LOCC）实现，并多次利用弱典型性和强典型性。我们还通过基于纠缠形成在无限维态上的替代单调性和渐近连续性论证，证明了该协议在所有协议中的最优性，即使在无限维可分操作下也是如此。在此过程中，我们推导出了无限维态量子熵的一个新积分表示，我们认为这一结果具有独立意义。我们的结果使我们能够完整表征一个重要的操作性纠缠度量——纠缠成本——适用于所有无限维物理系统。"
+  }
+]
