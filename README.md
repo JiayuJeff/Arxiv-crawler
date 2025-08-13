@@ -214,7 +214,33 @@ WEB_PORT = 8080
    - 📚 论文列表展示
    - ⏭️ 跳过论文功能
 
-## 🔧 故障排除
+## � Linux服务器使用
+
+### 无显示环境（推荐）
+
+1. **在服务器上启动**：
+   ```bash
+   python main.py --web_port 8080
+   ```
+
+2. **本地端口转发**：
+   ```bash
+   # 在本地机器执行
+   ssh -L 8080:localhost:8080 username@your_server_ip
+   ```
+
+3. **本地访问**：
+   打开浏览器访问 `http://localhost:8080`
+
+### 有显示环境
+
+直接运行即可：
+```bash
+python main.py
+```
+系统会尝试自动打开浏览器（firefox、chrome等）。
+
+## �🔧 故障排除
 
 ### 常见问题
 
@@ -243,9 +269,14 @@ WEB_PORT = 8080
    ```
 
 4. **浏览器未自动打开**
-   - 手动访问：`http://localhost:8080`
-   - 检查防火墙设置
-   - 尝试不同浏览器
+   - **Windows/macOS**: 手动访问：`http://localhost:8080`
+   - **Linux服务器**: 如果是无显示环境，请在本地转发端口：
+     ```bash
+     # 本地机器执行端口转发
+     ssh -L 8080:localhost:8080 username@server_ip
+     # 然后访问 http://localhost:8080
+     ```
+   - **Linux桌面**: 确保安装了浏览器（firefox、chrome等）
 
 ### 调试模式
 

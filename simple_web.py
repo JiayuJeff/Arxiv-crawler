@@ -747,6 +747,11 @@ def start_simple_web_chat(args):
     print(f"🚀 ArXiv论文智能问答系统")
     print(f"{'='*60}")
     
+    # 检测运行环境
+    import platform
+    system = platform.system().lower()
+    display = os.environ.get('DISPLAY') if system == 'linux' else True
+    
     # 创建聊天机器人
     chatbot = SimpleWebChatBot(
         web_port=getattr(args, 'web_port', 8080),
@@ -756,29 +761,72 @@ def start_simple_web_chat(args):
     # 创建Flask应用
     app = create_simple_app(chatbot)
     
+    print(f"📚 成功加载 {len(chatbot.papers)} 篇论文")
     print(f"📱 网页地址: http://localhost:{chatbot.web_port}")
-    print(f"📚 已准备 {len(chatbot.papers)} 篇论文")
-    print(f"🔧 请在网页中配置LLM连接")
+    
+    # 根据环境显示不同的提示
+    if system == 'linux' and not display:
+        print(f"🐧 检测到Linux无显示环境")
+        print(f"� 推荐使用SSH端口转发:")
+        print(f"   本地执行: ssh -L {chatbot.web_port}:localhost:{chatbot.web_port} username@server_ip")
+        print(f"   然后访问: http://localhost:{chatbot.web_port}")
+    else:
+        print(f"🔧 请在网页中配置LLM连接")
+        print(f"🌟 浏览器即将自动打开...")
+        print(f"⚠️  如未自动打开，请手动访问上述地址")
+    
     print(f"{'='*60}")
-    print(f"🌟 浏览器即将自动打开...")
-    print(f"⚠️  如未自动打开，请手动访问上述地址")
     print(f"🛑 按 Ctrl+C 退出")
     print(f"{'='*60}")
     
-    # 延迟后自动打开浏览器
+    # 延迟后自动打开浏览器（更好的跨平台支持）
     def open_browser():
         time.sleep(2)
         url = f"http://localhost:{chatbot.web_port}"
         try:
-            webbrowser.open(url)
-            print(f"✅ 浏览器已打开: {url}")
+            # 跨平台浏览器打开
+            import platform
+            system = platform.system().lower()
+            
+            if system == 'linux':
+                # Linux环境：检查是否有显示环境
+                display = os.environ.get('DISPLAY')
+                if not display:
+                    print(f"ℹ️ 检测到无显示环境的Linux系统")
+                    print(f"📌 请在有浏览器的环境中访问: {url}")
+                    return
+                
+                # 尝试使用常见的Linux浏览器
+                browsers = ['google-chrome', 'firefox', 'chromium-browser', 'chromium']
+                browser_found = False
+                for browser in browsers:
+                    try:
+                        import subprocess
+                        subprocess.run(['which', browser], check=True, capture_output=True)
+                        subprocess.Popen([browser, url])
+                        print(f"✅ 使用 {browser} 打开: {url}")
+                        browser_found = True
+                        break
+                    except (subprocess.CalledProcessError, FileNotFoundError):
+                        continue
+                
+                if not browser_found:
+                    print(f"ℹ️ 未找到可用浏览器")
+                    print(f"📌 请手动在浏览器中访问: {url}")
+            else:
+                # Windows/macOS：使用默认方法
+                webbrowser.open(url)
+                print(f"✅ 浏览器已打开: {url}")
+                
         except Exception as e:
-            print(f"⚠️ 无法自动打开浏览器: {e}")
+            print(f"ℹ️ 无法自动打开浏览器: {e}")
             print(f"📌 请手动访问: {url}")
     
-    browser_thread = threading.Thread(target=open_browser)
-    browser_thread.daemon = True
-    browser_thread.start()
+    # 只在适当的环境下尝试打开浏览器
+    if not (system == 'linux' and not display):
+        browser_thread = threading.Thread(target=open_browser)
+        browser_thread.daemon = True
+        browser_thread.start()
     
     # 启动Flask应用
     try:
