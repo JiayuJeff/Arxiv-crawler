@@ -161,12 +161,28 @@ def create_simple_app(chatbot):
     @app.route('/')
     def home():
         """主页"""
-        return render_template_string(get_html_template(), 
-                                      paper_count=len(chatbot.papers),
-                                      max_load_files=chatbot.max_load_files,
-                                      is_configured=chatbot.is_configured,
-                                      llm_model=chatbot.llm_model or "",
-                                      llm_port=chatbot.llm_port or 9000)
+        html_template = get_html_template()
+        try:
+            return render_template_string(html_template, 
+                                          paper_count=len(chatbot.papers),
+                                          max_load_files=chatbot.max_load_files,
+                                          is_configured=chatbot.is_configured,
+                                          llm_model=chatbot.llm_model or "",
+                                          llm_port=chatbot.llm_port or 9000)
+        except Exception as e:
+            print(f"模板渲染错误: {e}")
+            # 返回简单的错误页面
+            return f'''
+            <html>
+            <head><title>ArXiv智能问答系统</title></head>
+            <body>
+                <h1>ArXiv论文智能问答系统</h1>
+                <p>模板渲染失败: {str(e)}</p>
+                <p>已加载 {len(chatbot.papers)} 篇论文</p>
+                <p>配置状态: {"已配置" if chatbot.is_configured else "未配置"}</p>
+            </body>
+            </html>
+            '''
     
     @app.route('/configure', methods=['POST'])
     def configure_llm():
@@ -830,11 +846,17 @@ def start_simple_web_chat(args):
     
     # 启动Flask应用
     try:
-        app.run(host='0.0.0.0', port=chatbot.web_port, debug=False)
+        print(f"🚀 准备启动Flask服务器...")
+        print(f"📊 Host: 0.0.0.0, Port: {chatbot.web_port}")
+        app.run(host='0.0.0.0', port=chatbot.web_port, debug=False, threaded=True)
+    except Exception as e:
+        print(f"❌ Flask启动失败: {e}")
+        import traceback
+        traceback.print_exc()
     except KeyboardInterrupt:
         print(f"\n🛑 用户终止程序")
-    except Exception as e:
-        print(f"❌ 启动失败: {e}")
+    finally:
+        print(f"🔚 服务已停止")
 
 
 if __name__ == "__main__":

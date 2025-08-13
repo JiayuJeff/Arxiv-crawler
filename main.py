@@ -95,43 +95,7 @@ def main():
         print("🌐 启动Web界面模式...")
         from simple_web import start_simple_web_chat
         start_simple_web_chat(args)
-    
-    # 验证参数
-    if args.chat_file:
-        # 如果指定了chat_file，直接进行问答
-        print(f"使用现有文件进行问答: {args.chat_file}")
-        # 创建临时args对象用于问答
-        chat_args = argparse.Namespace()
-        chat_args.output = args.chat_file
-        chat_args.translate_llm = args.translate_llm
-        chat_args.port = args.port
-        chat_args.max_load_files = args.max_load_files
-        chat_args.web = args.web
-        chat_args.web_port = args.web_port
-        
-        if args.web:
-            from web_chat import start_web_chat
-            start_web_chat(chat_args)
-        else:
-            ask(chat_args)
-    else:
-        # 正常流程：爬取 -> 翻译 -> 问答
-        if not args.output:
-            parser.error("当不使用--chat_file时，--output参数是必需的")
-        
-        print("开始爬取ArXiv文章...")
-        crawl(args)
-        
-        print("开始翻译摘要...")
-        translate(args)
-        
-        if args.web:
-            print("启动网页版问答...")
-            from web_chat import start_web_chat
-            start_web_chat(args)
-        else:
-            print("开始问答模式...")
-            ask(args)
+
 
 if __name__ == "__main__":
     main()
