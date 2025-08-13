@@ -44,23 +44,31 @@ python main.py
 系统将自动：
 1. 🌐 启动Web服务器（默认8080端口）
 2. 🚀 自动打开浏览器
-3. 📚 开始加载论文数据
-4. ✨ 跳转到智能问答界面
+3. 📚 加载测试论文数据
+4. ✨ 显示配置界面，等待LLM连接配置
+
+**首次使用步骤**：
+1. 运行 `python main.py`
+2. 浏览器打开后，在页面顶部输入：
+   - 模型名称（如：`gpt-3.5-turbo`）
+   - 端口号（如：`9000`）
+3. 点击"连接"按钮
+4. 配置成功后即可开始智能问答
 
 ### 📋 详细启动选项
 
 ```bash
 # 使用Web界面（默认模式）
-python main.py --web
-
-# 使用命令行模式
-python main.py --console
+python main.py
 
 # 自定义Web端口
-python main.py --web --web_port 9090
+python main.py --web_port 9090
 
-# 设置最大加载论文数
-python main.py --max_load_files 20
+# 使用已有论文文件
+python main.py --chat_file your_papers.json
+
+# 使用命令行模式（需要完整参数）
+python main.py --console --translate_llm gpt-3.5-turbo --port 9000 --output papers.json
 
 # 查看所有选项
 python main.py --help
