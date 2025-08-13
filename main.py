@@ -84,14 +84,20 @@ def main():
                        help='翻译并发数量 (默认: 5)')
     
     # 新增网页版和文件加载限制参数
-    parser.add_argument('--web', action='store_true',
-                       help='启动网页版聊天界面')
+    parser.add_argument('--web', action='store_true', default=True,
+                       help='启动网页版聊天界面 (默认启用)')
+    parser.add_argument('--console', action='store_true',
+                       help='使用命令行模式而非网页版')
     parser.add_argument('--max_load_files', type=int, default=10,
                        help='最大同时加载的论文数量，超过此数量将逐篇加载 (默认: 10)')
     parser.add_argument('--web_port', type=int, default=8080,
                        help='网页服务器端口 (默认: 8080)')
 
     args = parser.parse_args()
+    
+    # 如果指定了console模式，则关闭web模式
+    if args.console:
+        args.web = False
     
     # 验证参数
     if args.chat_file:

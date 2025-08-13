@@ -1,164 +1,292 @@
-# ArXiv爬虫和问答系统使用指南
+# 🤖 ArXiv论文智能问答系统
 
-## 🚀 功能概述
+一个基于AI的学术论文智能分析平台，能够自动爬取ArXiv论文并提供智能问答功能。
 
-这是一个完整的ArXiv论文处理工具链，包含三个主要功能：
-1. **📚 爬取** - 从ArXiv获取论文信息
-2. **🌐 翻译** - 将英文摘要翻译为中文
-3. **💬 问答** - 基于论文内容进行智能问答
+## ✨ 功能特点
 
-## 📦 安装依赖
+- � **智能论文爬取**: 从ArXiv自动获取最新论文
+- 💬 **智能问答系统**: 基于OpenAI API的论文内容分析
+- 🌐 **Web界面**: 美观的Web界面，支持实时对话
+- 📱 **响应式设计**: 支持桌面端和移动端使用
+- 📊 **论文管理**: 可跳过不感兴趣的论文，提高查询效率
+- � **多模式处理**: 支持批量处理和逐篇处理模式
+- 🎨 **现代化UI**: 炫酷的渐变背景和动画效果
+
+## � 快速开始
+
+### 环境要求
+
+- Python 3.7+
+- OpenAI API密钥
+- 稳定的网络连接
+
+### 安装依赖
 
 ```bash
-pip install openai requests
+# 克隆项目
+git clone https://github.com/JiayuJeff/Arxiv-crawler.git
+cd Arxiv-crawler
+
+# 安装依赖包
+pip install requests openai flask
 ```
 
-## 🎯 完整使用流程
+### 配置API
 
-### 一键运行（推荐）
+启动兼容OpenAI的API服务（如本地LLM服务器），确保在指定端口运行。
+
+### 🎯 一键启动（推荐）
+
 ```bash
-python main.py \
-    --abstract-keywords "tool use" "reinforcement learning" \
-    --start-date 20250501 \
-    --end-date 20250805 \
-    --max-results 10 \
-    --output papers.json \
-    --translate_llm "Qwen/Qwen3-32B" \
-    --port 10006 \
-    --batchsize 5
+python main.py
 ```
 
-这个命令会：
-1. 🔍 爬取包含"tool use"和"reinforcement learning"的论文
-2. 🌐 翻译所有摘要为中文
-3. 💬 启动问答模式
+系统将自动：
+1. 🌐 启动Web服务器（默认8080端口）
+2. 🚀 自动打开浏览器
+3. 📚 开始加载论文数据
+4. ✨ 跳转到智能问答界面
 
-### 分步执行
+### 📋 详细启动选项
 
-#### 1. 只爬取论文
 ```bash
-python -c "
-from crawl import crawl
-import argparse
+# 使用Web界面（默认模式）
+python main.py --web
 
-class Args:
-    categories = ['cs.AI']
-    max_results = 5
-    output = 'papers.json'
-    # ... 其他参数
+# 使用命令行模式
+python main.py --console
 
-crawl(Args())
-"
+# 自定义Web端口
+python main.py --web --web_port 9090
+
+# 设置最大加载论文数
+python main.py --max_load_files 20
+
+# 查看所有选项
+python main.py --help
 ```
 
-#### 2. 只翻译已有文件
+## 🎮 使用指南
+
+### Web界面使用
+
+1. **启动系统**
+   ```bash
+   python main.py
+   ```
+   浏览器会自动打开 `http://localhost:8080`
+
+2. **智能问答**
+   - 💡 点击快捷问题按钮快速开始
+   - 📝 在输入框中输入问题，支持中英文
+   - 🎯 系统会自动分析相关论文并回答
+
+3. **论文管理**
+   - � 右侧显示所有加载的论文列表
+   - ⏭️ 输入论文编号（如：1,3,5）跳过不感兴趣的论文
+   - 🔄 点击"全部恢复"重新启用所有论文
+
+4. **快捷操作**
+   - 🎪 使用快捷问题按钮：研究方向分析、核心贡献总结等
+   - 🗑️ 清空对话：重置聊天记录
+   - ❓ 使用帮助：查看详细使用说明
+
+### 命令行使用
+
 ```bash
-python -c "
-from translate import translate
-import argparse
+# 使用命令行模式
+python main.py --console
 
-class Args:
-    output = 'papers.json'
-    translate_llm = 'Qwen/Qwen3-32B'
-    port = 10006
-    batchsize = 5
-
-translate(Args())
-"
+# 进入交互模式后
+> 这些论文的主要研究方向是什么？
+> 总结论文的核心技术贡献
+> 比较不同方法的优缺点
+> 跳过论文 1,3,5
+> 退出
 ```
 
-#### 3. 只启动问答
+## 📊 高级功能
+
+### 批量论文处理
+
+系统支持两种处理模式：
+
+- **批量处理模式**: 论文数量 ≤ `max_load_files`，一次性处理所有论文
+- **逐篇处理模式**: 论文数量较多时，逐篇分析以提高响应速度
+
+### 智能问答示例
+
+```
+🔍 研究主题查询:
+"这些论文主要研究什么领域？"
+
+💡 技术对比分析:
+"比较不同论文使用的深度学习方法"
+
+📊 数据集分析:
+"这些论文使用了哪些数据集？"
+
+🎯 实验结果总结:
+"总结各论文的主要实验结果"
+
+🔬 方法创新点:
+"有哪些值得关注的技术创新？"
+```
+
+### 论文管理技巧
+
+```
+⏭️ 跳过单篇论文: 
+输入 "1" 跳过第1篇论文
+
+⏭️ 跳过多篇论文:
+输入 "1,3,5,7" 跳过指定论文
+
+🔄 恢复所有论文:
+点击"全部恢复"或清空输入框后提交
+```
+
+## 🛠️ 配置选项
+
+### 命令行参数
+
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| `--web` | `True` | 启用Web界面模式 |
+| `--console` | `False` | 启用命令行模式 |
+| `--web_port` | `8080` | Web服务器端口 |
+| `--max_load_files` | `10` | 最大加载论文数量 |
+| `--api_base` | `http://localhost:9000/v1` | API服务地址 |
+| `--api_key` | `your-key-here` | API密钥 |
+
+### 配置文件
+
+在 `main.py` 中可以修改默认配置：
+
+```python
+# API配置
+API_BASE = "http://localhost:9000/v1"
+API_KEY = "your-key-here"
+
+# 处理配置
+MAX_LOAD_FILES = 10
+WEB_PORT = 8080
+```
+
+## 🌐 Web界面功能
+
+### 主要特性
+
+- 🎨 **现代化设计**: 渐变背景、动画效果、响应式布局
+- 💬 **实时对话**: 流畅的聊天体验，支持多轮对话
+- 📱 **移动端适配**: 完美支持手机和平板设备
+- � **状态实时更新**: 论文加载状态、处理模式实时显示
+
+### 界面组件
+
+1. **头部状态栏**
+   - 📚 显示已加载论文数量
+   - 🔄 显示当前处理模式
+   - ✅ 显示活跃论文数量
+
+2. **聊天区域**
+   - 💬 用户消息（右侧蓝色气泡）
+   - 🤖 AI回复（左侧白色气泡）
+   - 📄 论文信息标签
+   - ❌ 错误信息提示
+
+3. **输入区域**
+   - 📝 消息输入框（支持回车发送）
+   - 🚀 发送按钮（处理中自动禁用）
+   - 🗑️ 清空对话按钮
+   - ❓ 使用帮助按钮
+
+4. **侧边栏**
+   - 📋 论文管理工具
+   - 📚 论文列表展示
+   - ⏭️ 跳过论文功能
+
+## 🔧 故障排除
+
+### 常见问题
+
+1. **无法访问Web界面**
+   ```bash
+   # 检查端口是否被占用
+   netstat -an | grep 8080
+   
+   # 尝试其他端口
+   python main.py --web_port 9090
+   ```
+
+2. **API连接失败**
+   ```bash
+   # 检查API服务是否运行
+   curl http://localhost:9000/v1/models
+   
+   # 修改API地址
+   python main.py --api_base http://your-api-server:port/v1
+   ```
+
+3. **论文加载缓慢**
+   ```bash
+   # 减少加载论文数量
+   python main.py --max_load_files 5
+   ```
+
+4. **浏览器未自动打开**
+   - 手动访问：`http://localhost:8080`
+   - 检查防火墙设置
+   - 尝试不同浏览器
+
+### 调试模式
+
 ```bash
-python -c "
-from chat import ask
-import argparse
+# 启用详细日志
+python main.py --console
+# 然后查看控制台输出
 
-class Args:
-    output = 'papers.json'
-    translate_llm = 'Qwen/Qwen3-32B'
-    port = 10006
-
-ask(Args())
-"
+# 检查论文爬取状态
+python diagnose_crawl.py
 ```
 
-## 💬 问答功能特色
+## 📁 项目结构
 
-### 支持的问题类型
-- 📊 **论文总结**: "请总结这些论文的主要贡献"
-- 🔍 **技术分析**: "这些论文使用了哪些技术方法？"
-- ⚖️ **对比分析**: "比较这些论文的异同点"
-- 🎯 **特定查询**: "哪些论文涉及强化学习？"
-- 📚 **概念解释**: "什么是工具集成推理？"
-
-### 交互示例
 ```
-👤 您: 这些论文的主要研究方向是什么？
-
-🤖 助手: 基于提供的论文摘要，主要研究方向包括：
-
-1. **工具集成推理** (AutoTIR论文)
-   - 通过强化学习实现自主工具集成推理
-   - 增强大型语言模型的推理能力
-
-2. **机器人工具使用** (Prolonging Tool Life论文)  
-   - 通过寿命引导的强化学习学习通用工具的巧妙使用
-   - 在不确定环境中提高工具使用效率
-
-这些研究都聚焦于智能系统与工具的交互...
+Arxiv-crawler/
+├── main.py              # 主程序入口
+├── web_chat.py          # Web界面服务
+├── chat.py              # 聊天逻辑处理
+├── crawl.py             # 论文爬取模块
+├── translate.py         # 翻译功能
+├── diagnose_crawl.py    # 爬取诊断工具
+├── test_web.py          # Web功能测试
+├── examples.py          # 使用示例
+├── README.md            # 项目说明
+├── PROJECT_STATUS.md    # 项目状态
+└── WEB_FEATURES.md      # Web功能说明
 ```
 
-## 🔧 配置参数说明
+## 🤝 贡献指南
 
-### 爬取参数
-- `--categories`: 学科分类 (如 cs.AI, cs.LG)
-- `--abstract-keywords`: 摘要关键词 (AND关系)
-- `--keywords-any`: 可选关键词 (OR关系)
-- `--start-date` / `--end-date`: 时间范围
-- `--max-results`: 最大爬取数量
+欢迎提交Issues和Pull Requests！
 
-### 翻译参数
-- `--translate_llm`: 翻译模型名称 (必需)
-- `--port`: LLM服务端口
-- `--batchsize`: 翻译并发数
+1. Fork 本项目
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 创建 Pull Request
 
-### 问答参数
-- 使用与翻译相同的LLM配置
-- 自动读取`--output`指定的JSON文件
+## 📜 许可证
 
-## 🎨 输出格式
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
 
-### JSON文件结构
-```json
-[
-  {
-    "arxiv_id": "2507.21836v1",
-    "title": "论文标题",
-    "abstract": "英文摘要...",
-    "abstract_cn": "中文摘要...",
-    "authors": ["作者1", "作者2"],
-    "published": "2025-07-29T14:12:28Z",
-    "categories": ["cs.CL"],
-    "pdf_url": "PDF链接",
-    "page_url": "页面链接"
-  }
-]
-```
+## 📞 联系方式
 
-## 🚨 注意事项
+- 项目地址: [https://github.com/JiayuJeff/Arxiv-crawler](https://github.com/JiayuJeff/Arxiv-crawler)
+- 作者: JiayuJeff
+- 邮箱: jliufv@connect.ust.hk
 
-1. **LLM服务**: 确保在指定端口运行兼容OpenAI API的LLM服务
-2. **网络连接**: 爬取功能需要访问ArXiv API
-3. **文件路径**: 使用绝对路径避免路径问题
-4. **并发控制**: 合理设置`batchsize`避免API限制
-5. **退出问答**: 输入`quit`、`exit`或`退出`结束对话
+---
 
-## 🎯 使用技巧
-
-1. **精确搜索**: 使用`--abstract-keywords`进行精确匹配
-2. **宽泛搜索**: 使用`--keywords-any`扩大搜索范围
-3. **时间筛选**: 限制时间范围获取最新研究
-4. **分类筛选**: 指定学科分类提高相关性
-5. **批量处理**: 调整`batchsize`平衡速度和稳定性
-
-Happy researching! 🎓✨
+🎉 **开始您的论文研究之旅吧！**

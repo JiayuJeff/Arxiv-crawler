@@ -154,6 +154,9 @@ class ArxivCrawler:
         Returns:
             文章数据列表
         """
+        # ArXiv API建议单次请求不超过max_results=2000
+        max_results = min(max_results, 2000)
+        
         params = {
             'search_query': search_query,
             'start': start,
@@ -169,7 +172,10 @@ class ArxivCrawler:
             response = self.session.get(self.base_url, params=params)
             response.raise_for_status()
             
-            return self.parse_xml_response(response.text)
+            papers = self.parse_xml_response(response.text)
+            print(f"API返回 {len(papers)} 篇文章")
+            
+            return papers
             
         except requests.RequestException as e:
             print(f"请求失败: {e}")
@@ -283,9 +289,14 @@ class ArxivCrawler:
         """
         all_papers = []
         start = 0
+        consecutive_empty_batches = 0
+        max_empty_batches = 3  # 最多允许3次连续的空批次
+        
+        # ArXiv API建议的最大batch_size是2000，但实际使用中建议不超过1000
+        actual_batch_size = min(batch_size, 1000)
         
         while len(all_papers) < max_total:
-            current_batch_size = min(batch_size, max_total - len(all_papers))
+            current_batch_size = min(actual_batch_size, max_total - len(all_papers))
             
             print(f"\n=== 正在获取第 {start + 1} - {start + current_batch_size} 篇文章 ===")
             
@@ -297,23 +308,50 @@ class ArxivCrawler:
             )
             
             if not papers:
-                print("没有更多文章了")
-                break
+                consecutive_empty_batches += 1
+                print(f"本批次没有返回文章 (连续空批次: {consecutive_empty_batches})")
+                
+                if consecutive_empty_batches >= max_empty_batches:
+                    print("多次尝试无结果，停止爬取")
+                    break
+                
+                # 增加起始位置，尝试下一批
+                start += current_batch_size
+                continue
+            else:
+                consecutive_empty_batches = 0  # 重置空批次计数
             
-            all_papers.extend(papers)
+            # 过滤掉重复的文章
+            new_papers = []
+            existing_ids = {paper.get('arxiv_id') for paper in all_papers}
+            
+            for paper in papers:
+                paper_id = paper.get('arxiv_id')
+                if paper_id and paper_id not in existing_ids:
+                    new_papers.append(paper)
+                    existing_ids.add(paper_id)
+            
+            all_papers.extend(new_papers)
+            print(f"本批次获取 {len(papers)} 篇文章，其中 {len(new_papers)} 篇为新文章")
+            print(f"已获取 {len(all_papers)} 篇唯一文章")
+            
+            # 更新起始位置
             start += len(papers)
             
-            print(f"已获取 {len(all_papers)} 篇文章")
-            
-            # 如果返回的文章数少于请求数，说明已经到末尾
+            # 如果返回的文章数少于请求数，可能是到达末尾
             if len(papers) < current_batch_size:
-                print("已到达结果末尾")
-                break
+                print("返回文章数少于请求数，可能已到达结果末尾")
+                # 但是仍然尝试下一批，因为有时候中间会有空隙
+                if len(papers) == 0:
+                    break
             
             # 延迟，避免请求过于频繁
-            if delay > 0:
+            if delay > 0 and len(all_papers) < max_total:
                 print(f"等待 {delay} 秒...")
                 time.sleep(delay)
+        
+        print(f"\n=== 爬取完成 ===")
+        print(f"总共获取 {len(all_papers)} 篇唯一文章")
         
         return all_papers
     
@@ -473,8 +511,14 @@ def crawl(args):
         return
     
     print(f"\n=== 爬取完成 ===")
-    print(f"总共获取: {len(papers)} 篇文章")
-    print(f"保存到: {args.output}")
+    print(f"请求的最大数量: {args.max_results}")
+    print(f"实际获取数量: {len(papers)} 篇文章")
+    if len(papers) < args.max_results:
+        print(f"⚠️  获取数量少于请求数量，可能原因:")
+        print(f"   - ArXiv数据库中实际匹配的文章数量有限")
+        print(f"   - 部分文章可能被ArXiv API过滤")
+        print(f"   - 使用更宽泛的搜索条件可能获得更多结果")
+    print(f"保存位置: {args.output}")
     if not args.show_abstracts:
         print("提示: 使用 --show-abstracts 参数可在终端查看文章摘要")
 
